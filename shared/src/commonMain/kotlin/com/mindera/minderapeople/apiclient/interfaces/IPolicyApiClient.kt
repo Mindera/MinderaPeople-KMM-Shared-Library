@@ -1,7 +1,7 @@
 package com.mindera.minderapeople.apiclient.interfaces
 
-import com.mindera.minderapeople.DTO.PolicyDTO
+import com.mindera.minderapeople.dto.PolicyDTO
 
 interface IPolicyApiClient {
-    suspend fun getAllPolicies(): Result<List<PolicyDTO>>
+    suspend fun getAllPolicies(userId: String): Result<List<PolicyDTO>>
 }

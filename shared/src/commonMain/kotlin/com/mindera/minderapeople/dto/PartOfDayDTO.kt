@@ -1,4 +1,4 @@
-package com.mindera.minderapeople.DTO
+package com.mindera.minderapeople.dto
 
 import kotlinx.serialization.Serializable
 
