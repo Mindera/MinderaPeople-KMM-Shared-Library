@@ -1,6 +1,6 @@
 package com.mindera.minderapeople.repository
 
-import com.mindera.minderapeople.MinderaPeopleAPIClient
+import com.mindera.minderapeople.apiclient.interfaces.IPolicyApiClient
 
-class PolicyRepository(val apiClient: MinderaPeopleAPIClient) {
+class PolicyRepository(val apiClient: IPolicyApiClient) {
 }
