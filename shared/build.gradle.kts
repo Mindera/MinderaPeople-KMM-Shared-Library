@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("com.chromaticnoise.multiplatform-swiftpackage") version "2.0.3"
+    kotlin("plugin.serialization") version "1.8.10"
 }
 
 kotlin {
@@ -34,10 +35,15 @@ kotlin {
     }
 
     sourceSets {
+        val ktorVersion = "2.2.4"
         val commonMain by getting {
             dependencies{
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.4.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
             }
         }
         val commonTest by getting {
