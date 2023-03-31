@@ -6,6 +6,8 @@ import com.mindera.minderapeople.repository.interfaces.IPolicyRepository
 
 class PolicyRepository(private val apiClient: IPolicyApiClient): IPolicyRepository {
     override suspend fun getPolicies(userId: String): Result<List<PolicyDTO>> {
-        return apiClient.getAllPolicies(userId)
+        if(userId.matches(Regex("........-....-....-....-............")))
+            return apiClient.getAllPolicies(userId)
+        return Result.failure(Exception(DefaultData.INVALID_USER_ID))
     }
 }
