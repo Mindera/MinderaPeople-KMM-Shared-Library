@@ -2,6 +2,7 @@ package com.mindera.minderapeople.repository
 
 import com.mindera.minderapeople.repository.mocks.DefaultTestData
 import com.mindera.minderapeople.repository.mocks.PolicyApiClientMock
+import io.ktor.http.*
 import kotlinx.coroutines.runBlocking
 
 import kotlin.test.Test
@@ -22,7 +23,6 @@ class PolicyRepositoryTest {
             assertEquals(3, result.getOrNull()?.size)
             assertEquals(policies, result.getOrNull())
         }
-
     }
 
     @Test
@@ -37,4 +37,15 @@ class PolicyRepositoryTest {
         }
     }
 
+    @Test
+    fun getAllPoliciesForUser_userIdNotFound() {
+        val repo = PolicyRepository(PolicyApiClientMock())
+
+        runBlocking {
+            val result = repo.getPolicies("a74b7feh-6c57-49c6-8c7c-2522a4defc70")
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
 }
