@@ -1,4 +1,4 @@
-package com.mindera.minderapeople.repository.mocks
+package com.mindera.minderapeople.mocks
 
 import com.mindera.minderapeople.apiclient.interfaces.IPolicyApiClient
 import com.mindera.minderapeople.dto.PolicyDTO

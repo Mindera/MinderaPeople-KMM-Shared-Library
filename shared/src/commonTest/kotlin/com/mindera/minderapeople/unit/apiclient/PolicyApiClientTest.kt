@@ -1,9 +1,13 @@
-package com.mindera.minderapeople.apiclient
+package com.mindera.minderapeople.unit.apiclient
 
+import com.mindera.minderapeople.apiclient.PolicyApiClient
+import com.mindera.minderapeople.mocks.DefaultTestData
+import kotlinx.serialization.encodeToString
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
 import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.Json
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -11,34 +15,12 @@ import kotlin.test.assertTrue
 
 class PolicyApiClientTest {
 
-    private val successfulResponse = """
-        [
-             {
-                 "id": "policy1",
-                 "description": "Working from home",
-                 "icon_name": "Default_Icon"
-             },
-             {
-                 "id": "policy2",
-                 "description": "Working remotely",
-                 "icon_name": "Default_Icon"
-             },
-             {
-                 "id": "policy3",
-                 "description": "Vacations, PT",
-                 "icon_name": "Default_Icon",
-                 "policy_usage": 22,
-                 "policy_usage_limit": 28
-             }
-        ]  
-    """
-
     @Test
     fun getAllPoliciesForUser_successful() {
 
         val mockEngine = MockEngine {
             respond(
-                content = ByteReadChannel(successfulResponse),
+                content = ByteReadChannel(Json.encodeToString(DefaultTestData.SUCCESSFUL_3_POLICIES)),
                 status = HttpStatusCode.OK,
                 headers = headersOf(HttpHeaders.ContentType, "application/json")
             )
@@ -46,9 +28,9 @@ class PolicyApiClientTest {
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("0001")
+            val result = client.getAllPolicies("a74b7fef-6c57-49c6-8c7c-2522a4defc70")
 
-            assertEquals(3, result.getOrNull()?.size, "Returned list of 12 policies")
+            assertEquals(3, result.getOrNull()?.size)
             assertTrue(result.isSuccess)
         }
     }

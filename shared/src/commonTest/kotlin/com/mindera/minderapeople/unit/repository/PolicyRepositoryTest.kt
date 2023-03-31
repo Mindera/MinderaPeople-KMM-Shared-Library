@@ -1,7 +1,9 @@
-package com.mindera.minderapeople.repository
+package com.mindera.minderapeople.unit.repository
 
-import com.mindera.minderapeople.repository.mocks.DefaultTestData
-import com.mindera.minderapeople.repository.mocks.PolicyApiClientMock
+import com.mindera.minderapeople.repository.DefaultData
+import com.mindera.minderapeople.repository.PolicyRepository
+import com.mindera.minderapeople.mocks.DefaultTestData
+import com.mindera.minderapeople.mocks.PolicyApiClientMock
 import io.ktor.http.*
 import kotlinx.coroutines.runBlocking
 
