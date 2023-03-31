@@ -14,7 +14,7 @@ class PartOfDayApiClient(engine: HttpClientEngine): IPartOfDayApiClient {
 
     override suspend fun getPartsOfDay(): Result<List<PartOfDayDTO>> {
         return try {
-            val response = httpClient.get("${DefaultData.BASE_URL}/partsDay")
+            val response = httpClient.get("${DefaultData.BASE_URL}/partsday")
 
             if (response.status == HttpStatusCode.OK)
                 return Result.success(response.body())
