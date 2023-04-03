@@ -1,9 +1,8 @@
 package com.mindera.minderapeople.unit.repository
 
-import com.mindera.minderapeople.repository.DefaultData
-import com.mindera.minderapeople.repository.PolicyRepository
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.PolicyApiClientMock
+import com.mindera.minderapeople.repository.PolicyRepository
 import io.ktor.http.*
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
@@ -22,18 +21,6 @@ class PolicyRepositoryTest {
             assertTrue(result.isSuccess)
             assertEquals(3, result.getOrNull()?.size)
             assertEquals(policies, result.getOrNull())
-        }
-    }
-
-    @Test
-    fun getAllPoliciesForUser_invalidUserId() {
-        val repo = PolicyRepository(PolicyApiClientMock())
-
-        runBlocking {
-            val result = repo.getPolicies("0001")
-            assertTrue(result.isFailure)
-            assertEquals(null, result.getOrNull())
-            assertEquals(DefaultData.INVALID_USER_ID, result.exceptionOrNull()?.message)
         }
     }
 

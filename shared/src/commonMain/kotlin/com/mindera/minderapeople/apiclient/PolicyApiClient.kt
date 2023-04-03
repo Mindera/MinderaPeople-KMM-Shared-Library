@@ -7,14 +7,14 @@ import io.ktor.client.engine.*
 import io.ktor.client.request.*
 import io.ktor.http.*
 
-private const val BASE_URL = "http://localhost:3000/api"
 class PolicyApiClient(engine: HttpClientEngine): IPolicyApiClient {
 
-    private val httpClient = ApiHttpClient(engine).httpClient
+    private val apiHttpClient = ApiHttpClient(engine)
+    private val httpClient = apiHttpClient.httpClient
 
     override suspend fun getAllPolicies(userId: String): Result<List<PolicyDTO>> {
         return try {
-            val response = httpClient.get("${BASE_URL}/policies") {
+            val response = httpClient.get("${apiHttpClient.url}/policies") {
                 parameter("userId", userId)
             }
             if (response.status == HttpStatusCode.OK)
