@@ -43,4 +43,7 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
     override suspend fun removeEventById(userId: String, event: EventDTO): Result<Nothing?> {
         return apiClient.removeEventById(userId, event.id)
     }
+    override suspend fun getEventBy(userId: String, eventId: String): Result<EventDTO> {
+        return apiClient.getEventBy(userId, eventId)
+    }
 }
