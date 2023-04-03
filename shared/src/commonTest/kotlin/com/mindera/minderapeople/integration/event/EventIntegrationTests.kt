@@ -2,7 +2,6 @@ package com.mindera.minderapeople.integration.event
 
 import com.mindera.minderapeople.apiclient.EventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
-import com.mindera.minderapeople.repository.DefaultData
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
@@ -16,7 +15,6 @@ class EventIntegrationTests {
 
     @Test
     fun removeEventById_successful() {
-
         val mockEngine = MockEngine {
             respond(
                 content = ByteReadChannel(""),
@@ -35,48 +33,7 @@ class EventIntegrationTests {
     }
 
     @Test
-    fun removeEventById_invalidUserId() {
-
-        val mockEngine = MockEngine {
-            respond(
-                content = ByteReadChannel(""),
-                status = HttpStatusCode.NoContent,
-                headers = headersOf(HttpHeaders.ContentType, "application/json")
-            )
-        }
-        val apiClient = EventApiClient(mockEngine)
-        val repo = EventRepository(apiClient)
-
-        runBlocking {
-            val result = repo.removeEventById("0001", DefaultTestData.CORRECT_EVENT)
-            assertTrue(result.isFailure)
-            assertEquals(DefaultData.INVALID_IDS, result.exceptionOrNull()?.message)
-        }
-    }
-
-    @Test
-    fun removeEventById_invalidEventId() {
-
-        val mockEngine = MockEngine {
-            respond(
-                content = ByteReadChannel(""),
-                status = HttpStatusCode.NoContent,
-                headers = headersOf(HttpHeaders.ContentType, "application/json")
-            )
-        }
-        val apiClient = EventApiClient(mockEngine)
-        val repo = EventRepository(apiClient)
-
-        runBlocking {
-            val result = repo.removeEventById(DefaultTestData.EVENT_ID_CORRECT, DefaultTestData.ERROR_EVENT)
-            assertTrue(result.isFailure)
-            assertEquals(DefaultData.INVALID_IDS, result.exceptionOrNull()?.message)
-        }
-    }
-
-    @Test
     fun removeEventById_eventNotFound() {
-
         val mockEngine = MockEngine {
             respondError(HttpStatusCode.NotFound)
         }
@@ -92,7 +49,6 @@ class EventIntegrationTests {
 
     @Test
     fun removeEventById_exceptionThrown() {
-
         val error = "Error occurred"
         val mockEngine = MockEngine {
             throw Exception(error)

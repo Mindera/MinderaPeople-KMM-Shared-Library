@@ -19,7 +19,6 @@ object DefaultTestData {
     )
 
     //Events
-    const val ERROR_EVENT_NOT_FOUND = "Not found"
     const val USER_ID_CORRECT = "3b1276b3-d2f6-4e29-af8f-a0cb00208dda"
     const val EVENT_ID_CORRECT = "f4b20503-0a59-4e76-8796-aee78726139f"
     val CORRECT_EVENT = EventDTO(
@@ -38,7 +37,7 @@ object DefaultTestData {
         )
     )
     val ERROR_EVENT = EventDTO(
-        "0001",
+        "f4b20503-0a30-4e76-8796-aee78726139f",
         PolicyDTO(
             "0001",
             "Travel",
