@@ -9,7 +9,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-
 class EventApiClientTest {
 
     @Test
@@ -24,7 +23,10 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.removeEventById("3b1276b3-d2f6-4e29-af8f-a0cb00208dda", "f4b20503-0a59-4e76-8796-aee78726139f")
+            val result = client.removeEventById(
+                "3b1276b3-d2f6-4e29-af8f-a0cb00208dda",
+                "f4b20503-0a59-4e76-8796-aee78726139f"
+            )
 
             assertTrue(result.isSuccess)
             assertEquals(null, result.getOrNull())
@@ -43,7 +45,10 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.removeEventById("3b1276b3-d2f6-4e29-af8f-accb00208dda", "f4b20503-0a59-4e76-8796-aee78726139f")
+            val result = client.removeEventById(
+                "3b1276b3-d2f6-4e29-af8f-accb00208dda",
+                "f4b20503-0a59-4e76-8796-aee78726139f"
+            )
 
             assertEquals(null, result.getOrNull())
             assertTrue(result.isFailure)
@@ -60,7 +65,10 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.removeEventById("3b1276b3-d2f6-4e29-af8f-a0cb00208dda", "f4b20503-0a59-4e76-8796-aee78726139f")
+            val result = client.removeEventById(
+                "3b1276b3-d2f6-4e29-af8f-a0cb00208dda",
+                "f4b20503-0a59-4e76-8796-aee78726139f"
+            )
 
             assertEquals(null, result.getOrNull())
             assertTrue(result.isFailure)

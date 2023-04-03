@@ -19,4 +19,4 @@ data class EventDTO(
     val includesBreakfast: Boolean? = null,
     val city: String? = null,
     val project: ProjectDTO? = null
-    )
+)
