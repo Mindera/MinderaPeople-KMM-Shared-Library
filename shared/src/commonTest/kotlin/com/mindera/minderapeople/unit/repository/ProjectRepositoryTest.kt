@@ -58,7 +58,7 @@ class ProjectRepositoryTest {
      }
 
      @Test
-     fun `test getAllProjects returns failure if badRequest`() {
+     fun `test getAllProjects returns failure`() {
           val errorMessage = "Server could not handle request"
 
           given(api).suspendFunction(api::getAllProjects)

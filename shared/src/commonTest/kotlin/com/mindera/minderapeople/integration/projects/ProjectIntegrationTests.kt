@@ -1,16 +1,17 @@
-package com.mindera.minderapeople.unit.apiClient
+package com.mindera.minderapeople.integration.projects
 
 import com.mindera.minderapeople.apiclient.ProjectApiClientImpl
-import kotlin.test.Test
+import com.mindera.minderapeople.dto.ProjectDTO
+import com.mindera.minderapeople.repository.ProjectRepositoryImpl
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
 import kotlinx.coroutines.runBlocking
+import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-class ProjectApiClientTest {
-
+class ProjectIntegrationTests {
     private val validResponseWithElements = """
         [
             {
@@ -30,10 +31,17 @@ class ProjectApiClientTest {
 
     private val validResponseWithoutElements = """[]"""
 
+    private val expectedResponseWithElements = listOf(
+        ProjectDTO("anova0001","Anova(Unify)"),
+        ProjectDTO("farfetch0001","Farfetch (PH Portugal)"),
+        ProjectDTO("farfetch0002","Farfetch (FF Harrods)")
+    )
+
+    private val expectedResponseWithoutElements = listOf<ProjectDTO>()
 
     @Test
-    fun `test getAllProjects returns success and a list if API request was valid and there are objects`() {
-        val mockEngine = MockEngine {
+    fun `test getAllProjects returns success and a list if API request was valid and there are objects`(){
+        val mockEngine = MockEngine { request ->
             respond(
                 content = ByteReadChannel(validResponseWithElements),
                 status = HttpStatusCode.OK,
@@ -43,16 +51,18 @@ class ProjectApiClientTest {
 
         runBlocking {
             val apiClient = ProjectApiClientImpl(mockEngine)
-            val result = apiClient.getAllProjects()
+            val projectRepo = ProjectRepositoryImpl(apiClient)
+            val result = projectRepo.getAllProjects()
 
             assertTrue(result.isSuccess)
             assertEquals(3, result.getOrNull()?.size)
+            assertEquals(expectedResponseWithElements, result.getOrNull())
         }
     }
 
     @Test
-    fun `test getAllProjects returns success and an empty list if API request was valid and there are no objects`() {
-        val mockEngine = MockEngine {
+    fun `test getAllProjects returns success and a empty list if API request was valid and there are no objects`() {
+        val mockEngine = MockEngine { request ->
             respond(
                 content = ByteReadChannel(validResponseWithoutElements),
                 status = HttpStatusCode.OK,
@@ -62,23 +72,25 @@ class ProjectApiClientTest {
 
         runBlocking {
             val apiClient = ProjectApiClientImpl(mockEngine)
-            val result = apiClient.getAllProjects()
+            val projectRepo = ProjectRepositoryImpl(apiClient)
+            val result = projectRepo.getAllProjects()
 
             assertTrue(result.isSuccess)
             assertEquals(0, result.getOrNull()?.size)
+            assertEquals(expectedResponseWithoutElements, result.getOrNull())
         }
     }
 
     @Test
     fun `test getAllProjects returns failure if badRequest`() {
-
-        val mockEngine = MockEngine {
+        val mockEngine = MockEngine { request ->
             respondBadRequest()
         }
 
         runBlocking {
             val apiClient = ProjectApiClientImpl(mockEngine)
-            val result = apiClient.getAllProjects()
+            val projectRepo = ProjectRepositoryImpl(apiClient)
+            val result = projectRepo.getAllProjects()
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -87,7 +99,7 @@ class ProjectApiClientTest {
     }
 
     @Test
-    fun `test getAllProjects returns failure when Exception is thrown`() {
+    fun `test getAllProjects returns failure if Exception is thrown`() {
         val errorMessage = "Error"
 
         val mockEngine = MockEngine {
@@ -96,7 +108,8 @@ class ProjectApiClientTest {
 
         runBlocking {
             val apiClient = ProjectApiClientImpl(mockEngine)
-            val result = apiClient.getAllProjects()
+            val projectRepo = ProjectRepositoryImpl(apiClient)
+            val result = projectRepo.getAllProjects()
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
