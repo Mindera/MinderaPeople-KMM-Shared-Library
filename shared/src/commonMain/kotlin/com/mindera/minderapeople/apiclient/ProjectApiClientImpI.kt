@@ -1,20 +1,25 @@
 package com.mindera.minderapeople.apiclient
 
-import com.mindera.minderapeople.DTO.ProjectDTO
-import com.mindera.minderapeople.MinderaPeopleAPIClient
+import com.mindera.minderapeople.dto.ProjectDTO
 import com.mindera.minderapeople.apiclient.interfaces.IProjectsApiClient
 import io.ktor.client.call.*
+import io.ktor.client.engine.*
 import io.ktor.client.request.*
+import io.ktor.http.*
 
-class ProjectApiClientImpl: IProjectsApiClient {
+class ProjectApiClientImpl (engine: HttpClientEngine): IProjectsApiClient {
 
-    val httpClient = MinderaPeopleAPIClient.httpClient
-    val baseUrl = MinderaPeopleAPIClient.BASE_URL
+    private val httpClient = MinderaPeopleAPIClient(engine).httpClient
+    private val baseUrl = MinderaPeopleAPIClient.BASE_URL
 
     override suspend fun getAllProjects(): Result<List<ProjectDTO>> {
         return try{
-            val response: List<ProjectDTO> = httpClient.get("${baseUrl}/policies").body()
-            Result.success(response)
+            val response = httpClient.get("${baseUrl}/policies")
+
+            if(response.status == HttpStatusCode.OK)
+                Result.success(response.body())
+            else
+                Result.failure(Exception(response.status.description))
         }catch (e: Exception){
             Result.failure(e)
         }
