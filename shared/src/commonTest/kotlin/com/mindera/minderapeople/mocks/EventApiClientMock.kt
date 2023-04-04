@@ -1,9 +1,14 @@
 package com.mindera.minderapeople.mocks
 
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
+import com.mindera.minderapeople.dto.EventDTO
 import io.ktor.http.*
 
-class EventApiClientMock: IEventApiClient {
+class EventApiClientMock : IEventApiClient {
+
+    override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
+        TODO("Not yet implemented")
+    }
 
     override suspend fun removeEventById(userId: String, eventId: String): Result<Nothing?> {
         if (userId == DefaultTestData.USER_ID_CORRECT && eventId == DefaultTestData.EVENT_ID_CORRECT)
