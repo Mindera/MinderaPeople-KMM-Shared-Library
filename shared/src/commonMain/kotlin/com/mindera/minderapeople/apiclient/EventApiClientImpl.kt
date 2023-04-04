@@ -12,7 +12,7 @@ class EventApiClientImpl(engine: HttpClientEngine): IEventApiClient {
     private val httpClient = MinderaPeopleAPIClient(engine).httpClient
     private val baseUrl = MinderaPeopleAPIClient.BASE_URL
 
-    override suspend fun getEventBy(userId: String, eventId: String): Result<EventDTO> {
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
         return try{
             val response = httpClient.get("${baseUrl}/events/${userId}/${eventId}")
 
