@@ -20,5 +20,5 @@ interface IEventRepository {
         project: ProjectDTO?
     ): Result<EventDTO>
     suspend fun removeEventById(userId: String, event: EventDTO): Result<Nothing?>
-    suspend fun getEventBy(userId: String, eventId: String): Result<EventDTO>
+    suspend fun getEventById(userId: String, eventId: String): Result<EventDTO>
 }

@@ -8,7 +8,6 @@ import com.mindera.minderapeople.dto.ProjectDTO
 import com.mindera.minderapeople.repository.interfaces.IEventRepository
 
 class EventRepository(private val apiClient: IEventApiClient) : IEventRepository {
-
     override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
         return apiClient.getAllEventsForUser(userId)
     }
@@ -43,7 +42,7 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
     override suspend fun removeEventById(userId: String, event: EventDTO): Result<Nothing?> {
         return apiClient.removeEventById(userId, event.id)
     }
-    override suspend fun getEventBy(userId: String, eventId: String): Result<EventDTO> {
-        return apiClient.getEventBy(userId, eventId)
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
+        return apiClient.getEventById(userId, eventId)
     }
 }
