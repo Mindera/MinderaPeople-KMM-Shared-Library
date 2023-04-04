@@ -6,11 +6,9 @@ import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.PolicyApiClientMock
 import io.ktor.http.*
 import kotlinx.coroutines.runBlocking
-
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
-
 
 class PolicyRepositoryTest {
 
