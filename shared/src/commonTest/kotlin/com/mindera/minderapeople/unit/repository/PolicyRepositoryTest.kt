@@ -1,16 +1,14 @@
 package com.mindera.minderapeople.unit.repository
 
-import com.mindera.minderapeople.repository.DefaultData
-import com.mindera.minderapeople.repository.PolicyRepository
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.PolicyApiClientMock
+import com.mindera.minderapeople.repository.DefaultData
+import com.mindera.minderapeople.repository.PolicyRepository
 import io.ktor.http.*
 import kotlinx.coroutines.runBlocking
-
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
-
 
 class PolicyRepositoryTest {
 
