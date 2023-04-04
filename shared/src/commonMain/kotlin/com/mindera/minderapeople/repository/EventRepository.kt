@@ -10,4 +10,8 @@ class EventRepository(val apiClient: IEventApiClient): IEventRepository {
         return apiClient.getEventBy(userId, eventId)
     }
 
+    override suspend fun getEventByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
+        return apiClient.getEventByPolicy(userId, policyId)
+    }
+
 }

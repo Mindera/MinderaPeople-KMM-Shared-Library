@@ -24,4 +24,17 @@ class EventApiClientImpl(engine: HttpClientEngine): IEventApiClient {
             Result.failure(e)
         }
     }
+
+    override suspend fun getEventByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
+        return try{
+            val response = httpClient.get("${baseUrl}/events/${userId}/${policyId}")
+
+            if(response.status == HttpStatusCode.OK)
+                Result.success(response.body())
+            else
+                Result.failure(Exception(response.status.description))
+        }catch (e: Exception){
+            Result.failure(e)
+        }
+    }
 }
