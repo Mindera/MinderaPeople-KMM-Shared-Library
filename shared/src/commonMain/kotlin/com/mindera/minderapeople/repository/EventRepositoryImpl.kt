@@ -5,7 +5,7 @@ import com.mindera.minderapeople.dto.EventDTO
 import com.mindera.minderapeople.repository.interfaces.IEventRepository
 
 
-class EventRepository(val apiClient: IEventApiClient): IEventRepository {
+class EventRepositoryImpl(val apiClient: IEventApiClient): IEventRepository {
     override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
         return apiClient.getEventById(userId, eventId)
     }
