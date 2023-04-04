@@ -51,4 +51,67 @@ object DefaultTestData {
             "default"
         )
     )
+    val EVENT_LIST = listOf(
+        EventDTO(
+            "f4b20503-0a30-4e76-8796-aee78726139f",
+            PolicyDTO(
+                "0001",
+                "Travel",
+                "default"
+            ),
+            "2023-04-03",
+            "2023-04-10",
+            PartOfDayDTO(
+                "0001",
+                "Full day",
+                "default"
+            )
+        ),
+        EventDTO(
+            "f4b20503-0a30-4e76-8796-aee787261387",
+            PolicyDTO(
+                "0002",
+                "Sick day",
+                "default"
+            ),
+            "2023-05-03",
+            "2023-05-10",
+            PartOfDayDTO(
+                "0002",
+                "Morning",
+                "default"
+            )
+        ),
+        EventDTO(
+            "f4b20503-0a30-4e76-8796-aee787261399",
+            PolicyDTO(
+                "0003",
+                "Holidays",
+                "default"
+            ),
+            "2023-06-03",
+            "2023-06-10",
+            PartOfDayDTO(
+                "0001",
+                "Full day",
+                "default"
+            )
+        ),
+        EventDTO(
+            "f4b20503-0a30-4e76-8796-aee787661387",
+            PolicyDTO(
+                "0006",
+                "Carnival",
+                "default"
+            ),
+            "2023-02-03",
+            "2023-02-03",
+            PartOfDayDTO(
+                "0001",
+                "Full day",
+                "default"
+            )
+        )
+
+    )
 }
