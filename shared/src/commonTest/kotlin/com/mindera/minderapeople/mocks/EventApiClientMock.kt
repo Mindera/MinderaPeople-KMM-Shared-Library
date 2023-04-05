@@ -14,7 +14,10 @@ class EventApiClientMock : IEventApiClient {
     }
 
     override suspend fun editExistingEvent(userId: String, event: EventDTO): Result<EventDTO> {
-        TODO("Not yet implemented")
+        if (userId == DefaultTestData.USER_ID_CORRECT) {
+            return Result.success(DefaultTestData.CORRECT_EVENT)
+        }
+        return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
 
     override suspend fun removeEventById(userId: String, eventId: String): Result<Nothing?> {
