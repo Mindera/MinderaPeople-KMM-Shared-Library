@@ -69,6 +69,94 @@ class EventIntegrationTests {
     }
 
     @Test
+    fun editExistingEvent_successful() {
+        val event = DefaultTestData.CORRECT_EVENT
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(Json.encodeToString(event)),
+                status = HttpStatusCode.OK,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+        val apiClient = EventApiClient(mockEngine)
+        val repo = EventRepository(apiClient)
+
+        runBlocking {
+            val result = repo.editEvent(DefaultTestData.USER_ID_CORRECT,
+                event.id,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+                )
+
+            assertTrue(result.isSuccess)
+            assertEquals(event, result.getOrNull())
+        }
+    }
+
+    @Test
+    fun editExistingEvent_eventNotFound() {
+        val event = DefaultTestData.CORRECT_EVENT
+        val mockEngine = MockEngine {
+            respondError(HttpStatusCode.NotFound)
+        }
+        val apiClient = EventApiClient(mockEngine)
+        val repo = EventRepository(apiClient)
+
+        runBlocking {
+            val result = repo.editEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                "0001",
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+                )
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun editExistingEvent_exceptionThrown() {
+        val event = DefaultTestData.CORRECT_EVENT
+        val error = "Error occurred"
+        val mockEngine = MockEngine {
+            throw Exception(error)
+        }
+        val apiClient = EventApiClient(mockEngine)
+        val repo = EventRepository(apiClient)
+
+        runBlocking {
+            val result = repo.editEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.id,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
+            assertTrue(result.isFailure)
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
     fun removeEventById_successful() {
         val mockEngine = MockEngine {
             respond(
