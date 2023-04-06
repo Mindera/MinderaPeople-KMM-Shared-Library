@@ -51,12 +51,18 @@ kotlin {
             dependencies {
                 implementation(kotlin("test"))
                 implementation("io.ktor:ktor-client-mock:$ktorVersion")
+                implementation(kotlin("test-common"))
+                implementation(kotlin("test-annotations-common"))
                 implementation("org.jetbrains.kotlin:kotlin-test")
                 implementation("io.mockative:mockative:1.4.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+            }
+        }
         val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -66,6 +72,9 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+            dependencies {
+                implementation("io.ktor:ktor-client-darwin:$ktorVersion")
+            }
         }
         val iosX64Test by getting
         val iosArm64Test by getting

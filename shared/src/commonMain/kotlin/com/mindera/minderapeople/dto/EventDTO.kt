@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class EventDTO(
-    val id: String? = null,
+    val id: String,
     val policy: PolicyDTO,
     @SerialName("start_date")
     val startDate: String,
