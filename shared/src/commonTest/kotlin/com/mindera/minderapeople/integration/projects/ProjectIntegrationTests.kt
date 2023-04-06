@@ -2,7 +2,6 @@ package com.mindera.minderapeople.integration.projects
 
 import com.mindera.minderapeople.apiclient.ProjectApiClientImpl
 import com.mindera.minderapeople.dto.ProjectDTO
-import com.mindera.minderapeople.repository.ProjectRepositoryImpl
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*

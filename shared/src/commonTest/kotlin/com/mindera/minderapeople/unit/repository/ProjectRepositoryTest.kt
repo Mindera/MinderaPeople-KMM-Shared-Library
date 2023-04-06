@@ -1,8 +1,6 @@
 package com.mindera.minderapeople.unit.repository
 
-import com.mindera.minderapeople.apiclient.interfaces.IProjectsApiClient
 import com.mindera.minderapeople.dto.ProjectDTO
-import com.mindera.minderapeople.repository.ProjectRepositoryImpl
 import io.mockative.Mock
 import io.mockative.classOf
 import io.mockative.given
