@@ -37,6 +37,21 @@ object DefaultTestData {
             "default"
         )
     )
+    val CORRECT_NEW_EVENT = EventDTO(
+        null,
+        PolicyDTO(
+            "0001",
+            "Travel",
+            "default"
+        ),
+        "2023-04-03",
+        "2023-04-10",
+        PartOfDayDTO(
+            "0001",
+            "Full day",
+            "default"
+        )
+    )
     val ERROR_EVENT = EventDTO(
         "f4b20503-0a30-4e76-8796-aee78726139f",
         PolicyDTO(

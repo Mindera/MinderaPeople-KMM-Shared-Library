@@ -2,6 +2,9 @@ package com.mindera.minderapeople.apiclient
 
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
 import com.mindera.minderapeople.dto.EventDTO
+import com.mindera.minderapeople.dto.PartOfDayDTO
+import com.mindera.minderapeople.dto.PolicyDTO
+import com.mindera.minderapeople.dto.ProjectDTO
 import io.ktor.client.call.*
 import io.ktor.client.engine.*
 import io.ktor.client.request.*
@@ -76,6 +79,25 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
             if(response.status == HttpStatusCode.OK)
                 Result.success(response.body())
+            else
+                Result.failure(Exception(response.status.description))
+        }catch (e: Exception){
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun createEvent(
+        userId: String,
+        event: EventDTO
+    ): Result<Nothing?> {
+        return try{
+            val response = httpClient.post("${apiHttpClient.url}/events/${userId}") {
+                contentType(ContentType.Application.Json)
+                setBody(event)
+            }
+
+            if(response.status == HttpStatusCode.Created)
+                Result.success(null)
             else
                 Result.failure(Exception(response.status.description))
         }catch (e: Exception){

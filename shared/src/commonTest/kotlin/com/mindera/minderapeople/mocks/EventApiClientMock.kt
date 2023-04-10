@@ -36,4 +36,8 @@ class EventApiClientMock : IEventApiClient {
     override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
         TODO("Not yet implemented")
     }
+
+    override suspend fun createEvent(userId: String, event: EventDTO): Result<Nothing?> {
+        TODO("Not yet implemented")
+    }
 }

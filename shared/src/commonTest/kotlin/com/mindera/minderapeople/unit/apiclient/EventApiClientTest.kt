@@ -382,4 +382,60 @@ class EventApiClientTest {
             assertEquals(error, result.exceptionOrNull()?.message)
         }
     }
+
+    @Test
+    fun `test create event returns success if api call is successful`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.Created,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.createEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
+
+            assertTrue(result.isSuccess)
+            assertEquals(null, result.getOrNull())
+        }
+    }
+
+    @Test
+    fun `test create event returns failure when user not found`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.createEvent("0120", DefaultTestData.CORRECT_EVENT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test create event returns failure when exception is thrown`(){
+        val error = "Error occurred"
+        val mockEngine = MockEngine {
+            throw Exception(error)
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.createEvent("0120", DefaultTestData.CORRECT_EVENT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
 }

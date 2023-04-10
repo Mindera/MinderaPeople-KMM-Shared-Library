@@ -53,7 +53,7 @@ class EventRepositoryTest {
             val result =
                 repo.editEvent(
                     DefaultTestData.USER_ID_CORRECT,
-                    event.id,
+                    event.id!!,
                     event.policy,
                     event.startDate,
                     event.endDate,
@@ -77,7 +77,7 @@ class EventRepositoryTest {
 
         runBlocking {
             val result = repo.editEvent("00012",
-                event.id,
+                event.id!!,
                 event.policy,
                 event.startDate,
                 event.endDate,
@@ -288,6 +288,87 @@ class EventRepositoryTest {
 
         runBlocking {
             val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.POLICY_ID_CORRECT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test create event returns success if api request is successful`() {
+        val event = DefaultTestData.CORRECT_EVENT
+        given(api).suspendFunction(api::createEvent, fun2())
+            .whenInvokedWith(oneOf(DefaultTestData.USER_ID_CORRECT), oneOf(DefaultTestData.CORRECT_NEW_EVENT))
+            .thenReturn(Result.success(null))
+        val eventRepo = EventRepository(api)
+
+        runBlocking {
+            val result = eventRepo.createEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
+
+            assertTrue(result.isSuccess)
+            assertEquals(null, result.getOrNull())
+        }
+    }
+
+    @Test
+    fun `test create event returns failure if user not found`() {
+        val event = DefaultTestData.CORRECT_EVENT
+        given(api).suspendFunction(api::createEvent, fun2())
+            .whenInvokedWith(oneOf(DefaultTestData.USER_ID_CORRECT), oneOf(DefaultTestData.CORRECT_NEW_EVENT))
+            .thenReturn(Result.failure(Exception(HttpStatusCode.NotFound.description)))
+        val eventRepo = EventRepository(api)
+
+        runBlocking {
+            val result = eventRepo.createEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test create event returns failure if exception is thrown`() {
+        val error = "error"
+        val event = DefaultTestData.CORRECT_EVENT
+        given(api).suspendFunction(api::createEvent, fun2())
+            .whenInvokedWith(oneOf(DefaultTestData.USER_ID_CORRECT), oneOf(DefaultTestData.CORRECT_NEW_EVENT))
+            .thenReturn(Result.failure(Exception(error)))
+        val eventRepo = EventRepository(api)
+
+        runBlocking {
+            val result = eventRepo.createEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())

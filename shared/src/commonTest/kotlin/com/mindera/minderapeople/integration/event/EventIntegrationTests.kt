@@ -6,6 +6,9 @@ import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
+import io.mockative.fun2
+import io.mockative.given
+import io.mockative.oneOf
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -84,7 +87,7 @@ class EventIntegrationTests {
 
         runBlocking {
             val result = repo.editEvent(DefaultTestData.USER_ID_CORRECT,
-                event.id,
+                event.id!!,
                 event.policy,
                 event.startDate,
                 event.endDate,
@@ -142,7 +145,7 @@ class EventIntegrationTests {
         runBlocking {
             val result = repo.editEvent(
                 DefaultTestData.USER_ID_CORRECT,
-                event.id,
+                event.id!!,
                 event.policy,
                 event.startDate,
                 event.endDate,
@@ -314,4 +317,98 @@ class EventIntegrationTests {
         }
     }
 
+    @Test
+    fun `test create event returns success if api request is successful`() {
+        val event = DefaultTestData.CORRECT_EVENT
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.Created,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        val client = EventApiClient(mockEngine)
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.createEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
+
+            assertTrue(result.isSuccess)
+            assertEquals(null, result.getOrNull())
+        }
+    }
+
+    @Test
+    fun `test create event returns failure if user not found`() {
+        val event = DefaultTestData.CORRECT_EVENT
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        val client = EventApiClient(mockEngine)
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.createEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test create event returns failure if exception is thrown`() {
+        val event = DefaultTestData.CORRECT_EVENT
+        val error = "error"
+        val mockEngine = MockEngine {
+            throw Exception(error)
+        }
+
+        val client = EventApiClient(mockEngine)
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.createEvent(
+                DefaultTestData.USER_ID_CORRECT,
+                event.policy,
+                event.startDate,
+                event.endDate,
+                event.partOfDay,
+                event.additionalInfo,
+                event.includesBreakfast,
+                event.city,
+                event.project
+            )
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
 }
