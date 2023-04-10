@@ -6,7 +6,7 @@ import com.mindera.minderapeople.dto.PolicyDTO
 import com.mindera.minderapeople.dto.ProjectDTO
 
 interface IEventApiClient {
-    suspend fun getEventByPolicy(userId: String, policyId: String): Result<List<EventDTO>>
+    suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>>
     suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>>
     suspend fun editExistingEvent(userId: String, event: EventDTO): Result<EventDTO>
     suspend fun removeEventById(userId: String, eventId: String): Result<Nothing?>

@@ -5,6 +5,12 @@ import com.mindera.minderapeople.dto.EventDTO
 import io.ktor.http.*
 
 class EventApiClientMock : IEventApiClient {
+    override suspend fun getEventsByPolicy(
+        userId: String,
+        policyId: String
+    ): Result<List<EventDTO>> {
+        TODO("Not yet implemented")
+    }
 
     override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
         if (userId == DefaultTestData.USER_ID_CORRECT) {
@@ -25,5 +31,9 @@ class EventApiClientMock : IEventApiClient {
             return Result.success(null)
         }
         return Result.failure(Exception(HttpStatusCode.NotFound.description))
+    }
+
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
+        TODO("Not yet implemented")
     }
 }

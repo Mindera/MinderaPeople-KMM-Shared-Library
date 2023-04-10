@@ -188,4 +188,198 @@ class EventApiClientTest {
             assertEquals(error, result.exceptionOrNull()?.message)
         }
     }
+
+    @Test
+    fun `test getEventById returns success and the created event if succesfull`() {
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(Json.encodeToString(DefaultTestData.CORRECT_EVENT)),
+                status = HttpStatusCode.OK,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
+
+            assertTrue(result.isSuccess)
+            assertNotEquals(null, result.getOrNull())
+            assertEquals(DefaultTestData.CORRECT_EVENT, result.getOrNull())
+        }
+    }
+
+    @Test
+    fun `test getEventById returns failure and NotFound status if userId is incorrect`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventById("0001", DefaultTestData.EVENT_ID_CORRECT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventById returns failure and NotFound status if eventId is incorrect`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventById(DefaultTestData.USER_ID_CORRECT, "0001")
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventById returns failure and NotFound status if eventId and userId are incorrect`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventById("0001", "0001")
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventById returns failure when Exception is thrown`(){
+        val error = "Error occurred"
+        val mockEngine = MockEngine {
+            throw Exception(error)
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns success and a list of events if successful`() {
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(Json.encodeToString(listOf(DefaultTestData.CORRECT_EVENT))),
+                status = HttpStatusCode.OK,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.POLICY_ID_CORRECT)
+
+            assertTrue(result.isSuccess)
+            assertNotEquals(null, result.getOrNull())
+            assertEquals(listOf(DefaultTestData.CORRECT_EVENT), result.getOrNull())
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure and NotFound status if userId is incorrect`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventsByPolicy("0001", DefaultTestData.POLICY_ID_CORRECT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure and NotFound status if policyId is incorrect`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, "0001")
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure and NotFound status if policyId and userId are incorrect`(){
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(""),
+                status = HttpStatusCode.NotFound,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventsByPolicy("0001", "0001")
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure when Exception is thrown`(){
+        val error = "Error occurred"
+        val mockEngine = MockEngine {
+            throw Exception(error)
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
 }
