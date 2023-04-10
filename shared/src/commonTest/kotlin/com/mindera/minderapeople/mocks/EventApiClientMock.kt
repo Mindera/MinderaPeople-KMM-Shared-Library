@@ -26,4 +26,8 @@ class EventApiClientMock : IEventApiClient {
         }
         return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
+
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
+        TODO("Not yet implemented")
+    }
 }
