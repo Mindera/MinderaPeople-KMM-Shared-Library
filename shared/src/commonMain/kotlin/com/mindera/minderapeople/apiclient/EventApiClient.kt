@@ -11,6 +11,19 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
     private val apiHttpClient = ApiHttpClient(engine)
     private val httpClient = apiHttpClient.httpClient
+    override suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
+        return try {
+            val response = httpClient.get("${apiHttpClient.url}/events/${userId}?policy=${policyId}")
+
+            if (response.status == HttpStatusCode.OK) {
+                Result.success(response.body())
+            } else {
+                Result.failure(Exception(response.status.description))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
 
     override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
         return try {
