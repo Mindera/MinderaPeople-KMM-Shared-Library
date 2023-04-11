@@ -479,6 +479,9 @@ class EventIntegrationTests {
                 event.city,
                 event.project
             )
+
+            assertTrue(result.isFailure)
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
         }
     }
 
@@ -505,6 +508,9 @@ class EventIntegrationTests {
                 event.city,
                 event.project
             )
+
+            assertTrue(result.isFailure)
+            assertEquals(error, result.exceptionOrNull()?.message)
         }
     }
 }
