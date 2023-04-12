@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "iOSPackage",
+    name: "MinderaPeopleKMMSharedLib",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "iOSPackage",
-            targets: ["iOSPackage"]
+            name: "MinderaPeopleKMMSharedLib",
+            targets: ["MinderaPeopleKMMSharedLib"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "iOSPackage",
-            path: "./iOSPackage.xcframework"
+            name: "MinderaPeopleKMMSharedLib",
+            path: "./MinderaPeopleKMMSharedLib.xcframework"
         ),
     ]
 )
