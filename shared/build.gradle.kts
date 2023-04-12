@@ -5,6 +5,7 @@ plugins {
 }
 
 kotlin {
+    jvm()
 
     multiplatformSwiftPackage {
         packageName("iOSPackage")
