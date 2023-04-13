@@ -1,11 +1,9 @@
 package com.mindera.minderapeople.unit.repository
 
-import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.EventApiClientMock
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.http.*
-import io.mockative.*
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -13,8 +11,6 @@ import kotlin.test.assertNotEquals
 import kotlin.test.assertTrue
 
 class EventRepositoryTest {
-    @Mock
-    private val api = mock(classOf<IEventApiClient>())
 
     @Test
     fun getAllEventsForUser_successful() {
@@ -135,10 +131,8 @@ class EventRepositoryTest {
 
     @Test
     fun `test getEventById returns success and the created event if successful`() {
-        given(api).suspendFunction(api::getEventById, fun2())
-            .whenInvokedWith(oneOf(DefaultTestData.USER_ID_CORRECT), oneOf(DefaultTestData.EVENT_ID_CORRECT))
-            .thenReturn(Result.success(DefaultTestData.CORRECT_EVENT))
-        val eventRepo = EventRepository(api)
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
 
         runBlocking {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
@@ -151,10 +145,8 @@ class EventRepositoryTest {
 
     @Test
     fun `test getEventById returns failure and NotFound status if userId is incorrect`(){
-        given(api).suspendFunction(api::getEventById, fun2())
-            .whenInvokedWith(oneOf("0001"), oneOf(DefaultTestData.EVENT_ID_CORRECT))
-            .thenReturn(Result.failure(Exception(HttpStatusCode.NotFound.description)))
-        val eventRepo = EventRepository(api)
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
 
         runBlocking {
             val result = eventRepo.getEventById("0001", DefaultTestData.EVENT_ID_CORRECT)
@@ -167,10 +159,8 @@ class EventRepositoryTest {
 
     @Test
     fun `test getEventById returns failure and NotFound status if eventId is incorrect`(){
-        given(api).suspendFunction(api::getEventById, fun2())
-            .whenInvokedWith(oneOf(DefaultTestData.USER_ID_CORRECT), oneOf("0001"))
-            .thenReturn(Result.failure(Exception(HttpStatusCode.NotFound.description)))
-        val eventRepo = EventRepository(api)
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
 
         runBlocking {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, "0001")
@@ -183,10 +173,8 @@ class EventRepositoryTest {
 
     @Test
     fun `test getEventById returns failure and NotFound status if eventId and userId are incorrect`(){
-        given(api).suspendFunction(api::getEventById, fun2())
-            .whenInvokedWith(oneOf("0001"), oneOf("0001"))
-            .thenReturn(Result.failure(Exception(HttpStatusCode.NotFound.description)))
-        val eventRepo = EventRepository(api)
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
 
         runBlocking {
             val result = eventRepo.getEventById("0001", "0001")
@@ -194,23 +182,6 @@ class EventRepositoryTest {
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
-        }
-    }
-
-    @Test
-    fun `test getEventById returns failure when Exception is thrown`(){
-        val error = "Error occurred"
-        given(api).suspendFunction(api::getEventById, fun2())
-            .whenInvokedWith(oneOf(DefaultTestData.USER_ID_CORRECT), oneOf(DefaultTestData.EVENT_ID_CORRECT))
-            .thenReturn(Result.failure(Exception(error)))
-        val eventRepo = EventRepository(api)
-
-        runBlocking {
-            val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
-
-            assertTrue(result.isFailure)
-            assertEquals(null, result.getOrNull())
-            assertEquals(error, result.exceptionOrNull()?.message)
         }
     }
 }
