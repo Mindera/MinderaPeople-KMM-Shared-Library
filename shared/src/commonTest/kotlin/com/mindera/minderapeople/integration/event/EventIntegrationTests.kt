@@ -6,9 +6,6 @@ import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
-import io.mockative.fun2
-import io.mockative.given
-import io.mockative.oneOf
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
