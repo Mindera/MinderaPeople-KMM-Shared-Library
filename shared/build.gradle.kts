@@ -3,7 +3,6 @@ plugins {
     id("com.android.library")
     id("com.chromaticnoise.multiplatform-swiftpackage") version "2.0.3"
     kotlin("plugin.serialization") version "1.8.10"
-    id("com.google.devtools.ksp") version "1.8.0-1.0.9"
 }
 
 kotlin {
@@ -54,7 +53,6 @@ kotlin {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
                 implementation("org.jetbrains.kotlin:kotlin-test")
-                implementation("io.mockative:mockative:1.4.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
             }
         }
@@ -86,14 +84,6 @@ kotlin {
             iosSimulatorArm64Test.dependsOn(this)
         }
     }
-}
-
-dependencies {
-    configurations
-        .filter { it.name.startsWith("ksp") && it.name.contains("Test") }
-        .forEach {
-            add(it.name, "io.mockative:mockative-processor:1.4.0")
-        }
 }
 
 android {
