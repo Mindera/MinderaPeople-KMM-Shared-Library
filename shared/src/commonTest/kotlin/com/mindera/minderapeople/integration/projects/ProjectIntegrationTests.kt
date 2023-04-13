@@ -41,7 +41,7 @@ class ProjectIntegrationTests {
 
     @Test
     fun `test getAllProjects returns success and a list if API request was valid and there are objects`(){
-        val mockEngine = MockEngine { request ->
+        val mockEngine = MockEngine {
             respond(
                 content = ByteReadChannel(validResponseWithElements),
                 status = HttpStatusCode.OK,
@@ -62,7 +62,7 @@ class ProjectIntegrationTests {
 
     @Test
     fun `test getAllProjects returns success and a empty list if API request was valid and there are no objects`() {
-        val mockEngine = MockEngine { request ->
+        val mockEngine = MockEngine {
             respond(
                 content = ByteReadChannel(validResponseWithoutElements),
                 status = HttpStatusCode.OK,
@@ -83,7 +83,7 @@ class ProjectIntegrationTests {
 
     @Test
     fun `test getAllProjects returns failure if badRequest`() {
-        val mockEngine = MockEngine { request ->
+        val mockEngine = MockEngine {
             respondBadRequest()
         }
 
