@@ -184,4 +184,60 @@ class EventRepositoryTest {
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
         }
     }
+
+    @Test
+    fun `test getEventsByPolicy returns success and a list of events if successful`() {
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.POLICY_ID_CORRECT)
+
+            assertTrue(result.isSuccess)
+            assertNotEquals(null, result.getOrNull())
+            assertEquals(listOf(DefaultTestData.CORRECT_EVENT), result.getOrNull())
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure and NotFound status if userId is incorrect`(){
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.getEventsByPolicy("0001", DefaultTestData.POLICY_ID_CORRECT)
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure and NotFound status if policyId is incorrect`(){
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, "abc")
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun `test getEventsByPolicy returns failure and NotFound status if policyId and userId are incorrect`(){
+        val client = EventApiClientMock()
+        val eventRepo = EventRepository(client)
+
+        runBlocking {
+            val result = eventRepo.getEventsByPolicy("0001", "abc")
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
 }
