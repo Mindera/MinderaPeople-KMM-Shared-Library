@@ -44,6 +44,9 @@ class EventApiClientMock : IEventApiClient {
     }
 
     override suspend fun createEvent(userId: String, event: EventDTO): Result<Nothing?> {
-        TODO("Not yet implemented")
+        if (userId == DefaultTestData.USER_ID_CORRECT) {
+            return Result.success(null)
+        }
+        return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
 }
