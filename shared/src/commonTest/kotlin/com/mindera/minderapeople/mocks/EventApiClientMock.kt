@@ -9,7 +9,10 @@ class EventApiClientMock : IEventApiClient {
         userId: String,
         policyId: String
     ): Result<List<EventDTO>> {
-        TODO("Not yet implemented")
+        if (userId == DefaultTestData.USER_ID_CORRECT && policyId == DefaultTestData.POLICY_ID_CORRECT) {
+            return Result.success(listOf(DefaultTestData.CORRECT_EVENT))
+        }
+        return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
 
     override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {

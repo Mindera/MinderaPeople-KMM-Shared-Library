@@ -21,7 +21,7 @@ object DefaultTestData {
     //Events
     const val USER_ID_CORRECT = "3b1276b3-d2f6-4e29-af8f-a0cb00208dda"
     const val EVENT_ID_CORRECT = "f4b20503-0a59-4e76-8796-aee78726139f"
-    const val POLICY_ID_CORRECT = "0001"
+    const val POLICY_ID_CORRECT = "001"
     val CORRECT_EVENT = EventDTO(
         EVENT_ID_CORRECT,
         PolicyDTO(
