@@ -274,14 +274,14 @@ __attribute__((swift_name("PolicyDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ProjectDTO")))
 @interface MPKMMLProjectDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString * _Nullable)id projectName:(NSString * _Nullable)projectName __attribute__((swift_name("init(id:projectName:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id projectName:(NSString *)projectName __attribute__((swift_name("init(id:projectName:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLProjectDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLProjectDTO *)doCopyId:(NSString * _Nullable)id projectName:(NSString * _Nullable)projectName __attribute__((swift_name("doCopy(id:projectName:)")));
+- (MPKMMLProjectDTO *)doCopyId:(NSString *)id projectName:(NSString *)projectName __attribute__((swift_name("doCopy(id:projectName:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) NSString * _Nullable projectName __attribute__((swift_name("projectName")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString *projectName __attribute__((swift_name("projectName")));
 @end
 
 __attribute__((objc_subclassing_restricted))
