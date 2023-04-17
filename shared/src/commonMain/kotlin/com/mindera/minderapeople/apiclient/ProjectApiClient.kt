@@ -11,11 +11,10 @@ class ProjectApiClient (engine: HttpClientEngine): IProjectsApiClient {
 
     private val apiClient = ApiHttpClient(engine)
     private val httpClient = apiClient.httpClient
-    private val baseUrl = apiClient.url
 
     override suspend fun getAllProjects(): Result<List<ProjectDTO>> {
         return try{
-            val response = httpClient.get("${baseUrl}/policies")
+            val response = httpClient.get("${ApiDefaultData.BASE_URL}/policies")
 
             if(response.status == HttpStatusCode.OK)
                 Result.success(response.body())

@@ -14,8 +14,8 @@ class PolicyApiClient(engine: HttpClientEngine): IPolicyApiClient {
 
     override suspend fun getAllPolicies(userId: String): Result<List<PolicyDTO>> {
         return try {
-            val response = httpClient.get("${apiHttpClient.url}/policies") {
-                parameter("userId", userId)
+            val response = httpClient.get("${ApiDefaultData.BASE_URL}/policies") {
+                parameter(ApiDefaultData.USER_ID_PARAM, userId)
             }
             if (response.status == HttpStatusCode.OK)
                 Result.success(response.body())
