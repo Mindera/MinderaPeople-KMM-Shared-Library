@@ -1,9 +1,6 @@
 package com.mindera.minderapeople.mocks
 
-import com.mindera.minderapeople.dto.EventDTO
-import com.mindera.minderapeople.dto.PartOfDayDTO
-import com.mindera.minderapeople.dto.PolicyDTO
-import com.mindera.minderapeople.dto.ProjectDTO
+import com.mindera.minderapeople.dto.*
 
 object DefaultTestData {
 
@@ -44,8 +41,7 @@ object DefaultTestData {
             "default"
         )
     )
-    val CORRECT_NEW_EVENT = EventDTO(
-        null,
+    val CORRECT_NEW_EVENT = CreatingEventDTO(
         PolicyDTO(
             "0001",
             "Travel",

@@ -1,6 +1,7 @@
 package com.mindera.minderapeople.apiclient
 
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
+import com.mindera.minderapeople.dto.CreatingEventDTO
 import com.mindera.minderapeople.dto.EventDTO
 import io.ktor.client.call.*
 import io.ktor.client.engine.*
@@ -11,6 +12,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
     private val apiHttpClient = ApiHttpClient(engine)
     private val httpClient = apiHttpClient.httpClient
+
     override suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
         return try {
             val response = httpClient.get("${ApiDefaultData.BASE_URL}/events/${userId}?policy=${policyId}")
@@ -85,7 +87,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
     override suspend fun createEvent(
         userId: String,
-        event: EventDTO
+        event: CreatingEventDTO
     ): Result<Nothing?> {
         return try{
             val response = httpClient.post("${ApiDefaultData.BASE_URL}/events/${userId}") {

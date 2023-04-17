@@ -11,8 +11,7 @@ class ApiHttpClient(engine: HttpClientEngine) {
     val httpClient = HttpClient(engine) {
         install(ContentNegotiation) {
             json(Json {
-                ignoreUnknownKeys = true
-                useAlternativeNames = false
+                ignoreUnknownKeys = ApiDefaultData.API_IGNORE_UNKNOWN_KEYS
             })
         }
     }

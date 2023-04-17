@@ -6,5 +6,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ProjectDTO(
     @SerialName("id") val id: String,
-    @SerialName("project_name") val projectName: String
+    @SerialName("project_name") val name: String
 )

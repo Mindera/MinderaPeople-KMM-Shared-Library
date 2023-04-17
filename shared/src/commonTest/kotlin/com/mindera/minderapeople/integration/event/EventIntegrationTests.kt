@@ -84,7 +84,7 @@ class EventIntegrationTests {
 
         runBlocking {
             val result = repo.editEvent(DefaultTestData.USER_ID_CORRECT,
-                event.id!!,
+                event.id,
                 event.policy,
                 event.startDate,
                 event.endDate,
@@ -142,7 +142,7 @@ class EventIntegrationTests {
         runBlocking {
             val result = repo.editEvent(
                 DefaultTestData.USER_ID_CORRECT,
-                event.id!!,
+                event.id,
                 event.policy,
                 event.startDate,
                 event.endDate,
