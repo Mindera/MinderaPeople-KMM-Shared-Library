@@ -26,7 +26,7 @@ class PolicyApiClientTest {
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("a74b7fef-6c57-49c6-8c7c-2522a4defc70")
+            val result = client.getAllPolicies("knownId")
 
             assertEquals(3, result.getOrNull()?.size)
             assertTrue(result.isSuccess)
@@ -41,7 +41,7 @@ class PolicyApiClientTest {
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("0001")
+            val result = client.getAllPolicies("knownId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -58,7 +58,7 @@ class PolicyApiClientTest {
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("0001")
+            val result = client.getAllPolicies("knownId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())

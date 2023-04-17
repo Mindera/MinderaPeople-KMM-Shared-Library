@@ -28,7 +28,7 @@ class PolicyIntegrationTests {
         val repo = PolicyRepository(apiClient)
 
         runBlocking {
-            val result = repo.getPolicies("a74b7fef-6c57-49c6-8c7c-2522a4defc70")
+            val result = repo.getPolicies("knownId")
             assertTrue(result.isSuccess)
             assertEquals(3, result.getOrNull()?.size)
             assertEquals(DefaultTestData.SUCCESSFUL_3_POLICIES, result.getOrNull())
@@ -48,7 +48,7 @@ class PolicyIntegrationTests {
         val repo = PolicyRepository(apiClient)
 
         runBlocking {
-            val result = repo.getPolicies("a74b7fef-6c57-49c6-8c7c-2522a4dxfc70")
+            val result = repo.getPolicies("unknownId")
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
