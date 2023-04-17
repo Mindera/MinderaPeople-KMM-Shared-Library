@@ -2,22 +2,20 @@ package com.mindera.minderapeople.unit.apiclient
 
 import com.mindera.minderapeople.apiclient.PolicyApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
-import kotlinx.serialization.encodeToString
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
 import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
-
 class PolicyApiClientTest {
 
     @Test
     fun getAllPoliciesForUser_successful() {
-
         val mockEngine = MockEngine {
             respond(
                 content = ByteReadChannel(Json.encodeToString(DefaultTestData.SUCCESSFUL_3_POLICIES)),
@@ -28,7 +26,7 @@ class PolicyApiClientTest {
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("a74b7fef-6c57-49c6-8c7c-2522a4defc70")
+            val result = client.getAllPolicies("knownId")
 
             assertEquals(3, result.getOrNull()?.size)
             assertTrue(result.isSuccess)
@@ -37,14 +35,13 @@ class PolicyApiClientTest {
 
     @Test
     fun getAllPoliciesForUser_badRequest() {
-
         val mockEngine = MockEngine {
             respondBadRequest()
         }
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("0001")
+            val result = client.getAllPolicies("knownId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -61,7 +58,7 @@ class PolicyApiClientTest {
 
         runBlocking {
             val client = PolicyApiClient(mockEngine)
-            val result = client.getAllPolicies("0001")
+            val result = client.getAllPolicies("knownId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
