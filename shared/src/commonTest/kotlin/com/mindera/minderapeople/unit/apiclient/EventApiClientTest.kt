@@ -395,7 +395,7 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.createEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
+            val result = client.createEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_NEW_EVENT)
 
             assertTrue(result.isSuccess)
             assertEquals(null, result.getOrNull())
@@ -414,7 +414,7 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.createEvent("0120", DefaultTestData.CORRECT_EVENT)
+            val result = client.createEvent("0120", DefaultTestData.CORRECT_NEW_EVENT)
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -431,7 +431,7 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.createEvent("0120", DefaultTestData.CORRECT_EVENT)
+            val result = client.createEvent("0120", DefaultTestData.CORRECT_NEW_EVENT)
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
