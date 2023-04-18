@@ -81,8 +81,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "correctUserId",
-                "correctEventId"
+                "userId",
+                "eventId"
             )
 
             assertTrue(result.isSuccess)
@@ -103,8 +103,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "correctUserId",
-                "unknownEventId"
+                "userId",
+                "eventId"
             )
 
             assertEquals(null, result.getOrNull())
@@ -123,8 +123,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "correctUserId",
-                "correctEventId"
+                "userId",
+                "eventId"
             )
 
             assertEquals(null, result.getOrNull())
