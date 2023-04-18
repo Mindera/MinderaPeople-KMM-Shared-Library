@@ -1,4 +1,4 @@
 package com.mindera.minderapeople
 
-class MinderaPeopleAPIClient {
+interface MinderaPeopleAPIClient {
 }

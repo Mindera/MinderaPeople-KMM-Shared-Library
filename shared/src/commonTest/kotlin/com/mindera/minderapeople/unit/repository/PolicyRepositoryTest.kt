@@ -1,0 +1,38 @@
+package com.mindera.minderapeople.unit.repository
+
+import com.mindera.minderapeople.mocks.DefaultTestData
+import com.mindera.minderapeople.mocks.PolicyApiClientMock
+import com.mindera.minderapeople.repository.PolicyRepository
+import io.ktor.http.*
+import kotlinx.coroutines.runBlocking
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertTrue
+
+class PolicyRepositoryTest {
+
+    @Test
+    fun getAllPoliciesForUser_successful() {
+        val repo = PolicyRepository(PolicyApiClientMock())
+        val policies = DefaultTestData.SUCCESSFUL_3_POLICIES
+
+        runBlocking {
+            val result = repo.getPolicies("knownId")
+            assertTrue(result.isSuccess)
+            assertEquals(3, result.getOrNull()?.size)
+            assertEquals(policies, result.getOrNull())
+        }
+    }
+
+    @Test
+    fun getAllPoliciesForUser_userIdNotFound() {
+        val repo = PolicyRepository(PolicyApiClientMock())
+
+        runBlocking {
+            val result = repo.getPolicies("unknownId")
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+}
