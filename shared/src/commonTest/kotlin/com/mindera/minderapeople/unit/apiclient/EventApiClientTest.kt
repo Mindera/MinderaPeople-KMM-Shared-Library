@@ -1,4 +1,4 @@
-package com.mindera.minderapeople.unit.apiclient
+package com.mindera.minderapeople.unit.apiClient
 
 import com.mindera.minderapeople.apiclient.EventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
@@ -27,7 +27,7 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.getAllEventsForUser("3b1276b3-d2f6-4e29-af8f-a0cb00208dda")
+            val result = client.getAllEventsForUser("correctUserId")
 
             assertTrue(result.isSuccess)
             assertNotEquals(null, result.getOrNull())
@@ -38,16 +38,12 @@ class EventApiClientTest {
     @Test
     fun getAllEventsForUser_userNotFound() {
         val mockEngine = MockEngine {
-            respond(
-                content = ByteReadChannel(""),
-                status = HttpStatusCode.NotFound,
-                headers = headersOf(HttpHeaders.ContentType, "application/json")
-            )
+            respondError(HttpStatusCode.NotFound)
         }
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.getAllEventsForUser("0001")
+            val result = client.getAllEventsForUser("unknownUserId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -64,7 +60,7 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
-            val result = client.getAllEventsForUser("3b1276b3-d2f6-4e29-af8f-a0cb00208dda")
+            val result = client.getAllEventsForUser("correctUserId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -85,8 +81,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "3b1276b3-d2f6-4e29-af8f-a0cb00208dda",
-                "f4b20503-0a59-4e76-8796-aee78726139f"
+                "correctUserId",
+                "correctEventId"
             )
 
             assertTrue(result.isSuccess)
@@ -107,8 +103,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "3b1276b3-d2f6-4e29-af8f-accb00208dda",
-                "f4b20503-0a59-4e76-8796-aee78726139f"
+                "correctUserId",
+                "unknownEventId"
             )
 
             assertEquals(null, result.getOrNull())
@@ -127,8 +123,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "3b1276b3-d2f6-4e29-af8f-a0cb00208dda",
-                "f4b20503-0a59-4e76-8796-aee78726139f"
+                "correctUserId",
+                "correctEventId"
             )
 
             assertEquals(null, result.getOrNull())

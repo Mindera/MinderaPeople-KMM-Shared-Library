@@ -30,7 +30,7 @@ class EventRepositoryTest {
         val repo = EventRepository(client)
 
         runBlocking {
-            val result = repo.getAllEventsForUser("0001")
+            val result = repo.getAllEventsForUser("unknownUserId")
 
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -56,7 +56,7 @@ class EventRepositoryTest {
         val repo = EventRepository(client)
 
         runBlocking {
-            val result = repo.removeEventById("3b1276b3-d2f6-4e29-af8f-a0cb00208dcc", DefaultTestData.CORRECT_EVENT)
+            val result = repo.removeEventById("unknownUserId", DefaultTestData.CORRECT_EVENT)
             assertTrue(result.isFailure)
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
         }
