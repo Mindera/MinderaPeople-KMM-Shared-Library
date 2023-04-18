@@ -14,7 +14,7 @@ class EventApiClientMock : IEventApiClient {
     }
 
     override suspend fun editExistingEvent(userId: String, event: EventDTO): Result<EventDTO> {
-        if (userId == DefaultTestData.USER_ID_CORRECT) {
+        if (userId == DefaultTestData.USER_ID_CORRECT && event.id == DefaultTestData.CORRECT_EVENT.id) {
             return Result.success(DefaultTestData.CORRECT_EVENT)
         }
         return Result.failure(Exception(HttpStatusCode.NotFound.description))

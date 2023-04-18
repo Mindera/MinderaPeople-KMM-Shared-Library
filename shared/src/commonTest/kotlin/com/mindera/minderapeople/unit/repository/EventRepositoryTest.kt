@@ -71,7 +71,7 @@ class EventRepositoryTest {
         val event = DefaultTestData.ERROR_EVENT
 
         runBlocking {
-            val result = repo.editEvent("00012",
+            val result = repo.editEvent(DefaultTestData.USER_ID_CORRECT,
                 event.id,
                 event.policy,
                 event.startDate,

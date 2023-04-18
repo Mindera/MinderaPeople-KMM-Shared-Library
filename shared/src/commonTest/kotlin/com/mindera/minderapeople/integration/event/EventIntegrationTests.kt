@@ -111,7 +111,7 @@ class EventIntegrationTests {
         runBlocking {
             val result = repo.editEvent(
                 DefaultTestData.USER_ID_CORRECT,
-                "0001",
+                "unknownEventId",
                 event.policy,
                 event.startDate,
                 event.endDate,
