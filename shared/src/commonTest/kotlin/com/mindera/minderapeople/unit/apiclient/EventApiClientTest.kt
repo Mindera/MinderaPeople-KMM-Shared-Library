@@ -1,4 +1,4 @@
-package com.mindera.minderapeople.unit.apiclient
+package com.mindera.minderapeople.unit.apiClient
 
 import com.mindera.minderapeople.apiclient.EventApiClient
 import io.ktor.client.engine.mock.*
@@ -24,8 +24,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "3b1276b3-d2f6-4e29-af8f-a0cb00208dda",
-                "f4b20503-0a59-4e76-8796-aee78726139f"
+                "userId",
+                "eventId"
             )
 
             assertTrue(result.isSuccess)
@@ -46,8 +46,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "3b1276b3-d2f6-4e29-af8f-accb00208dda",
-                "f4b20503-0a59-4e76-8796-aee78726139f"
+                "userId",
+                "eventId"
             )
 
             assertEquals(null, result.getOrNull())
@@ -66,8 +66,8 @@ class EventApiClientTest {
         runBlocking {
             val client = EventApiClient(mockEngine)
             val result = client.removeEventById(
-                "3b1276b3-d2f6-4e29-af8f-a0cb00208dda",
-                "f4b20503-0a59-4e76-8796-aee78726139f"
+                "userId",
+                "eventId"
             )
 
             assertEquals(null, result.getOrNull())
