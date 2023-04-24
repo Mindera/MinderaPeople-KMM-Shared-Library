@@ -7,7 +7,6 @@ import com.mindera.minderapeople.utils.RequestResult
 import com.mindera.minderapeople.utils.toRequestResult
 
 class PartOfDayRepository(private val apiClient: IPartOfDayApiClient): IPartOfDayRepository {
-
     override suspend fun getPartsOfDay(): RequestResult<List<PartOfDayDTO>> {
         return apiClient.getPartsOfDay().toRequestResult()
     }

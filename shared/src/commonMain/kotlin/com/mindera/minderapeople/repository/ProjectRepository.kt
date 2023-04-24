@@ -10,5 +10,4 @@ class ProjectRepository(private val apiClient: IProjectsApiClient) : IProjectRep
     override suspend fun getAllProjects(): RequestResult<List<ProjectDTO>> {
         return apiClient.getAllProjects().toRequestResult()
     }
-
 }

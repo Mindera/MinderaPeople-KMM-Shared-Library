@@ -1,4 +1,4 @@
-package com.mindera.minderapeople.unit.apiClient
+package com.mindera.minderapeople.unit.apiclient
 
 import com.mindera.minderapeople.apiclient.ProjectApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData

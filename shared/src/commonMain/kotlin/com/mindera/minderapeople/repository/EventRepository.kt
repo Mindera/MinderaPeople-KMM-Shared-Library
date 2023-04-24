@@ -10,6 +10,7 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
     override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
         return apiClient.getAllEventsForUser(userId)
     }
+
     override suspend fun editEvent(
         userId: String,
         eventId: String,
@@ -25,6 +26,7 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
         val event = EventDTO(eventId, policy, startDate, endDate, partOfDay, additionalInfo, includesBreakfast, city, project)
         return apiClient.editExistingEvent(userId, event).toRequestResult()
     }
+
     override suspend fun removeEventById(userId: String, event: EventDTO): RequestResult<Nothing?> {
         return apiClient.removeEventById(userId, event.id).toRequestResult()
     }
@@ -32,6 +34,7 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
     override suspend fun getEventById(userId: String, eventId: String): RequestResult<EventDTO> {
         return apiClient.getEventById(userId, eventId).toRequestResult()
     }
+
     override suspend fun getEventsByPolicy(userId: String, policyId: String): RequestResult<List<EventDTO>> {
         return apiClient.getEventsByPolicy(userId, policyId).toRequestResult()
     }
