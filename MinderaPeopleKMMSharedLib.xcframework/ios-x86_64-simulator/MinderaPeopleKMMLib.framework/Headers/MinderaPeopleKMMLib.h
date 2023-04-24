@@ -144,11 +144,6 @@ __attribute__((swift_name("KotlinBoolean")))
 + (instancetype)numberWithBool:(BOOL)value;
 @end
 
-__attribute__((swift_name("MinderaPeopleAPIClient")))
-@protocol MPKMMLMinderaPeopleAPIClient
-@required
-@end
-
 
 /**
  * @note annotations
