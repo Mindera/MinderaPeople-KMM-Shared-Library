@@ -4,6 +4,7 @@ import com.mindera.minderapeople.dto.EventDTO
 import com.mindera.minderapeople.dto.PartOfDayDTO
 import com.mindera.minderapeople.dto.PolicyDTO
 import com.mindera.minderapeople.dto.ProjectDTO
+import com.mindera.minderapeople.utils.RequestResult
 
 interface IEventRepository {
     suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>>
@@ -18,9 +19,9 @@ interface IEventRepository {
         includesBreakfast: Boolean?,
         city: String?,
         project: ProjectDTO?
-    ): Result<EventDTO>
-    suspend fun removeEventById(userId: String, event: EventDTO): Result<Nothing?>
-    suspend fun getEventById(userId: String, eventId: String): Result<EventDTO>
+    ): RequestResult<EventDTO>
+    suspend fun removeEventById(userId: String, event: EventDTO): RequestResult<Nothing?>
+    suspend fun getEventById(userId: String, eventId: String): RequestResult<EventDTO>
     suspend fun createEvent(
         userId: String,
         policy: PolicyDTO,
@@ -31,6 +32,6 @@ interface IEventRepository {
         includesBreakfast: Boolean? = null,
         city: String? = null,
         project: ProjectDTO? = null
-    ): Result<Nothing?>
-    suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>>
+    ): RequestResult<Nothing?>
+    suspend fun getEventsByPolicy(userId: String, policyId: String): RequestResult<List<EventDTO>>
 }

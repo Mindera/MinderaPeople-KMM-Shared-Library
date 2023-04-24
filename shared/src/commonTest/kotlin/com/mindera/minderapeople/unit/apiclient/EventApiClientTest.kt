@@ -2,6 +2,7 @@ package com.mindera.minderapeople.unit.apiclient
 
 import com.mindera.minderapeople.apiclient.EventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
+import com.mindera.minderapeople.utils.toRequestResult
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
