@@ -185,7 +185,7 @@ class EventIntegrationTests {
         val repo = EventRepository(apiClient)
 
         runBlocking {
-            val result = repo.removeEventById(DefaultTestData.EVENT_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
+            val result = repo.removeEventById(DefaultTestData.EVENT_ID_CORRECT, DefaultTestData.ERROR_EVENT)
             assertTrue(result.isFailure)
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
         }

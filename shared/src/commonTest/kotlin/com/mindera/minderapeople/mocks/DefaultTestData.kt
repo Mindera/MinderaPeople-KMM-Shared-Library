@@ -19,8 +19,8 @@ object DefaultTestData {
     )
 
     //Events
-    const val USER_ID_CORRECT = "3b1276b3-d2f6-4e29-af8f-a0cb00208dda"
-    const val EVENT_ID_CORRECT = "f4b20503-0a59-4e76-8796-aee78726139f"
+    const val USER_ID_CORRECT = "correctUserId"
+    const val EVENT_ID_CORRECT = "correctEventId"
     val CORRECT_EVENT = EventDTO(
         EVENT_ID_CORRECT,
         PolicyDTO(
@@ -37,7 +37,7 @@ object DefaultTestData {
         )
     )
     val ERROR_EVENT = EventDTO(
-        "f4b20503-0a30-4e76-8796-aee78726139f",
+        "errorEventId",
         PolicyDTO(
             "0001",
             "Travel",
