@@ -7,8 +7,8 @@ import com.mindera.minderapeople.utils.RequestResult
 import com.mindera.minderapeople.utils.toRequestResult
 
 class EventRepository(private val apiClient: IEventApiClient) : IEventRepository {
-    override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
-        return apiClient.getAllEventsForUser(userId)
+    override suspend fun getAllEventsForUser(userId: String): RequestResult<List<EventDTO>> {
+        return apiClient.getAllEventsForUser(userId).toRequestResult()
     }
 
     override suspend fun editEvent(

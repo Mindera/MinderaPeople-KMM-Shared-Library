@@ -7,7 +7,7 @@ import com.mindera.minderapeople.dto.ProjectDTO
 import com.mindera.minderapeople.utils.RequestResult
 
 interface IEventRepository {
-    suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>>
+    suspend fun getAllEventsForUser(userId: String): RequestResult<List<EventDTO>>
     suspend fun editEvent(
         userId: String,
         eventId: String,
