@@ -512,7 +512,7 @@ __attribute__((swift_name("IEventRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
+- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLEventDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
@@ -554,7 +554,7 @@ __attribute__((swift_name("EventRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
+- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLEventDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
