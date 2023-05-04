@@ -26,6 +26,23 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
         }
     }
 
+    override suspend fun editExistingEvent(userId: String, event: EventDTO): Result<EventDTO> {
+        return try {
+            val response = httpClient.patch("${apiHttpClient.url}/events/${userId}/${event.id}") {
+                contentType(ContentType.Application.Json)
+                setBody(event)
+            }
+
+            if (response.status == HttpStatusCode.OK) {
+                Result.success(response.body())
+            } else {
+                Result.failure(Exception(response.status.description))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
     override suspend fun removeEventById(userId: String, eventId: String): Result<Nothing?> {
         return try {
             val response = httpClient.delete("${apiHttpClient.url}/events/${userId}/${eventId}")

@@ -69,6 +69,58 @@ class EventApiClientTest {
     }
 
     @Test
+    fun editExistingEvent_successful() {
+        val mockEngine = MockEngine {
+            respond(
+                content = ByteReadChannel(Json.encodeToString(DefaultTestData.EVENT_LIST[0])),
+                status = HttpStatusCode.OK,
+                headers = headersOf(HttpHeaders.ContentType, "application/json")
+            )
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.editExistingEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_LIST[0])
+
+            assertTrue(result.isSuccess)
+            assertEquals(DefaultTestData.EVENT_LIST[0], result.getOrNull())
+        }
+    }
+
+    @Test
+    fun editExistingEvent_eventNotFound() {
+        val mockEngine = MockEngine {
+            respondError(HttpStatusCode.NotFound)
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.editExistingEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_LIST[2])
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
+    fun editExistingEvent_exceptionThrown() {
+        val error = "Could not parse result"
+        val mockEngine = MockEngine {
+            throw Exception(error)
+        }
+
+        runBlocking {
+            val client = EventApiClient(mockEngine)
+            val result = client.editExistingEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_LIST[2])
+
+            assertTrue(result.isFailure)
+            assertEquals(null, result.getOrNull())
+            assertEquals(error, result.exceptionOrNull()?.message)
+        }
+    }
+
+    @Test
     fun removeEventById_successful() {
         val mockEngine = MockEngine {
             respond(
