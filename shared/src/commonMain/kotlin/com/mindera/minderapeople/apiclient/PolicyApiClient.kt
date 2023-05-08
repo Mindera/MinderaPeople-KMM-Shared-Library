@@ -2,10 +2,11 @@ package com.mindera.minderapeople.apiclient
 
 import com.mindera.minderapeople.apiclient.interfaces.IPolicyApiClient
 import com.mindera.minderapeople.dto.PolicyDTO
-import io.ktor.client.call.*
-import io.ktor.client.engine.*
-import io.ktor.client.request.*
-import io.ktor.http.*
+import io.ktor.client.call.body
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.request.get
+import io.ktor.client.request.parameter
+import io.ktor.http.HttpStatusCode
 
 class PolicyApiClient(engine: HttpClientEngine): IPolicyApiClient {
 

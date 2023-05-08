@@ -3,7 +3,7 @@ package com.mindera.minderapeople.unit.repository
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.EventApiClientMock
 import com.mindera.minderapeople.repository.EventRepository
-import io.ktor.http.*
+import io.ktor.http.HttpStatusCode
 import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 import kotlin.test.assertEquals

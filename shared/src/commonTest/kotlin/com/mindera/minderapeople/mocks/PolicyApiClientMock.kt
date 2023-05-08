@@ -2,7 +2,7 @@ package com.mindera.minderapeople.mocks
 
 import com.mindera.minderapeople.apiclient.interfaces.IPolicyApiClient
 import com.mindera.minderapeople.dto.PolicyDTO
-import io.ktor.http.*
+import io.ktor.http.HttpStatusCode
 
 class PolicyApiClientMock: IPolicyApiClient {
 

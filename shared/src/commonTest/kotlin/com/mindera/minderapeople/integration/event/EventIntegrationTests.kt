@@ -4,8 +4,10 @@ import com.mindera.minderapeople.apiclient.EventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
-import io.ktor.http.*
-import io.ktor.utils.io.*
+import io.ktor.http.HttpStatusCode
+import io.ktor.http.headersOf
+import io.ktor.http.HttpHeaders
+import io.ktor.utils.io.ByteReadChannel
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
