@@ -1,6 +1,7 @@
 package com.mindera.minderapeople.apiclient.interfaces
 
-import com.mindera.minderapeople.dto.*
+import com.mindera.minderapeople.dto.EventDTO
+import com.mindera.minderapeople.dto.CreatingEventDTO
 
 interface IEventApiClient {
     suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>>

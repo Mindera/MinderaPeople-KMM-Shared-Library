@@ -2,8 +2,8 @@ package com.mindera.minderapeople.apiclient
 
 import com.mindera.minderapeople.dto.ProjectDTO
 import com.mindera.minderapeople.apiclient.interfaces.IProjectsApiClient
-import io.ktor.client.call.*
-import io.ktor.client.engine.*
+import io.ktor.client.call.body
+import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.request.*
 import io.ktor.http.*
 
