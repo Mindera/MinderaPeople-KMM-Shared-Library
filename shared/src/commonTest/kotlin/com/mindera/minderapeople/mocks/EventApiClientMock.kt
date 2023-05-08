@@ -3,7 +3,7 @@ package com.mindera.minderapeople.mocks
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
 import com.mindera.minderapeople.dto.CreatingEventDTO
 import com.mindera.minderapeople.dto.EventDTO
-import io.ktor.http.*
+import io.ktor.http.HttpStatusCode
 
 class EventApiClientMock : IEventApiClient {
 
