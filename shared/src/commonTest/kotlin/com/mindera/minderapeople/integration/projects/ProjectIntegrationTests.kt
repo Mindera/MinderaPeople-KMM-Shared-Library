@@ -8,7 +8,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.http.HttpHeaders
 import io.ktor.utils.io.ByteReadChannel
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -51,7 +51,7 @@ class ProjectIntegrationTests {
             )
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val projectRepo = ProjectRepository(apiClient)
             val result = projectRepo.getAllProjects()
@@ -72,7 +72,7 @@ class ProjectIntegrationTests {
             )
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val projectRepo = ProjectRepository(apiClient)
             val result = projectRepo.getAllProjects()
@@ -89,7 +89,7 @@ class ProjectIntegrationTests {
             respondBadRequest()
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val projectRepo = ProjectRepository(apiClient)
             val result = projectRepo.getAllProjects()
@@ -108,7 +108,7 @@ class ProjectIntegrationTests {
             throw Exception(errorMessage)
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val projectRepo = ProjectRepository(apiClient)
             val result = projectRepo.getAllProjects()

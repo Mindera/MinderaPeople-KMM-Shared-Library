@@ -7,7 +7,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.http.HttpHeaders
 import io.ktor.utils.io.ByteReadChannel
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -26,7 +26,7 @@ class PartOfDayApiClientTest {
             )
         }
 
-        runBlocking {
+        runTest {
             val client = PartOfDayApiClient(mockEngine)
             val result = client.getPartsOfDay()
 
@@ -42,7 +42,7 @@ class PartOfDayApiClientTest {
             respondBadRequest()
         }
 
-        runBlocking {
+        runTest {
             val client = PartOfDayApiClient(mockEngine)
             val result = client.getPartsOfDay()
 
@@ -59,7 +59,7 @@ class PartOfDayApiClientTest {
             throw Exception(errorMessage)
         }
 
-        runBlocking {
+        runTest {
             val client = PartOfDayApiClient(mockEngine)
             val result = client.getPartsOfDay()
 

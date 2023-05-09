@@ -7,7 +7,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.http.HttpHeaders
 import io.ktor.utils.io.ByteReadChannel
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -26,7 +26,7 @@ class PolicyApiClientTest {
             )
         }
 
-        runBlocking {
+        runTest {
             val client = PolicyApiClient(mockEngine)
             val result = client.getAllPolicies("a74b7fef-6c57-49c6-8c7c-2522a4defc70")
 
@@ -41,7 +41,7 @@ class PolicyApiClientTest {
             respondBadRequest()
         }
 
-        runBlocking {
+        runTest {
             val client = PolicyApiClient(mockEngine)
             val result = client.getAllPolicies("0001")
 
@@ -58,7 +58,7 @@ class PolicyApiClientTest {
             throw Exception(errorMessage)
         }
 
-        runBlocking {
+        runTest {
             val client = PolicyApiClient(mockEngine)
             val result = client.getAllPolicies("0001")
 

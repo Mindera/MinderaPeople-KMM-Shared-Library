@@ -4,7 +4,7 @@ import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.EventApiClientMock
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.http.HttpStatusCode
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
@@ -17,7 +17,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val repo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = repo.getAllEventsForUser(DefaultTestData.USER_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -30,7 +30,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val repo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = repo.getAllEventsForUser("0001")
 
             assertTrue(result.isFailure)
@@ -45,7 +45,7 @@ class EventRepositoryTest {
         val repo = EventRepository(client)
         val event = DefaultTestData.CORRECT_EVENT
 
-        runBlocking {
+        runTest {
             val result =
                 repo.editEvent(
                     DefaultTestData.USER_ID_CORRECT,
@@ -71,7 +71,7 @@ class EventRepositoryTest {
         val repo = EventRepository(client)
         val event = DefaultTestData.ERROR_EVENT
 
-        runBlocking {
+        runTest {
             val result = repo.editEvent("00012",
                 event.id,
                 event.policy,
@@ -94,7 +94,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val repo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result =
                 repo.removeEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
             assertTrue(result.isSuccess)
@@ -107,7 +107,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val repo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = repo.removeEventById(
                     "3b1276b3-d2f6-4e29-af8f-a0cb00208dcc",
                     DefaultTestData.CORRECT_EVENT
@@ -122,7 +122,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val repo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = repo.removeEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.ERROR_EVENT)
             assertTrue(result.isFailure)
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
@@ -134,7 +134,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -148,7 +148,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById("0001", DefaultTestData.EVENT_ID_CORRECT)
 
             assertTrue(result.isFailure)
@@ -162,7 +162,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, "0001")
 
             assertTrue(result.isFailure)
@@ -176,7 +176,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById("0001", "0001")
 
             assertTrue(result.isFailure)
@@ -190,7 +190,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.POLICY_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -204,7 +204,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy("0001", DefaultTestData.POLICY_ID_CORRECT)
 
             assertTrue(result.isFailure)
@@ -218,7 +218,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, "abc")
 
             assertTrue(result.isFailure)
@@ -232,7 +232,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy("0001", "abc")
 
             assertTrue(result.isFailure)
@@ -247,7 +247,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.createEvent(
                 DefaultTestData.USER_ID_CORRECT,
                 event.policy,
@@ -271,7 +271,7 @@ class EventRepositoryTest {
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.createEvent(
                 "abc",
                 event.policy,

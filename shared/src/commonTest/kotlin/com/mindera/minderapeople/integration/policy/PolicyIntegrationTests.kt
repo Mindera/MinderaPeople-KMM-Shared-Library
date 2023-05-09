@@ -8,7 +8,7 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.http.HttpHeaders
 import io.ktor.utils.io.ByteReadChannel
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -29,7 +29,7 @@ class PolicyIntegrationTests {
         val apiClient = PolicyApiClient(mockEngine)
         val repo = PolicyRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getPolicies("a74b7fef-6c57-49c6-8c7c-2522a4defc70")
             assertTrue(result.isSuccess)
             assertEquals(3, result.getOrNull()?.size)
@@ -49,7 +49,7 @@ class PolicyIntegrationTests {
         val apiClient = PolicyApiClient(mockEngine)
         val repo = PolicyRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getPolicies("a74b7fef-6c57-49c6-8c7c-2522a4dxfc70")
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
