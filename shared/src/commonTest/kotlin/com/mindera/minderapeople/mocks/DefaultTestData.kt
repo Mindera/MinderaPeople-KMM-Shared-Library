@@ -5,15 +5,15 @@ import com.mindera.minderapeople.dto.*
 object DefaultTestData {
 
     val SUCCESSFUL_3_POLICIES = listOf(
-        PolicyDTO("0001", "Work from home", "defaultIcon", "wfh"),
-        PolicyDTO("0002", "Holidays", "defaultIcon", "holidays", 5, 20),
-        PolicyDTO("0002", "Sick Day", "defaultIcon", "sickday")
+        PolicyDTO("0001", "Work from home", "wfh"),
+        PolicyDTO("0002", "Holidays", "holidays", 5, 20),
+        PolicyDTO("0002", "Sick Day", "sickday")
     )
 
     val SUCCESSFUL_3_PARTS_OF_DAY = listOf(
-        PartOfDayDTO("0001", "Morning", "defaultIcon", "morning"),
-        PartOfDayDTO("0002", "Afternoon", "defaultIcon", "afternoon"),
-        PartOfDayDTO("0003", "Full day", "defaultIcon", "fullday")
+        PartOfDayDTO("0001", "Morning", "morning"),
+        PartOfDayDTO("0002", "Afternoon", "afternoon"),
+        PartOfDayDTO("0003", "Full day", "fullday")
     )
 
     val SUCCESSFUL_3_PROJECTS = listOf(
@@ -31,7 +31,6 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default",
             "travel"
         ),
         "2023-04-03",
@@ -39,7 +38,6 @@ object DefaultTestData {
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default",
             "fullday"
         )
     )
@@ -47,7 +45,6 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default",
             "travel"
         ),
         "2023-04-03",
@@ -55,7 +52,6 @@ object DefaultTestData {
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default",
             "fullday"
         )
     )
@@ -64,7 +60,6 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default",
             "travel"
         ),
         "2023-04-03",
@@ -72,7 +67,6 @@ object DefaultTestData {
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default",
             "fullday"
         )
     )
@@ -82,7 +76,6 @@ object DefaultTestData {
             PolicyDTO(
                 "0001",
                 "Travel",
-                "default",
                 "travel"
             ),
             "2023-04-03",
@@ -90,7 +83,6 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default",
                 "fullday"
             )
         ),
@@ -99,7 +91,6 @@ object DefaultTestData {
             PolicyDTO(
                 "0002",
                 "Sick day",
-                "default",
                 "sickday"
             ),
             "2023-05-03",
@@ -107,7 +98,6 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0002",
                 "Morning",
-                "default",
                 "morning"
             )
         ),
@@ -116,7 +106,6 @@ object DefaultTestData {
             PolicyDTO(
                 "0003",
                 "Holidays",
-                "default",
                 "holidays"
             ),
             "2023-06-03",
@@ -124,7 +113,6 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default",
                 "fullday"
             )
         ),
@@ -133,7 +121,6 @@ object DefaultTestData {
             PolicyDTO(
                 "0006",
                 "Carnival",
-                "default",
                 "carnival"
             ),
             "2023-02-03",
@@ -141,7 +128,6 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default",
                 "fullday"
             )
         )

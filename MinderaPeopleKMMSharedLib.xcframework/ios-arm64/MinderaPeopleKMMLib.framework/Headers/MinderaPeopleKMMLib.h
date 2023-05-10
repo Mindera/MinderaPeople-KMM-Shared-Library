@@ -221,14 +221,13 @@ __attribute__((swift_name("EventDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PartOfDayDTO")))
 @interface MPKMMLPartOfDayDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type __attribute__((swift_name("init(id:description:iconName:type:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id description:(NSString *)description type:(NSString *)type __attribute__((swift_name("init(id:description:type:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLPartOfDayDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLPartOfDayDTO *)doCopyId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type __attribute__((swift_name("doCopy(id:description:iconName:type:)")));
+- (MPKMMLPartOfDayDTO *)doCopyId:(NSString *)id description:(NSString *)description type:(NSString *)type __attribute__((swift_name("doCopy(id:description:type:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *description_ __attribute__((swift_name("description_")));
-@property (readonly) NSString *iconName __attribute__((swift_name("iconName")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSString *type __attribute__((swift_name("type")));
 @end
@@ -251,14 +250,13 @@ __attribute__((swift_name("PartOfDayDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PolicyDTO")))
 @interface MPKMMLPolicyDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("init(id:description:iconName:type:policyUsage:policyUsageLimit:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id description:(NSString *)description type:(NSString *)type policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("init(id:description:type:policyUsage:policyUsageLimit:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLPolicyDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLPolicyDTO *)doCopyId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("doCopy(id:description:iconName:type:policyUsage:policyUsageLimit:)")));
+- (MPKMMLPolicyDTO *)doCopyId:(NSString *)id description:(NSString *)description type:(NSString *)type policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("doCopy(id:description:type:policyUsage:policyUsageLimit:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *description_ __attribute__((swift_name("description_")));
-@property (readonly) NSString *iconName __attribute__((swift_name("iconName")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) MPKMMLInt * _Nullable policyUsage __attribute__((swift_name("policyUsage")));
 @property (readonly) MPKMMLInt * _Nullable policyUsageLimit __attribute__((swift_name("policyUsageLimit")));
