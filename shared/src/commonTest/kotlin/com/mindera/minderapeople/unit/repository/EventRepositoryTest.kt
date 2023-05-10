@@ -98,7 +98,7 @@ class EventRepositoryTest {
             val result =
                 repo.removeEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 
@@ -261,7 +261,7 @@ class EventRepositoryTest {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 

@@ -142,7 +142,7 @@ class EventApiClientTest {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 
@@ -398,7 +398,7 @@ class EventApiClientTest {
             val result = client.createEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_NEW_EVENT)
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 

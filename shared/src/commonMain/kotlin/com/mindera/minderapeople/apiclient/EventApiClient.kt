@@ -58,12 +58,12 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
         }
     }
 
-    override suspend fun removeEventById(userId: String, eventId: String): Result<Nothing?> {
+    override suspend fun removeEventById(userId: String, eventId: String): Result<Unit> {
         return try {
             val response = httpClient.delete("${ApiDefaultData.BASE_URL}/events/${userId}/${eventId}")
 
             if (response.status == HttpStatusCode.NoContent) {
-                Result.success(null)
+                Result.success(Unit)
             } else {
                 Result.failure(Exception(response.status.description))
             }
@@ -88,7 +88,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
     override suspend fun createEvent(
         userId: String,
         event: CreatingEventDTO
-    ): Result<Nothing?> {
+    ): Result<Unit> {
         return try{
             val response = httpClient.post("${ApiDefaultData.BASE_URL}/events/${userId}") {
                 contentType(ContentType.Application.Json)
@@ -96,7 +96,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
             }
 
             if(response.status == HttpStatusCode.Created)
-                Result.success(null)
+                Result.success(Unit)
             else
                 Result.failure(Exception(response.status.description))
         }catch (e: Exception){
