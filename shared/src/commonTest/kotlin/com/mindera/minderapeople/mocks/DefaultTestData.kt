@@ -5,15 +5,15 @@ import com.mindera.minderapeople.dto.*
 object DefaultTestData {
 
     val SUCCESSFUL_3_POLICIES = listOf(
-        PolicyDTO("0001", "Work from home", "defaultIcon"),
-        PolicyDTO("0002", "Holidays", "defaultIcon", 5, 20),
-        PolicyDTO("0002", "Sick Day", "defaultIcon")
+        PolicyDTO("0001", "Work from home", "defaultIcon", "wfh"),
+        PolicyDTO("0002", "Holidays", "defaultIcon", "holidays", 5, 20),
+        PolicyDTO("0002", "Sick Day", "defaultIcon", "sickday")
     )
 
     val SUCCESSFUL_3_PARTS_OF_DAY = listOf(
-        PartOfDayDTO("0001", "Morning", "defaultIcon"),
-        PartOfDayDTO("0002", "Afternoon", "defaultIcon"),
-        PartOfDayDTO("0003", "Full day", "defaultIcon")
+        PartOfDayDTO("0001", "Morning", "defaultIcon", "morning"),
+        PartOfDayDTO("0002", "Afternoon", "defaultIcon", "afternoon"),
+        PartOfDayDTO("0003", "Full day", "defaultIcon", "fullday")
     )
 
     val SUCCESSFUL_3_PROJECTS = listOf(
@@ -31,28 +31,32 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default"
+            "default",
+            "travel"
         ),
         "2023-04-03",
         "2023-04-10",
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default"
+            "default",
+            "fullday"
         )
     )
     val CORRECT_NEW_EVENT = CreatingEventDTO(
         PolicyDTO(
             "0001",
             "Travel",
-            "default"
+            "default",
+            "travel"
         ),
         "2023-04-03",
         "2023-04-10",
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default"
+            "default",
+            "fullday"
         )
     )
     val ERROR_EVENT = EventDTO(
@@ -60,14 +64,16 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default"
+            "default",
+            "travel"
         ),
         "2023-04-03",
         "2023-04-10",
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default"
+            "default",
+            "fullday"
         )
     )
     val EVENT_LIST = listOf(
@@ -76,14 +82,16 @@ object DefaultTestData {
             PolicyDTO(
                 "0001",
                 "Travel",
-                "default"
+                "default",
+                "travel"
             ),
             "2023-04-03",
             "2023-04-10",
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default"
+                "default",
+                "fullday"
             )
         ),
         EventDTO(
@@ -91,14 +99,16 @@ object DefaultTestData {
             PolicyDTO(
                 "0002",
                 "Sick day",
-                "default"
+                "default",
+                "sickday"
             ),
             "2023-05-03",
             "2023-05-10",
             PartOfDayDTO(
                 "0002",
                 "Morning",
-                "default"
+                "default",
+                "morning"
             )
         ),
         EventDTO(
@@ -106,14 +116,16 @@ object DefaultTestData {
             PolicyDTO(
                 "0003",
                 "Holidays",
-                "default"
+                "default",
+                "holidays"
             ),
             "2023-06-03",
             "2023-06-10",
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default"
+                "default",
+                "fullday"
             )
         ),
         EventDTO(
@@ -121,14 +133,16 @@ object DefaultTestData {
             PolicyDTO(
                 "0006",
                 "Carnival",
-                "default"
+                "default",
+                "carnival"
             ),
             "2023-02-03",
             "2023-02-03",
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default"
+                "default",
+                "fullday"
             )
         )
     )

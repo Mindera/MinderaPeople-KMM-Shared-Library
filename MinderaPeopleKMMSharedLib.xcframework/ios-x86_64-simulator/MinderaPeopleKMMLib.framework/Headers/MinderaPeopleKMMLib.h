@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MPKMMLPolicyDTO, MPKMMLPartOfDayDTO, MPKMMLProjectDTO, MPKMMLCreatingEventDTOCompanion, MPKMMLCreatingEventDTO, MPKMMLEventDTOCompanion, MPKMMLEventDTO, MPKMMLPartOfDayDTOCompanion, MPKMMLPolicyDTOCompanion, MPKMMLProjectDTOCompanion, MPKMMLKotlinThrowable, MPKMMLRequestResultCompanion, MPKMMLRequestResult<T>, MPKMMLApiDefaultData, MPKMMLKtor_client_coreHttpClient, MPKMMLKotlinNothing, MPKMMLKotlinArray<T>, MPKMMLKtor_client_coreHttpRequestData, MPKMMLKtor_client_coreHttpResponseData, MPKMMLKtor_client_coreHttpClientEngineConfig, MPKMMLKotlinx_coroutines_coreCoroutineDispatcher, MPKMMLKtor_client_coreHttpClientConfig<T>, MPKMMLKtor_eventsEvents, MPKMMLKtor_client_coreHttpReceivePipeline, MPKMMLKtor_client_coreHttpRequestPipeline, MPKMMLKtor_client_coreHttpResponsePipeline, MPKMMLKtor_client_coreHttpSendPipeline, MPKMMLKotlinException, MPKMMLKotlinRuntimeException, MPKMMLKotlinIllegalStateException, MPKMMLKotlinx_serialization_coreSerializersModule, MPKMMLKotlinx_serialization_coreSerialKind, MPKMMLKtor_httpUrl, MPKMMLKtor_httpHttpMethod, MPKMMLKtor_httpOutgoingContent, MPKMMLKtor_httpHttpStatusCode, MPKMMLKtor_utilsGMTDate, MPKMMLKtor_httpHttpProtocolVersion, MPKMMLKtor_client_coreProxyConfig, MPKMMLKotlinAbstractCoroutineContextElement, MPKMMLKotlinx_coroutines_coreCoroutineDispatcherKey, MPKMMLKtor_utilsAttributeKey<T>, MPKMMLKtor_eventsEventDefinition<T>, MPKMMLKtor_utilsPipelinePhase, MPKMMLKtor_utilsPipeline<TSubject, TContext>, MPKMMLKtor_client_coreHttpReceivePipelinePhases, MPKMMLKtor_client_coreHttpResponse, MPKMMLKotlinUnit, MPKMMLKtor_client_coreHttpRequestPipelinePhases, MPKMMLKtor_client_coreHttpRequestBuilder, MPKMMLKtor_client_coreHttpResponsePipelinePhases, MPKMMLKtor_client_coreHttpResponseContainer, MPKMMLKtor_client_coreHttpClientCall, MPKMMLKtor_client_coreHttpSendPipelinePhases, MPKMMLKtor_httpUrlCompanion, MPKMMLKtor_httpURLProtocol, MPKMMLKtor_httpHttpMethodCompanion, MPKMMLKtor_httpContentType, MPKMMLKotlinCancellationException, MPKMMLKtor_httpHttpStatusCodeCompanion, MPKMMLKtor_utilsGMTDateCompanion, MPKMMLKtor_utilsWeekDay, MPKMMLKtor_utilsMonth, MPKMMLKtor_httpHttpProtocolVersionCompanion, MPKMMLKotlinAbstractCoroutineContextKey<B, E>, MPKMMLKtor_httpHeadersBuilder, MPKMMLKtor_client_coreHttpRequestBuilderCompanion, MPKMMLKtor_httpURLBuilder, MPKMMLKtor_utilsTypeInfo, MPKMMLKtor_client_coreHttpClientCallCompanion, MPKMMLKtor_httpURLProtocolCompanion, MPKMMLKtor_httpHeaderValueParam, MPKMMLKtor_httpHeaderValueWithParametersCompanion, MPKMMLKtor_httpHeaderValueWithParameters, MPKMMLKtor_httpContentTypeCompanion, MPKMMLKotlinEnumCompanion, MPKMMLKotlinEnum<E>, MPKMMLKtor_utilsWeekDayCompanion, MPKMMLKtor_utilsMonthCompanion, MPKMMLKtor_ioMemory, MPKMMLKtor_ioChunkBuffer, MPKMMLKotlinByteArray, MPKMMLKtor_ioBuffer, MPKMMLKtor_ioByteReadPacket, MPKMMLKtor_utilsStringValuesBuilderImpl, MPKMMLKtor_httpURLBuilderCompanion, MPKMMLKotlinx_coroutines_coreAtomicDesc, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, MPKMMLKtor_ioMemoryCompanion, MPKMMLKtor_ioBufferCompanion, MPKMMLKtor_ioChunkBufferCompanion, MPKMMLKotlinByteIterator, MPKMMLKtor_ioInputCompanion, MPKMMLKtor_ioInput, MPKMMLKtor_ioByteReadPacketCompanion, MPKMMLKotlinKTypeProjection, MPKMMLKotlinx_coroutines_coreAtomicOp<__contravariant T>, MPKMMLKotlinx_coroutines_coreOpDescriptor, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, MPKMMLKotlinKVariance, MPKMMLKotlinKTypeProjectionCompanion, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
+@class MPKMMLPolicyDTO, MPKMMLPartOfDayDTO, MPKMMLProjectDTO, MPKMMLCreatingEventDTOCompanion, MPKMMLCreatingEventDTO, MPKMMLEventDTOCompanion, MPKMMLEventDTO, MPKMMLPartOfDayDTOCompanion, MPKMMLPolicyDTOCompanion, MPKMMLProjectDTOCompanion, MPKMMLRequestResultCompanion, MPKMMLKotlinThrowable, MPKMMLRequestResult, MPKMMLApiDefaultData, MPKMMLKtor_client_coreHttpClient, MPKMMLKotlinArray, MPKMMLKtor_client_coreHttpRequestData, MPKMMLKtor_client_coreHttpResponseData, MPKMMLKtor_client_coreHttpClientEngineConfig, MPKMMLKotlinx_coroutines_coreCoroutineDispatcher, MPKMMLKtor_client_coreHttpClientConfig, MPKMMLKtor_eventsEvents, MPKMMLKtor_client_coreHttpReceivePipeline, MPKMMLKtor_client_coreHttpRequestPipeline, MPKMMLKtor_client_coreHttpResponsePipeline, MPKMMLKtor_client_coreHttpSendPipeline, MPKMMLKotlinException, MPKMMLKotlinRuntimeException, MPKMMLKotlinIllegalStateException, MPKMMLKotlinx_serialization_coreSerializersModule, MPKMMLKotlinx_serialization_coreSerialKind, MPKMMLKotlinNothing, MPKMMLKtor_httpUrl, MPKMMLKtor_httpHttpMethod, MPKMMLKtor_httpOutgoingContent, MPKMMLKtor_httpHttpStatusCode, MPKMMLKtor_utilsGMTDate, MPKMMLKtor_httpHttpProtocolVersion, MPKMMLKtor_client_coreProxyConfig, MPKMMLKotlinAbstractCoroutineContextElement, MPKMMLKotlinx_coroutines_coreCoroutineDispatcherKey, MPKMMLKtor_utilsAttributeKey, MPKMMLKtor_eventsEventDefinition, MPKMMLKtor_utilsPipelinePhase, MPKMMLKtor_utilsPipeline, MPKMMLKtor_client_coreHttpReceivePipelinePhases, MPKMMLKtor_client_coreHttpRequestPipelinePhases, MPKMMLKtor_client_coreHttpResponsePipelinePhases, MPKMMLKtor_client_coreHttpSendPipelinePhases, MPKMMLKtor_httpUrlCompanion, MPKMMLKtor_httpURLProtocol, MPKMMLKtor_httpHttpMethodCompanion, MPKMMLKtor_httpContentType, MPKMMLKotlinCancellationException, MPKMMLKtor_httpHttpStatusCodeCompanion, MPKMMLKtor_utilsGMTDateCompanion, MPKMMLKtor_utilsWeekDay, MPKMMLKtor_utilsMonth, MPKMMLKtor_httpHttpProtocolVersionCompanion, MPKMMLKotlinAbstractCoroutineContextKey, MPKMMLKtor_httpURLProtocolCompanion, MPKMMLKtor_httpHeaderValueParam, MPKMMLKtor_httpHeaderValueWithParametersCompanion, MPKMMLKtor_httpHeaderValueWithParameters, MPKMMLKtor_httpContentTypeCompanion, MPKMMLKotlinEnumCompanion, MPKMMLKotlinEnum, MPKMMLKtor_utilsWeekDayCompanion, MPKMMLKtor_utilsMonthCompanion, MPKMMLKotlinx_coroutines_coreAtomicDesc, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, MPKMMLKotlinx_coroutines_coreAtomicOp, MPKMMLKotlinx_coroutines_coreOpDescriptor, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc;
 
-@protocol MPKMMLKotlinx_serialization_coreKSerializer, MPKMMLKtor_client_coreHttpClientEngine, MPKMMLIEventApiClient, MPKMMLIPartOfDayApiClient, MPKMMLIPolicyApiClient, MPKMMLIProjectsApiClient, MPKMMLIEventRepository, MPKMMLIPartOfDayRepository, MPKMMLIPolicyRepository, MPKMMLIProjectRepository, MPKMMLKotlinx_serialization_coreEncoder, MPKMMLKotlinx_serialization_coreSerialDescriptor, MPKMMLKotlinx_serialization_coreSerializationStrategy, MPKMMLKotlinx_serialization_coreDecoder, MPKMMLKotlinx_serialization_coreDeserializationStrategy, MPKMMLKtor_client_coreHttpClientEngineCapability, MPKMMLKotlinCoroutineContext, MPKMMLKotlinx_coroutines_coreCoroutineScope, MPKMMLKtor_ioCloseable, MPKMMLKtor_utilsAttributes, MPKMMLKotlinx_serialization_coreCompositeEncoder, MPKMMLKotlinAnnotation, MPKMMLKotlinx_serialization_coreCompositeDecoder, MPKMMLKotlinIterator, MPKMMLKtor_httpHeaders, MPKMMLKotlinx_coroutines_coreJob, MPKMMLKotlinCoroutineContextKey, MPKMMLKotlinCoroutineContextElement, MPKMMLKotlinContinuation, MPKMMLKotlinContinuationInterceptor, MPKMMLKotlinx_coroutines_coreRunnable, MPKMMLKtor_client_coreHttpClientPlugin, MPKMMLKotlinx_coroutines_coreDisposableHandle, MPKMMLKotlinSuspendFunction2, MPKMMLKotlinx_serialization_coreSerializersModuleCollector, MPKMMLKotlinKClass, MPKMMLKtor_httpParameters, MPKMMLKotlinMapEntry, MPKMMLKtor_utilsStringValues, MPKMMLKotlinx_coroutines_coreChildHandle, MPKMMLKotlinx_coroutines_coreChildJob, MPKMMLKotlinSequence, MPKMMLKotlinx_coroutines_coreSelectClause0, MPKMMLKotlinComparable, MPKMMLKotlinFunction, MPKMMLKtor_httpHttpMessage, MPKMMLKtor_ioByteReadChannel, MPKMMLKtor_httpHttpMessageBuilder, MPKMMLKtor_client_coreHttpRequest, MPKMMLKotlinKDeclarationContainer, MPKMMLKotlinKAnnotatedElement, MPKMMLKotlinKClassifier, MPKMMLKotlinx_coroutines_coreParentJob, MPKMMLKotlinx_coroutines_coreSelectInstance, MPKMMLKotlinSuspendFunction0, MPKMMLKtor_ioReadSession, MPKMMLKotlinSuspendFunction1, MPKMMLKotlinAppendable, MPKMMLKtor_utilsStringValuesBuilder, MPKMMLKtor_httpParametersBuilder, MPKMMLKotlinKType, MPKMMLKtor_ioObjectPool;
+@protocol MPKMMLKotlinx_serialization_coreKSerializer, MPKMMLKtor_client_coreHttpClientEngine, MPKMMLIEventApiClient, MPKMMLIPartOfDayApiClient, MPKMMLIPolicyApiClient, MPKMMLIProjectsApiClient, MPKMMLIEventRepository, MPKMMLIPartOfDayRepository, MPKMMLIPolicyRepository, MPKMMLIProjectRepository, MPKMMLKotlinx_serialization_coreEncoder, MPKMMLKotlinx_serialization_coreSerialDescriptor, MPKMMLKotlinx_serialization_coreSerializationStrategy, MPKMMLKotlinx_serialization_coreDecoder, MPKMMLKotlinx_serialization_coreDeserializationStrategy, MPKMMLKtor_client_coreHttpClientEngineCapability, MPKMMLKotlinCoroutineContext, MPKMMLKotlinx_coroutines_coreCoroutineScope, MPKMMLKtor_ioCloseable, MPKMMLKtor_utilsAttributes, MPKMMLKotlinx_serialization_coreCompositeEncoder, MPKMMLKotlinAnnotation, MPKMMLKotlinx_serialization_coreCompositeDecoder, MPKMMLKotlinIterator, MPKMMLKtor_httpHeaders, MPKMMLKotlinx_coroutines_coreJob, MPKMMLKotlinCoroutineContextKey, MPKMMLKotlinCoroutineContextElement, MPKMMLKotlinContinuation, MPKMMLKotlinContinuationInterceptor, MPKMMLKotlinx_coroutines_coreRunnable, MPKMMLKtor_client_coreHttpClientPlugin, MPKMMLKotlinx_coroutines_coreDisposableHandle, MPKMMLKotlinSuspendFunction2, MPKMMLKotlinx_serialization_coreSerializersModuleCollector, MPKMMLKotlinKClass, MPKMMLKtor_httpParameters, MPKMMLKotlinMapEntry, MPKMMLKtor_utilsStringValues, MPKMMLKotlinx_coroutines_coreChildHandle, MPKMMLKotlinx_coroutines_coreChildJob, MPKMMLKotlinSequence, MPKMMLKotlinx_coroutines_coreSelectClause0, MPKMMLKotlinComparable, MPKMMLKotlinFunction, MPKMMLKotlinKDeclarationContainer, MPKMMLKotlinKAnnotatedElement, MPKMMLKotlinKClassifier, MPKMMLKotlinx_coroutines_coreParentJob, MPKMMLKotlinx_coroutines_coreSelectInstance, MPKMMLKotlinSuspendFunction0;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -221,15 +221,16 @@ __attribute__((swift_name("EventDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PartOfDayDTO")))
 @interface MPKMMLPartOfDayDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName __attribute__((swift_name("init(id:description:iconName:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type __attribute__((swift_name("init(id:description:iconName:type:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLPartOfDayDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLPartOfDayDTO *)doCopyId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName __attribute__((swift_name("doCopy(id:description:iconName:)")));
+- (MPKMMLPartOfDayDTO *)doCopyId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type __attribute__((swift_name("doCopy(id:description:iconName:type:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *description_ __attribute__((swift_name("description_")));
 @property (readonly) NSString *iconName __attribute__((swift_name("iconName")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString *type __attribute__((swift_name("type")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -250,9 +251,9 @@ __attribute__((swift_name("PartOfDayDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PolicyDTO")))
 @interface MPKMMLPolicyDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("init(id:description:iconName:policyUsage:policyUsageLimit:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("init(id:description:iconName:type:policyUsage:policyUsageLimit:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLPolicyDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLPolicyDTO *)doCopyId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("doCopy(id:description:iconName:policyUsage:policyUsageLimit:)")));
+- (MPKMMLPolicyDTO *)doCopyId:(NSString *)id description:(NSString *)description iconName:(NSString *)iconName type:(NSString *)type policyUsage:(MPKMMLInt * _Nullable)policyUsage policyUsageLimit:(MPKMMLInt * _Nullable)policyUsageLimit __attribute__((swift_name("doCopy(id:description:iconName:type:policyUsage:policyUsageLimit:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -261,6 +262,7 @@ __attribute__((swift_name("PolicyDTO")))
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) MPKMMLInt * _Nullable policyUsage __attribute__((swift_name("policyUsage")));
 @property (readonly) MPKMMLInt * _Nullable policyUsageLimit __attribute__((swift_name("policyUsageLimit")));
+@property (readonly) NSString *type __attribute__((swift_name("type")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -303,24 +305,23 @@ __attribute__((swift_name("ProjectDTO.Companion")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RequestResult")))
-@interface MPKMMLRequestResult<T> : MPKMMLBase
-- (instancetype)initWithValue:(T _Nullable)value exception:(MPKMMLKotlinThrowable * _Nullable)exception isSuccess:(BOOL)isSuccess __attribute__((swift_name("init(value:exception:isSuccess:)"))) __attribute__((objc_designated_initializer));
+@interface MPKMMLRequestResult : MPKMMLBase
 @property (class, readonly, getter=companion) MPKMMLRequestResultCompanion *companion __attribute__((swift_name("companion")));
 - (MPKMMLKotlinThrowable * _Nullable)exceptionOrNull __attribute__((swift_name("exceptionOrNull()")));
-- (T _Nullable)getOrNull __attribute__((swift_name("getOrNull()")));
+- (id _Nullable)getOrNull __attribute__((swift_name("getOrNull()")));
 @property (readonly) BOOL isFailure __attribute__((swift_name("isFailure")));
 @property (readonly) BOOL isSuccess __attribute__((swift_name("isSuccess")));
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("RequestResultCompanion")))
+__attribute__((swift_name("RequestResult.Companion")))
 @interface MPKMMLRequestResultCompanion : MPKMMLBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) MPKMMLRequestResultCompanion *shared __attribute__((swift_name("shared")));
-- (MPKMMLRequestResult<id> *)failureException:(MPKMMLKotlinThrowable *)exception __attribute__((swift_name("failure(exception:)")));
-- (MPKMMLRequestResult<id> *)successValue:(id _Nullable)value __attribute__((swift_name("success(value:)")));
+- (MPKMMLRequestResult *)failureException:(MPKMMLKotlinThrowable *)exception __attribute__((swift_name("failure(exception:)")));
+- (MPKMMLRequestResult *)successValue:(id _Nullable)value __attribute__((swift_name("success(value:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -501,37 +502,37 @@ __attribute__((swift_name("IEventRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)createEventUserId:(NSString *)userId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLKotlinNothing *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
+- (void)createEventUserId:(NSString *)userId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)editEventUserId:(NSString *)userId eventId:(NSString *)eventId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLEventDTO *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("editEvent(userId:eventId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
+- (void)editEventUserId:(NSString *)userId eventId:(NSString *)eventId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("editEvent(userId:eventId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLEventDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
+- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getEventByIdUserId:(NSString *)userId eventId:(NSString *)eventId completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLEventDTO *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventById(userId:eventId:completionHandler:)")));
+- (void)getEventByIdUserId:(NSString *)userId eventId:(NSString *)eventId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventById(userId:eventId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getEventsByPolicyUserId:(NSString *)userId policyId:(NSString *)policyId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLEventDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventsByPolicy(userId:policyId:completionHandler:)")));
+- (void)getEventsByPolicyUserId:(NSString *)userId policyId:(NSString *)policyId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventsByPolicy(userId:policyId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)removeEventByIdUserId:(NSString *)userId event:(MPKMMLEventDTO *)event completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLKotlinNothing *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("removeEventById(userId:event:completionHandler:)")));
+- (void)removeEventByIdUserId:(NSString *)userId event:(MPKMMLEventDTO *)event completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("removeEventById(userId:event:completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -543,37 +544,37 @@ __attribute__((swift_name("EventRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)createEventUserId:(NSString *)userId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLKotlinNothing *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
+- (void)createEventUserId:(NSString *)userId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)editEventUserId:(NSString *)userId eventId:(NSString *)eventId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLEventDTO *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("editEvent(userId:eventId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
+- (void)editEventUserId:(NSString *)userId eventId:(NSString *)eventId policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("editEvent(userId:eventId:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLEventDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
+- (void)getAllEventsForUserUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllEventsForUser(userId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getEventByIdUserId:(NSString *)userId eventId:(NSString *)eventId completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLEventDTO *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventById(userId:eventId:completionHandler:)")));
+- (void)getEventByIdUserId:(NSString *)userId eventId:(NSString *)eventId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventById(userId:eventId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getEventsByPolicyUserId:(NSString *)userId policyId:(NSString *)policyId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLEventDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventsByPolicy(userId:policyId:completionHandler:)")));
+- (void)getEventsByPolicyUserId:(NSString *)userId policyId:(NSString *)policyId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getEventsByPolicy(userId:policyId:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)removeEventByIdUserId:(NSString *)userId event:(MPKMMLEventDTO *)event completionHandler:(void (^)(MPKMMLRequestResult<MPKMMLKotlinNothing *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("removeEventById(userId:event:completionHandler:)")));
+- (void)removeEventByIdUserId:(NSString *)userId event:(MPKMMLEventDTO *)event completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("removeEventById(userId:event:completionHandler:)")));
 @end
 
 __attribute__((swift_name("IPartOfDayRepository")))
@@ -584,7 +585,7 @@ __attribute__((swift_name("IPartOfDayRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getPartsOfDayWithCompletionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLPartOfDayDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPartsOfDay(completionHandler:)")));
+- (void)getPartsOfDayWithCompletionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPartsOfDay(completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -596,7 +597,7 @@ __attribute__((swift_name("PartOfDayRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getPartsOfDayWithCompletionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLPartOfDayDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPartsOfDay(completionHandler:)")));
+- (void)getPartsOfDayWithCompletionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPartsOfDay(completionHandler:)")));
 @end
 
 __attribute__((swift_name("IPolicyRepository")))
@@ -607,7 +608,7 @@ __attribute__((swift_name("IPolicyRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getPoliciesUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLPolicyDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPolicies(userId:completionHandler:)")));
+- (void)getPoliciesUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPolicies(userId:completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -619,7 +620,7 @@ __attribute__((swift_name("PolicyRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getPoliciesUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLPolicyDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPolicies(userId:completionHandler:)")));
+- (void)getPoliciesUserId:(NSString *)userId completionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getPolicies(userId:completionHandler:)")));
 @end
 
 __attribute__((swift_name("IProjectRepository")))
@@ -630,7 +631,7 @@ __attribute__((swift_name("IProjectRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getAllProjectsWithCompletionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLProjectDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
+- (void)getAllProjectsWithCompletionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -642,7 +643,7 @@ __attribute__((swift_name("ProjectRepository")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)getAllProjectsWithCompletionHandler:(void (^)(MPKMMLRequestResult<NSArray<MPKMMLProjectDTO *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
+- (void)getAllProjectsWithCompletionHandler:(void (^)(MPKMMLRequestResult * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -654,7 +655,7 @@ __attribute__((swift_name("EngineKt")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ResultExtensionKt")))
 @interface MPKMMLResultExtensionKt : MPKMMLBase
-+ (MPKMMLRequestResult<id> *)toRequestResult:(id _Nullable)receiver __attribute__((swift_name("toRequestResult(_:)")));
++ (MPKMMLRequestResult *)toRequestResult:(id _Nullable)receiver __attribute__((swift_name("toRequestResult(_:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
@@ -683,7 +684,7 @@ __attribute__((swift_name("KotlinThrowable")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(MPKMMLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-- (MPKMMLKotlinArray<NSString *> *)getStackTrace __attribute__((swift_name("getStackTrace()")));
+- (MPKMMLKotlinArray *)getStackTrace __attribute__((swift_name("getStackTrace()")));
 - (void)printStackTrace __attribute__((swift_name("printStackTrace()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) MPKMMLKotlinThrowable * _Nullable cause __attribute__((swift_name("cause")));
@@ -721,9 +722,9 @@ __attribute__((swift_name("Ktor_client_coreHttpClientEngine")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpClient")))
 @interface MPKMMLKtor_client_coreHttpClient : MPKMMLBase <MPKMMLKotlinx_coroutines_coreCoroutineScope, MPKMMLKtor_ioCloseable>
-- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine userConfig:(MPKMMLKtor_client_coreHttpClientConfig<MPKMMLKtor_client_coreHttpClientEngineConfig *> *)userConfig __attribute__((swift_name("init(engine:userConfig:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine userConfig:(MPKMMLKtor_client_coreHttpClientConfig *)userConfig __attribute__((swift_name("init(engine:userConfig:)"))) __attribute__((objc_designated_initializer));
 - (void)close __attribute__((swift_name("close()")));
-- (MPKMMLKtor_client_coreHttpClient *)configBlock:(void (^)(MPKMMLKtor_client_coreHttpClientConfig<id> *))block __attribute__((swift_name("config(block:)")));
+- (MPKMMLKtor_client_coreHttpClient *)configBlock:(void (^)(MPKMMLKtor_client_coreHttpClientConfig *))block __attribute__((swift_name("config(block:)")));
 - (BOOL)isSupportedCapability:(id<MPKMMLKtor_client_coreHttpClientEngineCapability>)capability __attribute__((swift_name("isSupported(capability:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) id<MPKMMLKtor_utilsAttributes> attributes __attribute__((swift_name("attributes")));
@@ -776,11 +777,6 @@ __attribute__((swift_name("KotlinCancellationException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(MPKMMLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(MPKMMLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinNothing")))
-@interface MPKMMLKotlinNothing : MPKMMLBase
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
@@ -926,13 +922,13 @@ __attribute__((swift_name("Kotlinx_serialization_coreDecoder")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinArray")))
-@interface MPKMMLKotlinArray<T> : MPKMMLBase
-+ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(MPKMMLInt *))init __attribute__((swift_name("init(size:init:)")));
+@interface MPKMMLKotlinArray : MPKMMLBase
++ (instancetype)arrayWithSize:(int32_t)size init:(id _Nullable (^)(MPKMMLInt *))init __attribute__((swift_name("init(size:init:)")));
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
+- (id _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
 - (id<MPKMMLKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
+- (void)setIndex:(int32_t)index value:(id _Nullable)value __attribute__((swift_name("set(index:value:)")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
@@ -1044,15 +1040,15 @@ __attribute__((swift_name("Ktor_client_coreHttpClientEngineCapability")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpClientConfig")))
-@interface MPKMMLKtor_client_coreHttpClientConfig<T> : MPKMMLBase
+@interface MPKMMLKtor_client_coreHttpClientConfig : MPKMMLBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (MPKMMLKtor_client_coreHttpClientConfig<T> *)clone __attribute__((swift_name("clone()")));
-- (void)engineBlock:(void (^)(T))block __attribute__((swift_name("engine(block:)")));
+- (MPKMMLKtor_client_coreHttpClientConfig *)clone __attribute__((swift_name("clone()")));
+- (void)engineBlock:(void (^)(MPKMMLKtor_client_coreHttpClientEngineConfig *))block __attribute__((swift_name("engine(block:)")));
 - (void)installClient:(MPKMMLKtor_client_coreHttpClient *)client __attribute__((swift_name("install(client:)")));
 - (void)installPlugin:(id<MPKMMLKtor_client_coreHttpClientPlugin>)plugin configure:(void (^)(id))configure __attribute__((swift_name("install(plugin:configure:)")));
 - (void)installKey:(NSString *)key block:(void (^)(MPKMMLKtor_client_coreHttpClient *))block __attribute__((swift_name("install(key:block:)")));
-- (void)plusAssignOther:(MPKMMLKtor_client_coreHttpClientConfig<T> *)other __attribute__((swift_name("plusAssign(other:)")));
+- (void)plusAssignOther:(MPKMMLKtor_client_coreHttpClientConfig *)other __attribute__((swift_name("plusAssign(other:)")));
 @property BOOL developmentMode __attribute__((swift_name("developmentMode")));
 @property BOOL expectSuccess __attribute__((swift_name("expectSuccess")));
 @property BOOL followRedirects __attribute__((swift_name("followRedirects")));
@@ -1062,15 +1058,15 @@ __attribute__((swift_name("Ktor_client_coreHttpClientConfig")))
 __attribute__((swift_name("Ktor_utilsAttributes")))
 @protocol MPKMMLKtor_utilsAttributes
 @required
-- (id)computeIfAbsentKey:(MPKMMLKtor_utilsAttributeKey<id> *)key block:(id (^)(void))block __attribute__((swift_name("computeIfAbsent(key:block:)")));
-- (BOOL)containsKey:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("contains(key:)")));
-- (id)getKey_:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("get(key_:)")));
-- (id _Nullable)getOrNullKey:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("getOrNull(key:)")));
-- (void)putKey:(MPKMMLKtor_utilsAttributeKey<id> *)key value:(id)value __attribute__((swift_name("put(key:value:)")));
-- (void)removeKey:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("remove(key:)")));
-- (id)takeKey:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("take(key:)")));
-- (id _Nullable)takeOrNullKey:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("takeOrNull(key:)")));
-@property (readonly) NSArray<MPKMMLKtor_utilsAttributeKey<id> *> *allKeys __attribute__((swift_name("allKeys")));
+- (id)computeIfAbsentKey:(MPKMMLKtor_utilsAttributeKey *)key block:(id (^)(void))block __attribute__((swift_name("computeIfAbsent(key:block:)")));
+- (BOOL)containsKey:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("contains(key:)")));
+- (id)getKey_:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("get(key_:)")));
+- (id _Nullable)getOrNullKey:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("getOrNull(key:)")));
+- (void)putKey:(MPKMMLKtor_utilsAttributeKey *)key value:(id)value __attribute__((swift_name("put(key:value:)")));
+- (void)removeKey:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("remove(key:)")));
+- (id)takeKey:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("take(key:)")));
+- (id _Nullable)takeOrNullKey:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("takeOrNull(key:)")));
+@property (readonly) NSArray<MPKMMLKtor_utilsAttributeKey *> *allKeys __attribute__((swift_name("allKeys")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -1078,15 +1074,15 @@ __attribute__((swift_name("Ktor_eventsEvents")))
 @interface MPKMMLKtor_eventsEvents : MPKMMLBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)raiseDefinition:(MPKMMLKtor_eventsEventDefinition<id> *)definition value:(id _Nullable)value __attribute__((swift_name("raise(definition:value:)")));
-- (id<MPKMMLKotlinx_coroutines_coreDisposableHandle>)subscribeDefinition:(MPKMMLKtor_eventsEventDefinition<id> *)definition handler:(void (^)(id _Nullable))handler __attribute__((swift_name("subscribe(definition:handler:)")));
-- (void)unsubscribeDefinition:(MPKMMLKtor_eventsEventDefinition<id> *)definition handler:(void (^)(id _Nullable))handler __attribute__((swift_name("unsubscribe(definition:handler:)")));
+- (void)raiseDefinition:(MPKMMLKtor_eventsEventDefinition *)definition value:(id _Nullable)value __attribute__((swift_name("raise(definition:value:)")));
+- (id<MPKMMLKotlinx_coroutines_coreDisposableHandle>)subscribeDefinition:(MPKMMLKtor_eventsEventDefinition *)definition handler:(void (^)(id _Nullable))handler __attribute__((swift_name("subscribe(definition:handler:)")));
+- (void)unsubscribeDefinition:(MPKMMLKtor_eventsEventDefinition *)definition handler:(void (^)(id _Nullable))handler __attribute__((swift_name("unsubscribe(definition:handler:)")));
 @end
 
 __attribute__((swift_name("Ktor_utilsPipeline")))
-@interface MPKMMLKtor_utilsPipeline<TSubject, TContext> : MPKMMLBase
+@interface MPKMMLKtor_utilsPipeline : MPKMMLBase
 - (instancetype)initWithPhase:(MPKMMLKtor_utilsPipelinePhase *)phase interceptors:(NSArray<id<MPKMMLKotlinSuspendFunction2>> *)interceptors __attribute__((swift_name("init(phase:interceptors:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithPhases:(MPKMMLKotlinArray<MPKMMLKtor_utilsPipelinePhase *> *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithPhases:(MPKMMLKotlinArray *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer));
 - (void)addPhasePhase:(MPKMMLKtor_utilsPipelinePhase *)phase __attribute__((swift_name("addPhase(phase:)")));
 - (void)afterIntercepted __attribute__((swift_name("afterIntercepted()")));
 
@@ -1094,14 +1090,14 @@ __attribute__((swift_name("Ktor_utilsPipeline")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)executeContext:(TContext)context subject:(TSubject)subject completionHandler:(void (^)(TSubject _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("execute(context:subject:completionHandler:)")));
+- (void)executeContext:(id)context subject:(id)subject completionHandler:(void (^)(id _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("execute(context:subject:completionHandler:)")));
 - (void)insertPhaseAfterReference:(MPKMMLKtor_utilsPipelinePhase *)reference phase:(MPKMMLKtor_utilsPipelinePhase *)phase __attribute__((swift_name("insertPhaseAfter(reference:phase:)")));
 - (void)insertPhaseBeforeReference:(MPKMMLKtor_utilsPipelinePhase *)reference phase:(MPKMMLKtor_utilsPipelinePhase *)phase __attribute__((swift_name("insertPhaseBefore(reference:phase:)")));
 - (void)interceptPhase:(MPKMMLKtor_utilsPipelinePhase *)phase block:(id<MPKMMLKotlinSuspendFunction2>)block __attribute__((swift_name("intercept(phase:block:)")));
 - (NSArray<id<MPKMMLKotlinSuspendFunction2>> *)interceptorsForPhasePhase:(MPKMMLKtor_utilsPipelinePhase *)phase __attribute__((swift_name("interceptorsForPhase(phase:)")));
-- (void)mergeFrom:(MPKMMLKtor_utilsPipeline<TSubject, TContext> *)from __attribute__((swift_name("merge(from:)")));
-- (void)mergePhasesFrom:(MPKMMLKtor_utilsPipeline<TSubject, TContext> *)from __attribute__((swift_name("mergePhases(from:)")));
-- (void)resetFromFrom:(MPKMMLKtor_utilsPipeline<TSubject, TContext> *)from __attribute__((swift_name("resetFrom(from:)")));
+- (void)mergeFrom:(MPKMMLKtor_utilsPipeline *)from __attribute__((swift_name("merge(from:)")));
+- (void)mergePhasesFrom:(MPKMMLKtor_utilsPipeline *)from __attribute__((swift_name("mergePhases(from:)")));
+- (void)resetFromFrom:(MPKMMLKtor_utilsPipeline *)from __attribute__((swift_name("resetFrom(from:)")));
 @property (readonly) id<MPKMMLKtor_utilsAttributes> attributes __attribute__((swift_name("attributes")));
 @property (readonly) BOOL developmentMode __attribute__((swift_name("developmentMode")));
 @property (readonly) BOOL isEmpty __attribute__((swift_name("isEmpty")));
@@ -1110,40 +1106,40 @@ __attribute__((swift_name("Ktor_utilsPipeline")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpReceivePipeline")))
-@interface MPKMMLKtor_client_coreHttpReceivePipeline : MPKMMLKtor_utilsPipeline<MPKMMLKtor_client_coreHttpResponse *, MPKMMLKotlinUnit *>
+@interface MPKMMLKtor_client_coreHttpReceivePipeline : MPKMMLKtor_utilsPipeline
 - (instancetype)initWithDevelopmentMode:(BOOL)developmentMode __attribute__((swift_name("init(developmentMode:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithPhase:(MPKMMLKtor_utilsPipelinePhase *)phase interceptors:(NSArray<id<MPKMMLKotlinSuspendFunction2>> *)interceptors __attribute__((swift_name("init(phase:interceptors:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-- (instancetype)initWithPhases:(MPKMMLKotlinArray<MPKMMLKtor_utilsPipelinePhase *> *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (instancetype)initWithPhases:(MPKMMLKotlinArray *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly, getter=companion) MPKMMLKtor_client_coreHttpReceivePipelinePhases *companion __attribute__((swift_name("companion")));
 @property (readonly) BOOL developmentMode __attribute__((swift_name("developmentMode")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpRequestPipeline")))
-@interface MPKMMLKtor_client_coreHttpRequestPipeline : MPKMMLKtor_utilsPipeline<id, MPKMMLKtor_client_coreHttpRequestBuilder *>
+@interface MPKMMLKtor_client_coreHttpRequestPipeline : MPKMMLKtor_utilsPipeline
 - (instancetype)initWithDevelopmentMode:(BOOL)developmentMode __attribute__((swift_name("init(developmentMode:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithPhase:(MPKMMLKtor_utilsPipelinePhase *)phase interceptors:(NSArray<id<MPKMMLKotlinSuspendFunction2>> *)interceptors __attribute__((swift_name("init(phase:interceptors:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-- (instancetype)initWithPhases:(MPKMMLKotlinArray<MPKMMLKtor_utilsPipelinePhase *> *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (instancetype)initWithPhases:(MPKMMLKotlinArray *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly, getter=companion) MPKMMLKtor_client_coreHttpRequestPipelinePhases *companion __attribute__((swift_name("companion")));
 @property (readonly) BOOL developmentMode __attribute__((swift_name("developmentMode")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpResponsePipeline")))
-@interface MPKMMLKtor_client_coreHttpResponsePipeline : MPKMMLKtor_utilsPipeline<MPKMMLKtor_client_coreHttpResponseContainer *, MPKMMLKtor_client_coreHttpClientCall *>
+@interface MPKMMLKtor_client_coreHttpResponsePipeline : MPKMMLKtor_utilsPipeline
 - (instancetype)initWithDevelopmentMode:(BOOL)developmentMode __attribute__((swift_name("init(developmentMode:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithPhase:(MPKMMLKtor_utilsPipelinePhase *)phase interceptors:(NSArray<id<MPKMMLKotlinSuspendFunction2>> *)interceptors __attribute__((swift_name("init(phase:interceptors:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-- (instancetype)initWithPhases:(MPKMMLKotlinArray<MPKMMLKtor_utilsPipelinePhase *> *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (instancetype)initWithPhases:(MPKMMLKotlinArray *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly, getter=companion) MPKMMLKtor_client_coreHttpResponsePipelinePhases *companion __attribute__((swift_name("companion")));
 @property (readonly) BOOL developmentMode __attribute__((swift_name("developmentMode")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpSendPipeline")))
-@interface MPKMMLKtor_client_coreHttpSendPipeline : MPKMMLKtor_utilsPipeline<id, MPKMMLKtor_client_coreHttpRequestBuilder *>
+@interface MPKMMLKtor_client_coreHttpSendPipeline : MPKMMLKtor_utilsPipeline
 - (instancetype)initWithDevelopmentMode:(BOOL)developmentMode __attribute__((swift_name("init(developmentMode:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithPhase:(MPKMMLKtor_utilsPipelinePhase *)phase interceptors:(NSArray<id<MPKMMLKotlinSuspendFunction2>> *)interceptors __attribute__((swift_name("init(phase:interceptors:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-- (instancetype)initWithPhases:(MPKMMLKotlinArray<MPKMMLKtor_utilsPipelinePhase *> *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (instancetype)initWithPhases:(MPKMMLKotlinArray *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly, getter=companion) MPKMMLKtor_client_coreHttpSendPipelinePhases *companion __attribute__((swift_name("companion")));
 @property (readonly) BOOL developmentMode __attribute__((swift_name("developmentMode")));
 @end
@@ -1254,6 +1250,11 @@ __attribute__((swift_name("Kotlinx_serialization_coreCompositeDecoder")))
 @property (readonly) MPKMMLKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
 @end
 
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinNothing")))
+@interface MPKMMLKotlinNothing : MPKMMLBase
+@end
+
 __attribute__((swift_name("KotlinIterator")))
 @protocol MPKMMLKotlinIterator
 @required
@@ -1319,8 +1320,8 @@ __attribute__((swift_name("Ktor_httpHeaders")))
 
 __attribute__((swift_name("Ktor_httpOutgoingContent")))
 @interface MPKMMLKtor_httpOutgoingContent : MPKMMLBase
-- (id _Nullable)getPropertyKey:(MPKMMLKtor_utilsAttributeKey<id> *)key __attribute__((swift_name("getProperty(key:)")));
-- (void)setPropertyKey:(MPKMMLKtor_utilsAttributeKey<id> *)key value:(id _Nullable)value __attribute__((swift_name("setProperty(key:value:)")));
+- (id _Nullable)getPropertyKey:(MPKMMLKtor_utilsAttributeKey *)key __attribute__((swift_name("getProperty(key:)")));
+- (void)setPropertyKey:(MPKMMLKtor_utilsAttributeKey *)key value:(id _Nullable)value __attribute__((swift_name("setProperty(key:value:)")));
 - (id<MPKMMLKtor_httpHeaders> _Nullable)trailers __attribute__((swift_name("trailers()")));
 @property (readonly) MPKMMLLong * _Nullable contentLength __attribute__((swift_name("contentLength")));
 @property (readonly) MPKMMLKtor_httpContentType * _Nullable contentType __attribute__((swift_name("contentType")));
@@ -1437,8 +1438,8 @@ __attribute__((swift_name("KotlinContinuation")))
  *   kotlin.ExperimentalStdlibApi
 */
 __attribute__((swift_name("KotlinAbstractCoroutineContextKey")))
-@interface MPKMMLKotlinAbstractCoroutineContextKey<B, E> : MPKMMLBase <MPKMMLKotlinCoroutineContextKey>
-- (instancetype)initWithBaseKey:(id<MPKMMLKotlinCoroutineContextKey>)baseKey safeCast:(E _Nullable (^)(id<MPKMMLKotlinCoroutineContextElement>))safeCast __attribute__((swift_name("init(baseKey:safeCast:)"))) __attribute__((objc_designated_initializer));
+@interface MPKMMLKotlinAbstractCoroutineContextKey : MPKMMLBase <MPKMMLKotlinCoroutineContextKey>
+- (instancetype)initWithBaseKey:(id<MPKMMLKotlinCoroutineContextKey>)baseKey safeCast:(id<MPKMMLKotlinCoroutineContextElement> _Nullable (^)(id<MPKMMLKotlinCoroutineContextElement>))safeCast __attribute__((swift_name("init(baseKey:safeCast:)"))) __attribute__((objc_designated_initializer));
 @end
 
 
@@ -1448,7 +1449,7 @@ __attribute__((swift_name("KotlinAbstractCoroutineContextKey")))
 */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Kotlinx_coroutines_coreCoroutineDispatcher.Key")))
-@interface MPKMMLKotlinx_coroutines_coreCoroutineDispatcherKey : MPKMMLKotlinAbstractCoroutineContextKey<id<MPKMMLKotlinContinuationInterceptor>, MPKMMLKotlinx_coroutines_coreCoroutineDispatcher *>
+@interface MPKMMLKotlinx_coroutines_coreCoroutineDispatcherKey : MPKMMLKotlinAbstractCoroutineContextKey
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithBaseKey:(id<MPKMMLKotlinCoroutineContextKey>)baseKey safeCast:(id<MPKMMLKotlinCoroutineContextElement> _Nullable (^)(id<MPKMMLKotlinCoroutineContextElement>))safeCast __attribute__((swift_name("init(baseKey:safeCast:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
@@ -1467,12 +1468,12 @@ __attribute__((swift_name("Ktor_client_coreHttpClientPlugin")))
 @required
 - (void)installPlugin:(id)plugin scope:(MPKMMLKtor_client_coreHttpClient *)scope __attribute__((swift_name("install(plugin:scope:)")));
 - (id)prepareBlock:(void (^)(id))block __attribute__((swift_name("prepare(block:)")));
-@property (readonly) MPKMMLKtor_utilsAttributeKey<id> *key __attribute__((swift_name("key")));
+@property (readonly) MPKMMLKtor_utilsAttributeKey *key __attribute__((swift_name("key")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_utilsAttributeKey")))
-@interface MPKMMLKtor_utilsAttributeKey<T> : MPKMMLBase
+@interface MPKMMLKtor_utilsAttributeKey : MPKMMLBase
 - (instancetype)initWithName:(NSString *)name __attribute__((swift_name("init(name:)"))) __attribute__((objc_designated_initializer));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
@@ -1481,7 +1482,7 @@ __attribute__((swift_name("Ktor_utilsAttributeKey")))
 @end
 
 __attribute__((swift_name("Ktor_eventsEventDefinition")))
-@interface MPKMMLKtor_eventsEventDefinition<T> : MPKMMLBase
+@interface MPKMMLKtor_eventsEventDefinition : MPKMMLBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @end
@@ -1528,35 +1529,6 @@ __attribute__((swift_name("Ktor_client_coreHttpReceivePipeline.Phases")))
 @property (readonly) MPKMMLKtor_utilsPipelinePhase *State __attribute__((swift_name("State")));
 @end
 
-__attribute__((swift_name("Ktor_httpHttpMessage")))
-@protocol MPKMMLKtor_httpHttpMessage
-@required
-@property (readonly) id<MPKMMLKtor_httpHeaders> headers __attribute__((swift_name("headers")));
-@end
-
-__attribute__((swift_name("Ktor_client_coreHttpResponse")))
-@interface MPKMMLKtor_client_coreHttpResponse : MPKMMLBase <MPKMMLKtor_httpHttpMessage, MPKMMLKotlinx_coroutines_coreCoroutineScope>
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) MPKMMLKtor_client_coreHttpClientCall *call __attribute__((swift_name("call")));
-@property (readonly) id<MPKMMLKtor_ioByteReadChannel> content __attribute__((swift_name("content")));
-@property (readonly) MPKMMLKtor_utilsGMTDate *requestTime __attribute__((swift_name("requestTime")));
-@property (readonly) MPKMMLKtor_utilsGMTDate *responseTime __attribute__((swift_name("responseTime")));
-@property (readonly) MPKMMLKtor_httpHttpStatusCode *status __attribute__((swift_name("status")));
-@property (readonly) MPKMMLKtor_httpHttpProtocolVersion *version __attribute__((swift_name("version")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinUnit")))
-@interface MPKMMLKotlinUnit : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)unit __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKotlinUnit *shared __attribute__((swift_name("shared")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@end
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpRequestPipeline.Phases")))
 @interface MPKMMLKtor_client_coreHttpRequestPipelinePhases : MPKMMLBase
@@ -1571,34 +1543,6 @@ __attribute__((swift_name("Ktor_client_coreHttpRequestPipeline.Phases")))
 @property (readonly) MPKMMLKtor_utilsPipelinePhase *Transform __attribute__((swift_name("Transform")));
 @end
 
-__attribute__((swift_name("Ktor_httpHttpMessageBuilder")))
-@protocol MPKMMLKtor_httpHttpMessageBuilder
-@required
-@property (readonly) MPKMMLKtor_httpHeadersBuilder *headers __attribute__((swift_name("headers")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_client_coreHttpRequestBuilder")))
-@interface MPKMMLKtor_client_coreHttpRequestBuilder : MPKMMLBase <MPKMMLKtor_httpHttpMessageBuilder>
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) MPKMMLKtor_client_coreHttpRequestBuilderCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLKtor_client_coreHttpRequestData *)build __attribute__((swift_name("build()")));
-- (id _Nullable)getCapabilityOrNullKey:(id<MPKMMLKtor_client_coreHttpClientEngineCapability>)key __attribute__((swift_name("getCapabilityOrNull(key:)")));
-- (void)setAttributesBlock:(void (^)(id<MPKMMLKtor_utilsAttributes>))block __attribute__((swift_name("setAttributes(block:)")));
-- (void)setCapabilityKey:(id<MPKMMLKtor_client_coreHttpClientEngineCapability>)key capability:(id)capability __attribute__((swift_name("setCapability(key:capability:)")));
-- (MPKMMLKtor_client_coreHttpRequestBuilder *)takeFromBuilder:(MPKMMLKtor_client_coreHttpRequestBuilder *)builder __attribute__((swift_name("takeFrom(builder:)")));
-- (MPKMMLKtor_client_coreHttpRequestBuilder *)takeFromWithExecutionContextBuilder:(MPKMMLKtor_client_coreHttpRequestBuilder *)builder __attribute__((swift_name("takeFromWithExecutionContext(builder:)")));
-- (void)urlBlock:(void (^)(MPKMMLKtor_httpURLBuilder *, MPKMMLKtor_httpURLBuilder *))block __attribute__((swift_name("url(block:)")));
-@property (readonly) id<MPKMMLKtor_utilsAttributes> attributes __attribute__((swift_name("attributes")));
-@property id body __attribute__((swift_name("body")));
-@property MPKMMLKtor_utilsTypeInfo * _Nullable bodyType __attribute__((swift_name("bodyType")));
-@property (readonly) id<MPKMMLKotlinx_coroutines_coreJob> executionContext __attribute__((swift_name("executionContext")));
-@property (readonly) MPKMMLKtor_httpHeadersBuilder *headers __attribute__((swift_name("headers")));
-@property MPKMMLKtor_httpHttpMethod *method __attribute__((swift_name("method")));
-@property (readonly) MPKMMLKtor_httpURLBuilder *url __attribute__((swift_name("url")));
-@end
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_client_coreHttpResponsePipeline.Phases")))
 @interface MPKMMLKtor_client_coreHttpResponsePipelinePhases : MPKMMLBase
@@ -1611,55 +1555,6 @@ __attribute__((swift_name("Ktor_client_coreHttpResponsePipeline.Phases")))
 @property (readonly) MPKMMLKtor_utilsPipelinePhase *Receive __attribute__((swift_name("Receive")));
 @property (readonly) MPKMMLKtor_utilsPipelinePhase *State __attribute__((swift_name("State")));
 @property (readonly) MPKMMLKtor_utilsPipelinePhase *Transform __attribute__((swift_name("Transform")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_client_coreHttpResponseContainer")))
-@interface MPKMMLKtor_client_coreHttpResponseContainer : MPKMMLBase
-- (instancetype)initWithExpectedType:(MPKMMLKtor_utilsTypeInfo *)expectedType response:(id)response __attribute__((swift_name("init(expectedType:response:)"))) __attribute__((objc_designated_initializer));
-- (MPKMMLKtor_client_coreHttpResponseContainer *)doCopyExpectedType:(MPKMMLKtor_utilsTypeInfo *)expectedType response:(id)response __attribute__((swift_name("doCopy(expectedType:response:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) MPKMMLKtor_utilsTypeInfo *expectedType __attribute__((swift_name("expectedType")));
-@property (readonly) id response __attribute__((swift_name("response")));
-@end
-
-__attribute__((swift_name("Ktor_client_coreHttpClientCall")))
-@interface MPKMMLKtor_client_coreHttpClientCall : MPKMMLBase <MPKMMLKotlinx_coroutines_coreCoroutineScope>
-- (instancetype)initWithClient:(MPKMMLKtor_client_coreHttpClient *)client requestData:(MPKMMLKtor_client_coreHttpRequestData *)requestData responseData:(MPKMMLKtor_client_coreHttpResponseData *)responseData __attribute__((swift_name("init(client:requestData:responseData:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithClient:(MPKMMLKtor_client_coreHttpClient *)client __attribute__((swift_name("init(client:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MPKMMLKtor_client_coreHttpClientCallCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)bodyInfo:(MPKMMLKtor_utilsTypeInfo *)info completionHandler:(void (^)(id _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("body(info:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)bodyNullableInfo:(MPKMMLKtor_utilsTypeInfo *)info completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("bodyNullable(info:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)getResponseContentWithCompletionHandler:(void (^)(id<MPKMMLKtor_ioByteReadChannel> _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getResponseContent(completionHandler:)")));
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/**
- * @note This property has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-@property (readonly) BOOL allowDoubleReceive __attribute__((swift_name("allowDoubleReceive")));
-@property (readonly) id<MPKMMLKtor_utilsAttributes> attributes __attribute__((swift_name("attributes")));
-@property (readonly) MPKMMLKtor_client_coreHttpClient *client __attribute__((swift_name("client")));
-@property (readonly) id<MPKMMLKotlinCoroutineContext> coroutineContext __attribute__((swift_name("coroutineContext")));
-@property id<MPKMMLKtor_client_coreHttpRequest> request __attribute__((swift_name("request")));
-@property MPKMMLKtor_client_coreHttpResponse *response __attribute__((swift_name("response")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -1916,10 +1811,10 @@ __attribute__((swift_name("Ktor_utilsGMTDate.Companion")))
 @end
 
 __attribute__((swift_name("KotlinEnum")))
-@interface MPKMMLKotlinEnum<E> : MPKMMLBase <MPKMMLKotlinComparable>
+@interface MPKMMLKotlinEnum : MPKMMLBase <MPKMMLKotlinComparable>
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
+- (int32_t)compareToOther:(MPKMMLKotlinEnum *)other __attribute__((swift_name("compareTo(other:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -1929,7 +1824,7 @@ __attribute__((swift_name("KotlinEnum")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_utilsWeekDay")))
-@interface MPKMMLKtor_utilsWeekDay : MPKMMLKotlinEnum<MPKMMLKtor_utilsWeekDay *>
+@interface MPKMMLKtor_utilsWeekDay : MPKMMLKotlinEnum
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
@@ -1941,13 +1836,13 @@ __attribute__((swift_name("Ktor_utilsWeekDay")))
 @property (class, readonly) MPKMMLKtor_utilsWeekDay *friday __attribute__((swift_name("friday")));
 @property (class, readonly) MPKMMLKtor_utilsWeekDay *saturday __attribute__((swift_name("saturday")));
 @property (class, readonly) MPKMMLKtor_utilsWeekDay *sunday __attribute__((swift_name("sunday")));
-+ (MPKMMLKotlinArray<MPKMMLKtor_utilsWeekDay *> *)values __attribute__((swift_name("values()")));
++ (MPKMMLKotlinArray *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
 @end
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Ktor_utilsMonth")))
-@interface MPKMMLKtor_utilsMonth : MPKMMLKotlinEnum<MPKMMLKtor_utilsMonth *>
+@interface MPKMMLKtor_utilsMonth : MPKMMLKotlinEnum
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
@@ -1964,7 +1859,7 @@ __attribute__((swift_name("Ktor_utilsMonth")))
 @property (class, readonly) MPKMMLKtor_utilsMonth *october __attribute__((swift_name("october")));
 @property (class, readonly) MPKMMLKtor_utilsMonth *november __attribute__((swift_name("november")));
 @property (class, readonly) MPKMMLKtor_utilsMonth *december __attribute__((swift_name("december")));
-+ (MPKMMLKotlinArray<MPKMMLKtor_utilsMonth *> *)values __attribute__((swift_name("values()")));
++ (MPKMMLKotlinArray *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
 @end
 
@@ -1982,304 +1877,6 @@ __attribute__((swift_name("Ktor_httpHttpProtocolVersion.Companion")))
 @property (readonly) MPKMMLKtor_httpHttpProtocolVersion *HTTP_2_0 __attribute__((swift_name("HTTP_2_0")));
 @property (readonly) MPKMMLKtor_httpHttpProtocolVersion *QUIC __attribute__((swift_name("QUIC")));
 @property (readonly) MPKMMLKtor_httpHttpProtocolVersion *SPDY_3 __attribute__((swift_name("SPDY_3")));
-@end
-
-__attribute__((swift_name("Ktor_ioByteReadChannel")))
-@protocol MPKMMLKtor_ioByteReadChannel
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)awaitContentWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("awaitContent(completionHandler:)")));
-- (BOOL)cancelCause_:(MPKMMLKotlinThrowable * _Nullable)cause __attribute__((swift_name("cancel(cause_:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)discardMax:(int64_t)max completionHandler:(void (^)(MPKMMLLong * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("discard(max:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)peekToDestination:(MPKMMLKtor_ioMemory *)destination destinationOffset:(int64_t)destinationOffset offset:(int64_t)offset min:(int64_t)min max:(int64_t)max completionHandler:(void (^)(MPKMMLLong * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("peekTo(destination:destinationOffset:offset:min:max:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readAvailableDst:(MPKMMLKtor_ioChunkBuffer *)dst completionHandler:(void (^)(MPKMMLInt * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readAvailable(dst:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readAvailableDst:(MPKMMLKotlinByteArray *)dst offset:(int32_t)offset length:(int32_t)length completionHandler:(void (^)(MPKMMLInt * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readAvailable(dst:offset:length:completionHandler:)")));
-- (int32_t)readAvailableMin:(int32_t)min block:(void (^)(MPKMMLKtor_ioBuffer *))block __attribute__((swift_name("readAvailable(min:block:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readAvailableDst:(void *)dst offset:(int32_t)offset length:(int32_t)length completionHandler_:(void (^)(MPKMMLInt * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readAvailable(dst:offset:length:completionHandler_:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readAvailableDst:(void *)dst offset:(int64_t)offset length:(int64_t)length completionHandler__:(void (^)(MPKMMLInt * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readAvailable(dst:offset:length:completionHandler__:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readBooleanWithCompletionHandler:(void (^)(MPKMMLBoolean * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readBoolean(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readByteWithCompletionHandler:(void (^)(MPKMMLByte * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readByte(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readDoubleWithCompletionHandler:(void (^)(MPKMMLDouble * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readDouble(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readFloatWithCompletionHandler:(void (^)(MPKMMLFloat * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readFloat(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readFullyDst:(MPKMMLKtor_ioChunkBuffer *)dst n:(int32_t)n completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:n:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readFullyDst:(MPKMMLKotlinByteArray *)dst offset:(int32_t)offset length:(int32_t)length completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readFullyDst:(void *)dst offset:(int32_t)offset length:(int32_t)length completionHandler_:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler_:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readFullyDst:(void *)dst offset:(int64_t)offset length:(int64_t)length completionHandler__:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readFully(dst:offset:length:completionHandler__:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readIntWithCompletionHandler:(void (^)(MPKMMLInt * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readInt(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readLongWithCompletionHandler:(void (^)(MPKMMLLong * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readLong(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readPacketSize:(int32_t)size completionHandler:(void (^)(MPKMMLKtor_ioByteReadPacket * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readPacket(size:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readRemainingLimit:(int64_t)limit completionHandler:(void (^)(MPKMMLKtor_ioByteReadPacket * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readRemaining(limit:completionHandler:)")));
-- (void)readSessionConsumer:(void (^)(id<MPKMMLKtor_ioReadSession>))consumer __attribute__((swift_name("readSession(consumer:)"))) __attribute__((deprecated("Use read { } instead.")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readShortWithCompletionHandler:(void (^)(MPKMMLShort * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readShort(completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readSuspendableSessionConsumer:(id<MPKMMLKotlinSuspendFunction1>)consumer completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("readSuspendableSession(consumer:completionHandler:)"))) __attribute__((deprecated("Use read { } instead.")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readUTF8LineLimit:(int32_t)limit completionHandler:(void (^)(NSString * _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("readUTF8Line(limit:completionHandler:)")));
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)readUTF8LineToOut:(id<MPKMMLKotlinAppendable>)out limit:(int32_t)limit completionHandler:(void (^)(MPKMMLBoolean * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("readUTF8LineTo(out:limit:completionHandler:)")));
-@property (readonly) int32_t availableForRead __attribute__((swift_name("availableForRead")));
-@property (readonly) MPKMMLKotlinThrowable * _Nullable closedCause __attribute__((swift_name("closedCause")));
-@property (readonly) BOOL isClosedForRead __attribute__((swift_name("isClosedForRead")));
-@property (readonly) BOOL isClosedForWrite __attribute__((swift_name("isClosedForWrite")));
-@property (readonly) int64_t totalBytesRead __attribute__((swift_name("totalBytesRead")));
-@end
-
-__attribute__((swift_name("Ktor_utilsStringValuesBuilder")))
-@protocol MPKMMLKtor_utilsStringValuesBuilder
-@required
-- (void)appendName:(NSString *)name value:(NSString *)value __attribute__((swift_name("append(name:value:)")));
-- (void)appendAllStringValues:(id<MPKMMLKtor_utilsStringValues>)stringValues __attribute__((swift_name("appendAll(stringValues:)")));
-- (void)appendAllName:(NSString *)name values:(id)values __attribute__((swift_name("appendAll(name:values:)")));
-- (void)appendMissingStringValues:(id<MPKMMLKtor_utilsStringValues>)stringValues __attribute__((swift_name("appendMissing(stringValues:)")));
-- (void)appendMissingName:(NSString *)name values:(id)values __attribute__((swift_name("appendMissing(name:values:)")));
-- (id<MPKMMLKtor_utilsStringValues>)build __attribute__((swift_name("build()")));
-- (void)clear __attribute__((swift_name("clear()")));
-- (BOOL)containsName:(NSString *)name __attribute__((swift_name("contains(name:)")));
-- (BOOL)containsName:(NSString *)name value:(NSString *)value __attribute__((swift_name("contains(name:value:)")));
-- (NSSet<id<MPKMMLKotlinMapEntry>> *)entries __attribute__((swift_name("entries()")));
-- (NSString * _Nullable)getName:(NSString *)name __attribute__((swift_name("get(name:)")));
-- (NSArray<NSString *> * _Nullable)getAllName:(NSString *)name __attribute__((swift_name("getAll(name:)")));
-- (BOOL)isEmpty_ __attribute__((swift_name("isEmpty()")));
-- (NSSet<NSString *> *)names __attribute__((swift_name("names()")));
-- (void)removeName:(NSString *)name __attribute__((swift_name("remove(name:)")));
-- (BOOL)removeName:(NSString *)name value:(NSString *)value __attribute__((swift_name("remove(name:value:)")));
-- (void)removeKeysWithNoEntries __attribute__((swift_name("removeKeysWithNoEntries()")));
-- (void)setName:(NSString *)name value:(NSString *)value __attribute__((swift_name("set(name:value:)")));
-@property (readonly) BOOL caseInsensitiveName __attribute__((swift_name("caseInsensitiveName")));
-@end
-
-__attribute__((swift_name("Ktor_utilsStringValuesBuilderImpl")))
-@interface MPKMMLKtor_utilsStringValuesBuilderImpl : MPKMMLBase <MPKMMLKtor_utilsStringValuesBuilder>
-- (instancetype)initWithCaseInsensitiveName:(BOOL)caseInsensitiveName size:(int32_t)size __attribute__((swift_name("init(caseInsensitiveName:size:)"))) __attribute__((objc_designated_initializer));
-- (void)appendName:(NSString *)name value:(NSString *)value __attribute__((swift_name("append(name:value:)")));
-- (void)appendAllStringValues:(id<MPKMMLKtor_utilsStringValues>)stringValues __attribute__((swift_name("appendAll(stringValues:)")));
-- (void)appendAllName:(NSString *)name values:(id)values __attribute__((swift_name("appendAll(name:values:)")));
-- (void)appendMissingStringValues:(id<MPKMMLKtor_utilsStringValues>)stringValues __attribute__((swift_name("appendMissing(stringValues:)")));
-- (void)appendMissingName:(NSString *)name values:(id)values __attribute__((swift_name("appendMissing(name:values:)")));
-- (id<MPKMMLKtor_utilsStringValues>)build __attribute__((swift_name("build()")));
-- (void)clear __attribute__((swift_name("clear()")));
-- (BOOL)containsName:(NSString *)name __attribute__((swift_name("contains(name:)")));
-- (BOOL)containsName:(NSString *)name value:(NSString *)value __attribute__((swift_name("contains(name:value:)")));
-- (NSSet<id<MPKMMLKotlinMapEntry>> *)entries __attribute__((swift_name("entries()")));
-- (NSString * _Nullable)getName:(NSString *)name __attribute__((swift_name("get(name:)")));
-- (NSArray<NSString *> * _Nullable)getAllName:(NSString *)name __attribute__((swift_name("getAll(name:)")));
-- (BOOL)isEmpty_ __attribute__((swift_name("isEmpty()")));
-- (NSSet<NSString *> *)names __attribute__((swift_name("names()")));
-- (void)removeName:(NSString *)name __attribute__((swift_name("remove(name:)")));
-- (BOOL)removeName:(NSString *)name value:(NSString *)value __attribute__((swift_name("remove(name:value:)")));
-- (void)removeKeysWithNoEntries __attribute__((swift_name("removeKeysWithNoEntries()")));
-- (void)setName:(NSString *)name value:(NSString *)value __attribute__((swift_name("set(name:value:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)validateNameName:(NSString *)name __attribute__((swift_name("validateName(name:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)validateValueValue:(NSString *)value __attribute__((swift_name("validateValue(value:)")));
-@property (readonly) BOOL caseInsensitiveName __attribute__((swift_name("caseInsensitiveName")));
-
-/**
- * @note This property has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-@property (readonly) MPKMMLMutableDictionary<NSString *, NSMutableArray<NSString *> *> *values __attribute__((swift_name("values")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_httpHeadersBuilder")))
-@interface MPKMMLKtor_httpHeadersBuilder : MPKMMLKtor_utilsStringValuesBuilderImpl
-- (instancetype)initWithSize:(int32_t)size __attribute__((swift_name("init(size:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithCaseInsensitiveName:(BOOL)caseInsensitiveName size:(int32_t)size __attribute__((swift_name("init(caseInsensitiveName:size:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-- (id<MPKMMLKtor_httpHeaders>)build __attribute__((swift_name("build()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)validateNameName:(NSString *)name __attribute__((swift_name("validateName(name:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)validateValueValue:(NSString *)value __attribute__((swift_name("validateValue(value:)")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_client_coreHttpRequestBuilder.Companion")))
-@interface MPKMMLKtor_client_coreHttpRequestBuilderCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_client_coreHttpRequestBuilderCompanion *shared __attribute__((swift_name("shared")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_httpURLBuilder")))
-@interface MPKMMLKtor_httpURLBuilder : MPKMMLBase
-- (instancetype)initWithProtocol:(MPKMMLKtor_httpURLProtocol *)protocol host:(NSString *)host port:(int32_t)port user:(NSString * _Nullable)user password:(NSString * _Nullable)password pathSegments:(NSArray<NSString *> *)pathSegments parameters:(id<MPKMMLKtor_httpParameters>)parameters fragment:(NSString *)fragment trailingQuery:(BOOL)trailingQuery __attribute__((swift_name("init(protocol:host:port:user:password:pathSegments:parameters:fragment:trailingQuery:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MPKMMLKtor_httpURLBuilderCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLKtor_httpUrl *)build __attribute__((swift_name("build()")));
-- (NSString *)buildString __attribute__((swift_name("buildString()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property NSString *encodedFragment __attribute__((swift_name("encodedFragment")));
-@property id<MPKMMLKtor_httpParametersBuilder> encodedParameters __attribute__((swift_name("encodedParameters")));
-@property NSString * _Nullable encodedPassword __attribute__((swift_name("encodedPassword")));
-@property NSArray<NSString *> *encodedPathSegments __attribute__((swift_name("encodedPathSegments")));
-@property NSString * _Nullable encodedUser __attribute__((swift_name("encodedUser")));
-@property NSString *fragment __attribute__((swift_name("fragment")));
-@property NSString *host __attribute__((swift_name("host")));
-@property (readonly) id<MPKMMLKtor_httpParametersBuilder> parameters __attribute__((swift_name("parameters")));
-@property NSString * _Nullable password __attribute__((swift_name("password")));
-@property NSArray<NSString *> *pathSegments __attribute__((swift_name("pathSegments")));
-@property int32_t port __attribute__((swift_name("port")));
-@property MPKMMLKtor_httpURLProtocol *protocol __attribute__((swift_name("protocol")));
-@property BOOL trailingQuery __attribute__((swift_name("trailingQuery")));
-@property NSString * _Nullable user __attribute__((swift_name("user")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_utilsTypeInfo")))
-@interface MPKMMLKtor_utilsTypeInfo : MPKMMLBase
-- (instancetype)initWithType:(id<MPKMMLKotlinKClass>)type reifiedType:(id<MPKMMLKotlinKType>)reifiedType kotlinType:(id<MPKMMLKotlinKType> _Nullable)kotlinType __attribute__((swift_name("init(type:reifiedType:kotlinType:)"))) __attribute__((objc_designated_initializer));
-- (MPKMMLKtor_utilsTypeInfo *)doCopyType:(id<MPKMMLKotlinKClass>)type reifiedType:(id<MPKMMLKotlinKType>)reifiedType kotlinType:(id<MPKMMLKotlinKType> _Nullable)kotlinType __attribute__((swift_name("doCopy(type:reifiedType:kotlinType:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) id<MPKMMLKotlinKType> _Nullable kotlinType __attribute__((swift_name("kotlinType")));
-@property (readonly) id<MPKMMLKotlinKType> reifiedType __attribute__((swift_name("reifiedType")));
-@property (readonly) id<MPKMMLKotlinKClass> type __attribute__((swift_name("type")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_client_coreHttpClientCall.Companion")))
-@interface MPKMMLKtor_client_coreHttpClientCallCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_client_coreHttpClientCallCompanion *shared __attribute__((swift_name("shared")));
-@property (readonly) MPKMMLKtor_utilsAttributeKey<id> *CustomResponse __attribute__((swift_name("CustomResponse"))) __attribute__((unavailable("This is going to be removed. Please file a ticket with clarification why and what for do you need it.")));
-@end
-
-__attribute__((swift_name("Ktor_client_coreHttpRequest")))
-@protocol MPKMMLKtor_client_coreHttpRequest <MPKMMLKtor_httpHttpMessage, MPKMMLKotlinx_coroutines_coreCoroutineScope>
-@required
-@property (readonly) id<MPKMMLKtor_utilsAttributes> attributes __attribute__((swift_name("attributes")));
-@property (readonly) MPKMMLKtor_client_coreHttpClientCall *call __attribute__((swift_name("call")));
-@property (readonly) MPKMMLKtor_httpOutgoingContent *content __attribute__((swift_name("content")));
-@property (readonly) MPKMMLKtor_httpHttpMethod *method __attribute__((swift_name("method")));
-@property (readonly) MPKMMLKtor_httpUrl *url __attribute__((swift_name("url")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -2363,7 +1960,7 @@ __attribute__((swift_name("KotlinSuspendFunction0")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinEnumCompanion")))
+__attribute__((swift_name("KotlinEnum.Companion")))
 @interface MPKMMLKotlinEnumCompanion : MPKMMLBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
@@ -2393,221 +1990,13 @@ __attribute__((swift_name("Ktor_utilsMonth.Companion")))
 - (MPKMMLKtor_utilsMonth *)fromValue:(NSString *)value __attribute__((swift_name("from(value:)")));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioMemory")))
-@interface MPKMMLKtor_ioMemory : MPKMMLBase
-- (instancetype)initWithPointer:(void *)pointer size:(int64_t)size __attribute__((swift_name("init(pointer:size:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MPKMMLKtor_ioMemoryCompanion *companion __attribute__((swift_name("companion")));
-- (void)doCopyToDestination:(MPKMMLKtor_ioMemory *)destination offset:(int32_t)offset length:(int32_t)length destinationOffset:(int32_t)destinationOffset __attribute__((swift_name("doCopyTo(destination:offset:length:destinationOffset:)")));
-- (void)doCopyToDestination:(MPKMMLKtor_ioMemory *)destination offset:(int64_t)offset length:(int64_t)length destinationOffset_:(int64_t)destinationOffset __attribute__((swift_name("doCopyTo(destination:offset:length:destinationOffset_:)")));
-- (int8_t)loadAtIndex:(int32_t)index __attribute__((swift_name("loadAt(index:)")));
-- (int8_t)loadAtIndex_:(int64_t)index __attribute__((swift_name("loadAt(index_:)")));
-- (MPKMMLKtor_ioMemory *)sliceOffset:(int32_t)offset length:(int32_t)length __attribute__((swift_name("slice(offset:length:)")));
-- (MPKMMLKtor_ioMemory *)sliceOffset:(int64_t)offset length_:(int64_t)length __attribute__((swift_name("slice(offset:length_:)")));
-- (void)storeAtIndex:(int32_t)index value:(int8_t)value __attribute__((swift_name("storeAt(index:value:)")));
-- (void)storeAtIndex:(int64_t)index value_:(int8_t)value __attribute__((swift_name("storeAt(index:value_:)")));
-@property (readonly) void *pointer __attribute__((swift_name("pointer")));
-@property (readonly) int64_t size __attribute__((swift_name("size")));
-@property (readonly) int32_t size32 __attribute__((swift_name("size32")));
-@end
-
-__attribute__((swift_name("Ktor_ioBuffer")))
-@interface MPKMMLKtor_ioBuffer : MPKMMLBase
-- (instancetype)initWithMemory:(MPKMMLKtor_ioMemory *)memory __attribute__((swift_name("init(memory:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MPKMMLKtor_ioBufferCompanion *companion __attribute__((swift_name("companion")));
-- (void)commitWrittenCount:(int32_t)count __attribute__((swift_name("commitWritten(count:)")));
-- (void)discardExactCount:(int32_t)count __attribute__((swift_name("discardExact(count:)")));
-- (MPKMMLKtor_ioBuffer *)duplicate __attribute__((swift_name("duplicate()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)duplicateToCopy:(MPKMMLKtor_ioBuffer *)copy __attribute__((swift_name("duplicateTo(copy:)")));
-- (int8_t)readByte __attribute__((swift_name("readByte()")));
-- (void)reserveEndGapEndGap:(int32_t)endGap __attribute__((swift_name("reserveEndGap(endGap:)")));
-- (void)reserveStartGapStartGap:(int32_t)startGap __attribute__((swift_name("reserveStartGap(startGap:)")));
-- (void)reset __attribute__((swift_name("reset()")));
-- (void)resetForRead __attribute__((swift_name("resetForRead()")));
-- (void)resetForWrite __attribute__((swift_name("resetForWrite()")));
-- (void)resetForWriteLimit:(int32_t)limit __attribute__((swift_name("resetForWrite(limit:)")));
-- (void)rewindCount:(int32_t)count __attribute__((swift_name("rewind(count:)")));
-- (NSString *)description __attribute__((swift_name("description()")));
-- (int32_t)tryPeekByte __attribute__((swift_name("tryPeekByte()")));
-- (int32_t)tryReadByte __attribute__((swift_name("tryReadByte()")));
-- (void)writeByteValue:(int8_t)value __attribute__((swift_name("writeByte(value:)")));
-@property (readonly) int32_t capacity __attribute__((swift_name("capacity")));
-@property (readonly) int32_t endGap __attribute__((swift_name("endGap")));
-@property (readonly) int32_t limit __attribute__((swift_name("limit")));
-@property (readonly) MPKMMLKtor_ioMemory *memory __attribute__((swift_name("memory")));
-@property (readonly) int32_t readPosition __attribute__((swift_name("readPosition")));
-@property (readonly) int32_t readRemaining __attribute__((swift_name("readRemaining")));
-@property (readonly) int32_t startGap __attribute__((swift_name("startGap")));
-@property (readonly) int32_t writePosition __attribute__((swift_name("writePosition")));
-@property (readonly) int32_t writeRemaining __attribute__((swift_name("writeRemaining")));
-@end
-
-__attribute__((swift_name("Ktor_ioChunkBuffer")))
-@interface MPKMMLKtor_ioChunkBuffer : MPKMMLKtor_ioBuffer
-- (instancetype)initWithMemory:(MPKMMLKtor_ioMemory *)memory origin:(MPKMMLKtor_ioChunkBuffer * _Nullable)origin parentPool:(id<MPKMMLKtor_ioObjectPool> _Nullable)parentPool __attribute__((swift_name("init(memory:origin:parentPool:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithMemory:(MPKMMLKtor_ioMemory *)memory __attribute__((swift_name("init(memory:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly, getter=companion) MPKMMLKtor_ioChunkBufferCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLKtor_ioChunkBuffer * _Nullable)cleanNext __attribute__((swift_name("cleanNext()")));
-- (MPKMMLKtor_ioChunkBuffer *)duplicate __attribute__((swift_name("duplicate()")));
-- (void)releasePool:(id<MPKMMLKtor_ioObjectPool>)pool __attribute__((swift_name("release(pool:)")));
-- (void)reset __attribute__((swift_name("reset()")));
-@property (getter=next_) MPKMMLKtor_ioChunkBuffer * _Nullable next __attribute__((swift_name("next")));
-@property (readonly) MPKMMLKtor_ioChunkBuffer * _Nullable origin __attribute__((swift_name("origin")));
-@property (readonly) int32_t referenceCount __attribute__((swift_name("referenceCount")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinByteArray")))
-@interface MPKMMLKotlinByteArray : MPKMMLBase
-+ (instancetype)arrayWithSize:(int32_t)size __attribute__((swift_name("init(size:)")));
-+ (instancetype)arrayWithSize:(int32_t)size init:(MPKMMLByte *(^)(MPKMMLInt *))init __attribute__((swift_name("init(size:init:)")));
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (int8_t)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
-- (MPKMMLKotlinByteIterator *)iterator __attribute__((swift_name("iterator()")));
-- (void)setIndex:(int32_t)index value:(int8_t)value __attribute__((swift_name("set(index:value:)")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
-@end
-
-__attribute__((swift_name("Ktor_ioInput")))
-@interface MPKMMLKtor_ioInput : MPKMMLBase <MPKMMLKtor_ioCloseable>
-- (instancetype)initWithHead:(MPKMMLKtor_ioChunkBuffer *)head remaining:(int64_t)remaining pool:(id<MPKMMLKtor_ioObjectPool>)pool __attribute__((swift_name("init(head:remaining:pool:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MPKMMLKtor_ioInputCompanion *companion __attribute__((swift_name("companion")));
-- (BOOL)canRead __attribute__((swift_name("canRead()")));
-- (void)close __attribute__((swift_name("close()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)closeSource __attribute__((swift_name("closeSource()")));
-- (int32_t)discardN:(int32_t)n __attribute__((swift_name("discard(n:)")));
-- (int64_t)discardN_:(int64_t)n __attribute__((swift_name("discard(n_:)")));
-- (void)discardExactN:(int32_t)n __attribute__((swift_name("discardExact(n:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (MPKMMLKtor_ioChunkBuffer * _Nullable)fill __attribute__((swift_name("fill()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (int32_t)fillDestination:(MPKMMLKtor_ioMemory *)destination offset:(int32_t)offset length:(int32_t)length __attribute__((swift_name("fill(destination:offset:length:)")));
-- (BOOL)hasBytesN:(int32_t)n __attribute__((swift_name("hasBytes(n:)")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)markNoMoreChunksAvailable __attribute__((swift_name("markNoMoreChunksAvailable()")));
-- (int64_t)peekToDestination:(MPKMMLKtor_ioMemory *)destination destinationOffset:(int64_t)destinationOffset offset:(int64_t)offset min:(int64_t)min max:(int64_t)max __attribute__((swift_name("peekTo(destination:destinationOffset:offset:min:max:)")));
-- (int32_t)peekToBuffer:(MPKMMLKtor_ioChunkBuffer *)buffer __attribute__((swift_name("peekTo(buffer:)")));
-- (int8_t)readByte __attribute__((swift_name("readByte()")));
-- (NSString *)readTextMin:(int32_t)min max:(int32_t)max __attribute__((swift_name("readText(min:max:)")));
-- (int32_t)readTextOut:(id<MPKMMLKotlinAppendable>)out min:(int32_t)min max:(int32_t)max __attribute__((swift_name("readText(out:min:max:)")));
-- (NSString *)readTextExactExactCharacters:(int32_t)exactCharacters __attribute__((swift_name("readTextExact(exactCharacters:)")));
-- (void)readTextExactOut:(id<MPKMMLKotlinAppendable>)out exactCharacters:(int32_t)exactCharacters __attribute__((swift_name("readTextExact(out:exactCharacters:)")));
-- (void)release_ __attribute__((swift_name("release()")));
-- (int32_t)tryPeek __attribute__((swift_name("tryPeek()")));
-@property (readonly) BOOL endOfInput __attribute__((swift_name("endOfInput")));
-@property (readonly) id<MPKMMLKtor_ioObjectPool> pool __attribute__((swift_name("pool")));
-@property (readonly) int64_t remaining __attribute__((swift_name("remaining")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioByteReadPacket")))
-@interface MPKMMLKtor_ioByteReadPacket : MPKMMLKtor_ioInput
-- (instancetype)initWithHead:(MPKMMLKtor_ioChunkBuffer *)head pool:(id<MPKMMLKtor_ioObjectPool>)pool __attribute__((swift_name("init(head:pool:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithHead:(MPKMMLKtor_ioChunkBuffer *)head remaining:(int64_t)remaining pool:(id<MPKMMLKtor_ioObjectPool>)pool __attribute__((swift_name("init(head:remaining:pool:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly, getter=companion) MPKMMLKtor_ioByteReadPacketCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (void)closeSource __attribute__((swift_name("closeSource()")));
-- (MPKMMLKtor_ioByteReadPacket *)doCopy __attribute__((swift_name("doCopy()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (MPKMMLKtor_ioChunkBuffer * _Nullable)fill __attribute__((swift_name("fill()")));
-
-/**
- * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
-*/
-- (int32_t)fillDestination:(MPKMMLKtor_ioMemory *)destination offset:(int32_t)offset length:(int32_t)length __attribute__((swift_name("fill(destination:offset:length:)")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@end
-
-__attribute__((swift_name("Ktor_ioReadSession")))
-@protocol MPKMMLKtor_ioReadSession
-@required
-- (int32_t)discardN:(int32_t)n __attribute__((swift_name("discard(n:)")));
-- (MPKMMLKtor_ioChunkBuffer * _Nullable)requestAtLeast:(int32_t)atLeast __attribute__((swift_name("request(atLeast:)")));
-@property (readonly) int32_t availableForRead __attribute__((swift_name("availableForRead")));
-@end
-
-__attribute__((swift_name("KotlinSuspendFunction1")))
-@protocol MPKMMLKotlinSuspendFunction1 <MPKMMLKotlinFunction>
-@required
-
-/**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
-*/
-- (void)invokeP1:(id _Nullable)p1 completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(p1:completionHandler:)")));
-@end
-
-__attribute__((swift_name("KotlinAppendable")))
-@protocol MPKMMLKotlinAppendable
-@required
-- (id<MPKMMLKotlinAppendable>)appendValue:(unichar)value __attribute__((swift_name("append(value:)")));
-- (id<MPKMMLKotlinAppendable>)appendValue_:(id _Nullable)value __attribute__((swift_name("append(value_:)")));
-- (id<MPKMMLKotlinAppendable>)appendValue:(id _Nullable)value startIndex:(int32_t)startIndex endIndex:(int32_t)endIndex __attribute__((swift_name("append(value:startIndex:endIndex:)")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_httpURLBuilder.Companion")))
-@interface MPKMMLKtor_httpURLBuilderCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_httpURLBuilderCompanion *shared __attribute__((swift_name("shared")));
-@end
-
-__attribute__((swift_name("Ktor_httpParametersBuilder")))
-@protocol MPKMMLKtor_httpParametersBuilder <MPKMMLKtor_utilsStringValuesBuilder>
-@required
-@end
-
-__attribute__((swift_name("KotlinKType")))
-@protocol MPKMMLKotlinKType
-@required
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.1")
-*/
-@property (readonly) NSArray<MPKMMLKotlinKTypeProjection *> *arguments __attribute__((swift_name("arguments")));
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.1")
-*/
-@property (readonly) id<MPKMMLKotlinKClassifier> _Nullable classifier __attribute__((swift_name("classifier")));
-@property (readonly) BOOL isMarkedNullable __attribute__((swift_name("isMarkedNullable")));
-@end
-
 __attribute__((swift_name("Kotlinx_coroutines_coreAtomicDesc")))
 @interface MPKMMLKotlinx_coroutines_coreAtomicDesc : MPKMMLBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)completeOp:(MPKMMLKotlinx_coroutines_coreAtomicOp<id> *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
-- (id _Nullable)prepareOp:(MPKMMLKotlinx_coroutines_coreAtomicOp<id> *)op __attribute__((swift_name("prepare(op:)")));
-@property MPKMMLKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
+- (void)completeOp:(MPKMMLKotlinx_coroutines_coreAtomicOp *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
+- (id _Nullable)prepareOp:(MPKMMLKotlinx_coroutines_coreAtomicOp *)op __attribute__((swift_name("prepare(op:)")));
+@property MPKMMLKotlinx_coroutines_coreAtomicOp *atomicOp __attribute__((swift_name("atomicOp")));
 @end
 
 __attribute__((swift_name("Kotlinx_coroutines_coreOpDescriptor")))
@@ -2617,7 +2006,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreOpDescriptor")))
 - (BOOL)isEarlierThanThat:(MPKMMLKotlinx_coroutines_coreOpDescriptor *)that __attribute__((swift_name("isEarlierThan(that:)")));
 - (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) MPKMMLKotlinx_coroutines_coreAtomicOp<id> * _Nullable atomicOp __attribute__((swift_name("atomicOp")));
+@property (readonly) MPKMMLKotlinx_coroutines_coreAtomicOp * _Nullable atomicOp __attribute__((swift_name("atomicOp")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -2630,107 +2019,20 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.Prepare
 - (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *affected __attribute__((swift_name("affected")));
-@property (readonly) MPKMMLKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
+@property (readonly) MPKMMLKotlinx_coroutines_coreAtomicOp *atomicOp __attribute__((swift_name("atomicOp")));
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc *desc __attribute__((swift_name("desc")));
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *next __attribute__((swift_name("next")));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioMemory.Companion")))
-@interface MPKMMLKtor_ioMemoryCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_ioMemoryCompanion *shared __attribute__((swift_name("shared")));
-@property (readonly) MPKMMLKtor_ioMemory *Empty __attribute__((swift_name("Empty")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioBuffer.Companion")))
-@interface MPKMMLKtor_ioBufferCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_ioBufferCompanion *shared __attribute__((swift_name("shared")));
-@property (readonly) MPKMMLKtor_ioBuffer *Empty __attribute__((swift_name("Empty")));
-@property (readonly) int32_t ReservedSize __attribute__((swift_name("ReservedSize")));
-@end
-
-__attribute__((swift_name("Ktor_ioObjectPool")))
-@protocol MPKMMLKtor_ioObjectPool <MPKMMLKtor_ioCloseable>
-@required
-- (id)borrow __attribute__((swift_name("borrow()")));
-- (void)dispose __attribute__((swift_name("dispose()")));
-- (void)recycleInstance:(id)instance __attribute__((swift_name("recycle(instance:)")));
-@property (readonly) int32_t capacity __attribute__((swift_name("capacity")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioChunkBuffer.Companion")))
-@interface MPKMMLKtor_ioChunkBufferCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_ioChunkBufferCompanion *shared __attribute__((swift_name("shared")));
-@property (readonly) MPKMMLKtor_ioChunkBuffer *Empty __attribute__((swift_name("Empty")));
-@property (readonly) id<MPKMMLKtor_ioObjectPool> EmptyPool __attribute__((swift_name("EmptyPool")));
-@property (readonly) id<MPKMMLKtor_ioObjectPool> Pool __attribute__((swift_name("Pool")));
-@end
-
-__attribute__((swift_name("KotlinByteIterator")))
-@interface MPKMMLKotlinByteIterator : MPKMMLBase <MPKMMLKotlinIterator>
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (MPKMMLByte *)next __attribute__((swift_name("next()")));
-- (int8_t)nextByte __attribute__((swift_name("nextByte()")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioInput.Companion")))
-@interface MPKMMLKtor_ioInputCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_ioInputCompanion *shared __attribute__((swift_name("shared")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Ktor_ioByteReadPacket.Companion")))
-@interface MPKMMLKtor_ioByteReadPacketCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKtor_ioByteReadPacketCompanion *shared __attribute__((swift_name("shared")));
-@property (readonly) MPKMMLKtor_ioByteReadPacket *Empty __attribute__((swift_name("Empty")));
-@end
-
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.1")
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinKTypeProjection")))
-@interface MPKMMLKotlinKTypeProjection : MPKMMLBase
-- (instancetype)initWithVariance:(MPKMMLKotlinKVariance * _Nullable)variance type:(id<MPKMMLKotlinKType> _Nullable)type __attribute__((swift_name("init(variance:type:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) MPKMMLKotlinKTypeProjectionCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLKotlinKTypeProjection *)doCopyVariance:(MPKMMLKotlinKVariance * _Nullable)variance type:(id<MPKMMLKotlinKType> _Nullable)type __attribute__((swift_name("doCopy(variance:type:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) id<MPKMMLKotlinKType> _Nullable type __attribute__((swift_name("type")));
-@property (readonly) MPKMMLKotlinKVariance * _Nullable variance __attribute__((swift_name("variance")));
-@end
-
 __attribute__((swift_name("Kotlinx_coroutines_coreAtomicOp")))
-@interface MPKMMLKotlinx_coroutines_coreAtomicOp<__contravariant T> : MPKMMLKotlinx_coroutines_coreOpDescriptor
+@interface MPKMMLKotlinx_coroutines_coreAtomicOp : MPKMMLKotlinx_coroutines_coreOpDescriptor
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)completeAffected:(T _Nullable)affected failure:(id _Nullable)failure __attribute__((swift_name("complete(affected:failure:)")));
+- (void)completeAffected:(id _Nullable)affected failure:(id _Nullable)failure __attribute__((swift_name("complete(affected:failure:)")));
 - (id _Nullable)decideDecision:(id _Nullable)decision __attribute__((swift_name("decide(decision:)")));
 - (id _Nullable)performAffected:(id _Nullable)affected __attribute__((swift_name("perform(affected:)")));
-- (id _Nullable)prepareAffected:(T _Nullable)affected __attribute__((swift_name("prepare(affected:)")));
-@property (readonly) MPKMMLKotlinx_coroutines_coreAtomicOp<id> *atomicOp __attribute__((swift_name("atomicOp")));
+- (id _Nullable)prepareAffected:(id _Nullable)affected __attribute__((swift_name("prepare(affected:)")));
+@property (readonly) MPKMMLKotlinx_coroutines_coreAtomicOp *atomicOp __attribute__((swift_name("atomicOp")));
 @property (readonly) id _Nullable consensus __attribute__((swift_name("consensus")));
 @property (readonly) BOOL isDecided __attribute__((swift_name("isDecided")));
 @property (readonly) int64_t opSequence __attribute__((swift_name("opSequence")));
@@ -2745,8 +2047,8 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode")))
 - (BOOL)addLastIfPrevNode:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)node predicate:(MPKMMLBoolean *(^)(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *))predicate __attribute__((swift_name("addLastIfPrev(node:predicate:)")));
 - (BOOL)addLastIfPrevAndIfNode:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)node predicate:(MPKMMLBoolean *(^)(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *))predicate condition:(MPKMMLBoolean *(^)(void))condition __attribute__((swift_name("addLastIfPrevAndIf(node:predicate:condition:)")));
 - (BOOL)addOneIfEmptyNode:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("addOneIfEmpty(node:)")));
-- (MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *> *)describeAddLastNode:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("describeAddLast(node:)")));
-- (MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *> *)describeRemoveFirst __attribute__((swift_name("describeRemoveFirst()")));
+- (MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc *)describeAddLastNode:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("describeAddLast(node:)")));
+- (MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc *)describeRemoveFirst __attribute__((swift_name("describeRemoveFirst()")));
 - (void)helpRemove __attribute__((swift_name("helpRemove()")));
 
 /**
@@ -2767,7 +2069,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.Abstrac
 @interface MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc : MPKMMLKotlinx_coroutines_coreAtomicDesc
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)completeOp:(MPKMMLKotlinx_coroutines_coreAtomicOp<id> *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
+- (void)completeOp:(MPKMMLKotlinx_coroutines_coreAtomicOp *)op failure:(id _Nullable)failure __attribute__((swift_name("complete(op:failure:)")));
 
 /**
  * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
@@ -2781,7 +2083,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.Abstrac
 - (void)finishPreparePrepareOp:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp *)prepareOp __attribute__((swift_name("finishPrepare(prepareOp:)")));
 - (id _Nullable)onPreparePrepareOp:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp *)prepareOp __attribute__((swift_name("onPrepare(prepareOp:)")));
 - (void)onRemovedAffected:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)affected __attribute__((swift_name("onRemoved(affected:)")));
-- (id _Nullable)prepareOp:(MPKMMLKotlinx_coroutines_coreAtomicOp<id> *)op __attribute__((swift_name("prepare(op:)")));
+- (id _Nullable)prepareOp:(MPKMMLKotlinx_coroutines_coreAtomicOp *)op __attribute__((swift_name("prepare(op:)")));
 
 /**
  * @note This method has protected visibility in Kotlin source and is intended only for use by subclasses.
@@ -2805,54 +2107,9 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.Abstrac
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable originalNext __attribute__((swift_name("originalNext")));
 @end
 
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.1")
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinKVariance")))
-@interface MPKMMLKotlinKVariance : MPKMMLKotlinEnum<MPKMMLKotlinKVariance *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) MPKMMLKotlinKVariance *invariant __attribute__((swift_name("invariant")));
-@property (class, readonly) MPKMMLKotlinKVariance *in __attribute__((swift_name("in")));
-@property (class, readonly) MPKMMLKotlinKVariance *out __attribute__((swift_name("out")));
-+ (MPKMMLKotlinArray<MPKMMLKotlinKVariance *> *)values __attribute__((swift_name("values()")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinKTypeProjection.Companion")))
-@interface MPKMMLKotlinKTypeProjectionCompanion : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLKotlinKTypeProjectionCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
-- (MPKMMLKotlinKTypeProjection *)contravariantType:(id<MPKMMLKotlinKType>)type __attribute__((swift_name("contravariant(type:)")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
-- (MPKMMLKotlinKTypeProjection *)covariantType:(id<MPKMMLKotlinKType>)type __attribute__((swift_name("covariant(type:)")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
-- (MPKMMLKotlinKTypeProjection *)invariantType:(id<MPKMMLKotlinKType>)type __attribute__((swift_name("invariant(type:)")));
-@property (readonly) MPKMMLKotlinKTypeProjection *STAR __attribute__((swift_name("STAR")));
-@end
-
-__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc")))
-@interface MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T> : MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc
-- (instancetype)initWithQueue:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)queue node:(T)node __attribute__((swift_name("init(queue:node:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.AddLastDesc")))
+@interface MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc : MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc
+- (instancetype)initWithQueue:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)queue node:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)node __attribute__((swift_name("init(queue:node:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 
@@ -2877,7 +2134,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeAddLastD
  * @note This property has protected visibility in Kotlin source and is intended only for use by subclasses.
 */
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable affectedNode __attribute__((swift_name("affectedNode")));
-@property (readonly) T node __attribute__((swift_name("node")));
+@property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *node __attribute__((swift_name("node")));
 
 /**
  * @note This property has protected visibility in Kotlin source and is intended only for use by subclasses.
@@ -2886,8 +2143,8 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeAddLastD
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *queue __attribute__((swift_name("queue")));
 @end
 
-__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc")))
-@interface MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T> : MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc
+__attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNode.RemoveFirstDesc")))
+@interface MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc : MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc
 - (instancetype)initWithQueue:(MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *)queue __attribute__((swift_name("init(queue:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
@@ -2924,7 +2181,7 @@ __attribute__((swift_name("Kotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFi
 */
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode * _Nullable originalNext __attribute__((swift_name("originalNext")));
 @property (readonly) MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode *queue __attribute__((swift_name("queue")));
-@property (readonly) T _Nullable result __attribute__((swift_name("result")));
+@property (readonly) id _Nullable result __attribute__((swift_name("result")));
 @end
 
 #pragma pop_macro("_Nullable_result")
