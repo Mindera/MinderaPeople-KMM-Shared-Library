@@ -26,4 +26,11 @@ class EventApiClientMock : IEventApiClient {
         }
         return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
+
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
+        if (userId == DefaultTestData.USER_ID_CORRECT && eventId == DefaultTestData.EVENT_ID_CORRECT) {
+            return Result.success(DefaultTestData.CORRECT_EVENT)
+        }
+        return Result.failure(Exception(HttpStatusCode.NotFound.description))
+    }
 }

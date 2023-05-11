@@ -6,13 +6,10 @@ import com.mindera.minderapeople.dto.PartOfDayDTO
 import com.mindera.minderapeople.dto.PolicyDTO
 import com.mindera.minderapeople.dto.ProjectDTO
 import com.mindera.minderapeople.repository.interfaces.IEventRepository
-
 class EventRepository(private val apiClient: IEventApiClient) : IEventRepository {
-
     override suspend fun getAllEventsForUser(userId: String): Result<List<EventDTO>> {
         return apiClient.getAllEventsForUser(userId)
     }
-
     override suspend fun editEvent(
         userId: String,
         eventId: String,
@@ -25,22 +22,14 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
         city: String?,
         project: ProjectDTO?
     ): Result<EventDTO> {
-        val event =
-            EventDTO(
-                eventId,
-                policy,
-                startDate,
-                endDate,
-                partOfDay,
-                additionalInfo,
-                includesBreakfast,
-                city,
-                project
-            )
+        val event = EventDTO(eventId, policy, startDate, endDate, partOfDay, additionalInfo, includesBreakfast, city, project)
         return apiClient.editExistingEvent(userId, event)
     }
-
     override suspend fun removeEventById(userId: String, event: EventDTO): Result<Nothing?> {
         return apiClient.removeEventById(userId, event.id)
+    }
+
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
+        return apiClient.getEventById(userId, eventId)
     }
 }

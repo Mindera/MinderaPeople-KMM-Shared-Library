@@ -53,6 +53,8 @@ kotlin {
                 implementation("io.ktor:ktor-client-mock:$ktorVersion")
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
+                implementation("org.jetbrains.kotlin:kotlin-test")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
             }
         }
         val androidMain by getting {

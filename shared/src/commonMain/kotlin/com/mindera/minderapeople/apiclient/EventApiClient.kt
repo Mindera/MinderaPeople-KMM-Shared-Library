@@ -56,4 +56,17 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
             Result.failure(e)
         }
     }
+
+    override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
+        return try{
+            val response = httpClient.get("${apiHttpClient.url}/events/${userId}/${eventId}")
+
+            if(response.status == HttpStatusCode.OK)
+                Result.success(response.body())
+            else
+                Result.failure(Exception(response.status.description))
+        }catch (e: Exception){
+            Result.failure(e)
+        }
+    }
 }
