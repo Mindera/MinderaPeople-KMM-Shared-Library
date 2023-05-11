@@ -11,6 +11,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
     private val apiHttpClient = ApiHttpClient(engine)
     private val httpClient = apiHttpClient.httpClient
+    
     override suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
         return try {
             val response = httpClient.get("${apiHttpClient.url}/events/${userId}?policy=${policyId}")
