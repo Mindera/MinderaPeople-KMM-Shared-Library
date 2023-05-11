@@ -21,5 +21,16 @@ interface IEventRepository {
     ): Result<EventDTO>
     suspend fun removeEventById(userId: String, event: EventDTO): Result<Nothing?>
     suspend fun getEventById(userId: String, eventId: String): Result<EventDTO>
+    suspend fun createEvent(
+        userId: String,
+        policy: PolicyDTO,
+        startDate: String,
+        endDate: String,
+        partOfDay: PartOfDayDTO,
+        additionalInfo: String? = null,
+        includesBreakfast: Boolean? = null,
+        city: String? = null,
+        project: ProjectDTO? = null
+    ): Result<Nothing?>
     suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>>
 }

@@ -1,10 +1,12 @@
 package com.mindera.minderapeople.mocks
 
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
+import com.mindera.minderapeople.dto.CreatingEventDTO
 import com.mindera.minderapeople.dto.EventDTO
-import io.ktor.http.*
+import io.ktor.http.HttpStatusCode
 
 class EventApiClientMock : IEventApiClient {
+
     override suspend fun getEventsByPolicy(
         userId: String,
         policyId: String
@@ -39,6 +41,13 @@ class EventApiClientMock : IEventApiClient {
     override suspend fun getEventById(userId: String, eventId: String): Result<EventDTO> {
         if (userId == DefaultTestData.USER_ID_CORRECT && eventId == DefaultTestData.EVENT_ID_CORRECT) {
             return Result.success(DefaultTestData.CORRECT_EVENT)
+        }
+        return Result.failure(Exception(HttpStatusCode.NotFound.description))
+    }
+
+    override suspend fun createEvent(userId: String, event: CreatingEventDTO): Result<Nothing?> {
+        if (userId == DefaultTestData.USER_ID_CORRECT) {
+            return Result.success(null)
         }
         return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }

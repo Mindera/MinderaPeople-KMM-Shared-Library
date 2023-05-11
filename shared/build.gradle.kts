@@ -8,7 +8,7 @@ plugins {
 kotlin {
 
     multiplatformSwiftPackage {
-        packageName("iOSPackage")
+        packageName("MinderaPeopleKMMSharedLib")
         swiftToolsVersion("5.3")
         targetPlatforms {
             iOS { v("13") }
@@ -30,7 +30,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "MinderaPeopleKMMLib"
         }
     }
 

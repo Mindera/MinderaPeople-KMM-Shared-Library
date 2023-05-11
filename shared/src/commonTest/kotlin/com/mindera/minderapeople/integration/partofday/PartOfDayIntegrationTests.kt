@@ -4,9 +4,11 @@ import com.mindera.minderapeople.apiclient.PartOfDayApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.repository.PartOfDayRepository
 import io.ktor.client.engine.mock.*
-import io.ktor.http.*
-import io.ktor.utils.io.*
-import kotlinx.coroutines.runBlocking
+import io.ktor.http.HttpStatusCode
+import io.ktor.http.headersOf
+import io.ktor.http.HttpHeaders
+import io.ktor.utils.io.ByteReadChannel
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -27,7 +29,7 @@ class PartOfDayIntegrationTests {
         val apiClient = PartOfDayApiClient(mockEngine)
         val repo = PartOfDayRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getPartsOfDay()
             assertTrue(result.isSuccess)
             assertEquals(3, result.getOrNull()?.size)
@@ -45,7 +47,7 @@ class PartOfDayIntegrationTests {
         val apiClient = PartOfDayApiClient(mockEngine)
         val repo = PartOfDayRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getPartsOfDay()
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())

@@ -1,8 +1,6 @@
 package com.mindera.minderapeople.mocks
 
-import com.mindera.minderapeople.dto.EventDTO
-import com.mindera.minderapeople.dto.PartOfDayDTO
-import com.mindera.minderapeople.dto.PolicyDTO
+import com.mindera.minderapeople.dto.*
 
 object DefaultTestData {
 
@@ -18,12 +16,32 @@ object DefaultTestData {
         PartOfDayDTO("0003", "Full day", "defaultIcon")
     )
 
+    val SUCCESSFUL_3_PROJECTS = listOf(
+        ProjectDTO("anova0001","Anova(Unify)"),
+        ProjectDTO("farfetch0001","Farfetch (PH Portugal)"),
+        ProjectDTO("farfetch0002","Farfetch (FF Harrods)")
+    )
+
     //Events
     const val USER_ID_CORRECT = "3b1276b3-d2f6-4e29-af8f-a0cb00208dda"
     const val EVENT_ID_CORRECT = "f4b20503-0a59-4e76-8796-aee78726139f"
     const val POLICY_ID_CORRECT = "001"
     val CORRECT_EVENT = EventDTO(
         EVENT_ID_CORRECT,
+        PolicyDTO(
+            "0001",
+            "Travel",
+            "default"
+        ),
+        "2023-04-03",
+        "2023-04-10",
+        PartOfDayDTO(
+            "0001",
+            "Full day",
+            "default"
+        )
+    )
+    val CORRECT_NEW_EVENT = CreatingEventDTO(
         PolicyDTO(
             "0001",
             "Travel",
@@ -113,6 +131,5 @@ object DefaultTestData {
                 "default"
             )
         )
-
     )
 }

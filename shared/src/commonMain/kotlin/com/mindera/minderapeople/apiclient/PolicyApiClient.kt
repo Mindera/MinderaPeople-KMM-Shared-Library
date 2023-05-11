@@ -2,20 +2,20 @@ package com.mindera.minderapeople.apiclient
 
 import com.mindera.minderapeople.apiclient.interfaces.IPolicyApiClient
 import com.mindera.minderapeople.dto.PolicyDTO
-import io.ktor.client.call.*
-import io.ktor.client.engine.*
+import io.ktor.client.call.body
+import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.request.*
 import io.ktor.http.*
 
-private const val BASE_URL = "http://localhost:3000/api"
 class PolicyApiClient(engine: HttpClientEngine): IPolicyApiClient {
 
-    private val httpClient = ApiHttpClient(engine).httpClient
+    private val apiHttpClient = ApiHttpClient(engine)
+    private val httpClient = apiHttpClient.httpClient
 
     override suspend fun getAllPolicies(userId: String): Result<List<PolicyDTO>> {
         return try {
-            val response = httpClient.get("${BASE_URL}/policies") {
-                parameter("userId", userId)
+            val response = httpClient.get("${ApiDefaultData.BASE_URL}/policies") {
+                parameter(ApiDefaultData.USER_ID_PARAM, userId)
             }
             if (response.status == HttpStatusCode.OK)
                 Result.success(response.body())

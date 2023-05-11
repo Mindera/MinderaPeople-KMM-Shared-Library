@@ -1,0 +1,8 @@
+framework module MinderaPeopleKMMLib {
+    umbrella header "MinderaPeopleKMMLib.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
