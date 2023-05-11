@@ -1,20 +1,18 @@
 package com.mindera.minderapeople.apiclient
 
-import io.ktor.client.*
-import io.ktor.client.engine.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.serialization.kotlinx.json.*
+import com.mindera.minderapeople.getEngine
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-class ApiHttpClient(engine: HttpClientEngine) {
-
-    val url = "http://localhost:3000/api"
+class ApiHttpClient(engine: HttpClientEngine = getEngine()) {
 
     val httpClient = HttpClient(engine) {
         install(ContentNegotiation) {
             json(Json {
-                ignoreUnknownKeys = true
-                useAlternativeNames = false
+                ignoreUnknownKeys = ApiDefaultData.API_IGNORE_UNKNOWN_KEYS
             })
         }
     }

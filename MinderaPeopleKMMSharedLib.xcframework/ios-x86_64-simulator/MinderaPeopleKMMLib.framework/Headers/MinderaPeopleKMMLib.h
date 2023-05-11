@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MPKMMLPolicyDTO, MPKMMLPartOfDayDTO, MPKMMLProjectDTO, MPKMMLEventDTOCompanion, MPKMMLEventDTO, MPKMMLPartOfDayDTOCompanion, MPKMMLPolicyDTOCompanion, MPKMMLProjectDTOCompanion, MPKMMLKtor_client_coreHttpClient, MPKMMLDefaultData, MPKMMLKtor_client_coreHttpRequestData, MPKMMLKtor_client_coreHttpResponseData, MPKMMLKtor_client_coreHttpClientEngineConfig, MPKMMLKotlinx_coroutines_coreCoroutineDispatcher, MPKMMLKtor_client_coreHttpClientConfig<T>, MPKMMLKtor_eventsEvents, MPKMMLKtor_client_coreHttpReceivePipeline, MPKMMLKtor_client_coreHttpRequestPipeline, MPKMMLKtor_client_coreHttpResponsePipeline, MPKMMLKtor_client_coreHttpSendPipeline, MPKMMLKotlinThrowable, MPKMMLKotlinArray<T>, MPKMMLKotlinException, MPKMMLKotlinRuntimeException, MPKMMLKotlinIllegalStateException, MPKMMLKotlinx_serialization_coreSerializersModule, MPKMMLKotlinx_serialization_coreSerialKind, MPKMMLKotlinNothing, MPKMMLKtor_httpUrl, MPKMMLKtor_httpHttpMethod, MPKMMLKtor_httpOutgoingContent, MPKMMLKtor_httpHttpStatusCode, MPKMMLKtor_utilsGMTDate, MPKMMLKtor_httpHttpProtocolVersion, MPKMMLKtor_client_coreProxyConfig, MPKMMLKotlinAbstractCoroutineContextElement, MPKMMLKotlinx_coroutines_coreCoroutineDispatcherKey, MPKMMLKtor_utilsAttributeKey<T>, MPKMMLKtor_eventsEventDefinition<T>, MPKMMLKtor_utilsPipelinePhase, MPKMMLKtor_utilsPipeline<TSubject, TContext>, MPKMMLKtor_client_coreHttpReceivePipelinePhases, MPKMMLKtor_client_coreHttpResponse, MPKMMLKotlinUnit, MPKMMLKtor_client_coreHttpRequestPipelinePhases, MPKMMLKtor_client_coreHttpRequestBuilder, MPKMMLKtor_client_coreHttpResponsePipelinePhases, MPKMMLKtor_client_coreHttpResponseContainer, MPKMMLKtor_client_coreHttpClientCall, MPKMMLKtor_client_coreHttpSendPipelinePhases, MPKMMLKtor_httpUrlCompanion, MPKMMLKtor_httpURLProtocol, MPKMMLKtor_httpHttpMethodCompanion, MPKMMLKtor_httpContentType, MPKMMLKotlinCancellationException, MPKMMLKtor_httpHttpStatusCodeCompanion, MPKMMLKtor_utilsGMTDateCompanion, MPKMMLKtor_utilsWeekDay, MPKMMLKtor_utilsMonth, MPKMMLKtor_httpHttpProtocolVersionCompanion, MPKMMLKotlinAbstractCoroutineContextKey<B, E>, MPKMMLKtor_httpHeadersBuilder, MPKMMLKtor_client_coreHttpRequestBuilderCompanion, MPKMMLKtor_httpURLBuilder, MPKMMLKtor_utilsTypeInfo, MPKMMLKtor_client_coreHttpClientCallCompanion, MPKMMLKtor_httpURLProtocolCompanion, MPKMMLKtor_httpHeaderValueParam, MPKMMLKtor_httpHeaderValueWithParametersCompanion, MPKMMLKtor_httpHeaderValueWithParameters, MPKMMLKtor_httpContentTypeCompanion, MPKMMLKotlinEnumCompanion, MPKMMLKotlinEnum<E>, MPKMMLKtor_utilsWeekDayCompanion, MPKMMLKtor_utilsMonthCompanion, MPKMMLKtor_ioMemory, MPKMMLKtor_ioChunkBuffer, MPKMMLKotlinByteArray, MPKMMLKtor_ioBuffer, MPKMMLKtor_ioByteReadPacket, MPKMMLKtor_utilsStringValuesBuilderImpl, MPKMMLKtor_httpURLBuilderCompanion, MPKMMLKotlinx_coroutines_coreAtomicDesc, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, MPKMMLKtor_ioMemoryCompanion, MPKMMLKtor_ioBufferCompanion, MPKMMLKtor_ioChunkBufferCompanion, MPKMMLKotlinByteIterator, MPKMMLKtor_ioInputCompanion, MPKMMLKtor_ioInput, MPKMMLKtor_ioByteReadPacketCompanion, MPKMMLKotlinKTypeProjection, MPKMMLKotlinx_coroutines_coreAtomicOp<__contravariant T>, MPKMMLKotlinx_coroutines_coreOpDescriptor, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, MPKMMLKotlinKVariance, MPKMMLKotlinKTypeProjectionCompanion, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
+@class MPKMMLPolicyDTO, MPKMMLPartOfDayDTO, MPKMMLProjectDTO, MPKMMLCreatingEventDTOCompanion, MPKMMLCreatingEventDTO, MPKMMLEventDTOCompanion, MPKMMLEventDTO, MPKMMLPartOfDayDTOCompanion, MPKMMLPolicyDTOCompanion, MPKMMLProjectDTOCompanion, MPKMMLApiDefaultData, MPKMMLKtor_client_coreHttpClient, MPKMMLKtor_client_coreHttpRequestData, MPKMMLKtor_client_coreHttpResponseData, MPKMMLKtor_client_coreHttpClientEngineConfig, MPKMMLKotlinx_coroutines_coreCoroutineDispatcher, MPKMMLKtor_client_coreHttpClientConfig<T>, MPKMMLKtor_eventsEvents, MPKMMLKtor_client_coreHttpReceivePipeline, MPKMMLKtor_client_coreHttpRequestPipeline, MPKMMLKtor_client_coreHttpResponsePipeline, MPKMMLKtor_client_coreHttpSendPipeline, MPKMMLKotlinThrowable, MPKMMLKotlinArray<T>, MPKMMLKotlinException, MPKMMLKotlinRuntimeException, MPKMMLKotlinIllegalStateException, MPKMMLKotlinx_serialization_coreSerializersModule, MPKMMLKotlinx_serialization_coreSerialKind, MPKMMLKotlinNothing, MPKMMLKtor_httpUrl, MPKMMLKtor_httpHttpMethod, MPKMMLKtor_httpOutgoingContent, MPKMMLKtor_httpHttpStatusCode, MPKMMLKtor_utilsGMTDate, MPKMMLKtor_httpHttpProtocolVersion, MPKMMLKtor_client_coreProxyConfig, MPKMMLKotlinAbstractCoroutineContextElement, MPKMMLKotlinx_coroutines_coreCoroutineDispatcherKey, MPKMMLKtor_utilsAttributeKey<T>, MPKMMLKtor_eventsEventDefinition<T>, MPKMMLKtor_utilsPipelinePhase, MPKMMLKtor_utilsPipeline<TSubject, TContext>, MPKMMLKtor_client_coreHttpReceivePipelinePhases, MPKMMLKtor_client_coreHttpResponse, MPKMMLKotlinUnit, MPKMMLKtor_client_coreHttpRequestPipelinePhases, MPKMMLKtor_client_coreHttpRequestBuilder, MPKMMLKtor_client_coreHttpResponsePipelinePhases, MPKMMLKtor_client_coreHttpResponseContainer, MPKMMLKtor_client_coreHttpClientCall, MPKMMLKtor_client_coreHttpSendPipelinePhases, MPKMMLKtor_httpUrlCompanion, MPKMMLKtor_httpURLProtocol, MPKMMLKtor_httpHttpMethodCompanion, MPKMMLKtor_httpContentType, MPKMMLKotlinCancellationException, MPKMMLKtor_httpHttpStatusCodeCompanion, MPKMMLKtor_utilsGMTDateCompanion, MPKMMLKtor_utilsWeekDay, MPKMMLKtor_utilsMonth, MPKMMLKtor_httpHttpProtocolVersionCompanion, MPKMMLKotlinAbstractCoroutineContextKey<B, E>, MPKMMLKtor_httpHeadersBuilder, MPKMMLKtor_client_coreHttpRequestBuilderCompanion, MPKMMLKtor_httpURLBuilder, MPKMMLKtor_utilsTypeInfo, MPKMMLKtor_client_coreHttpClientCallCompanion, MPKMMLKtor_httpURLProtocolCompanion, MPKMMLKtor_httpHeaderValueParam, MPKMMLKtor_httpHeaderValueWithParametersCompanion, MPKMMLKtor_httpHeaderValueWithParameters, MPKMMLKtor_httpContentTypeCompanion, MPKMMLKotlinEnumCompanion, MPKMMLKotlinEnum<E>, MPKMMLKtor_utilsWeekDayCompanion, MPKMMLKtor_utilsMonthCompanion, MPKMMLKtor_ioMemory, MPKMMLKtor_ioChunkBuffer, MPKMMLKotlinByteArray, MPKMMLKtor_ioBuffer, MPKMMLKtor_ioByteReadPacket, MPKMMLKtor_utilsStringValuesBuilderImpl, MPKMMLKtor_httpURLBuilderCompanion, MPKMMLKotlinx_coroutines_coreAtomicDesc, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, MPKMMLKtor_ioMemoryCompanion, MPKMMLKtor_ioBufferCompanion, MPKMMLKtor_ioChunkBufferCompanion, MPKMMLKotlinByteIterator, MPKMMLKtor_ioInputCompanion, MPKMMLKtor_ioInput, MPKMMLKtor_ioByteReadPacketCompanion, MPKMMLKotlinKTypeProjection, MPKMMLKotlinx_coroutines_coreAtomicOp<__contravariant T>, MPKMMLKotlinx_coroutines_coreOpDescriptor, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNode, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, MPKMMLKotlinKVariance, MPKMMLKotlinKTypeProjectionCompanion, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, MPKMMLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
 
-@protocol MPKMMLPlatform, MPKMMLKotlinx_serialization_coreKSerializer, MPKMMLKtor_client_coreHttpClientEngine, MPKMMLIEventApiClient, MPKMMLIPartOfDayApiClient, MPKMMLIPolicyApiClient, MPKMMLIEventRepository, MPKMMLIPartOfDayRepository, MPKMMLIPolicyRepository, MPKMMLKotlinx_serialization_coreEncoder, MPKMMLKotlinx_serialization_coreSerialDescriptor, MPKMMLKotlinx_serialization_coreSerializationStrategy, MPKMMLKotlinx_serialization_coreDecoder, MPKMMLKotlinx_serialization_coreDeserializationStrategy, MPKMMLKtor_client_coreHttpClientEngineCapability, MPKMMLKotlinCoroutineContext, MPKMMLKotlinx_coroutines_coreCoroutineScope, MPKMMLKtor_ioCloseable, MPKMMLKtor_utilsAttributes, MPKMMLKotlinx_serialization_coreCompositeEncoder, MPKMMLKotlinAnnotation, MPKMMLKotlinx_serialization_coreCompositeDecoder, MPKMMLKtor_httpHeaders, MPKMMLKotlinx_coroutines_coreJob, MPKMMLKotlinCoroutineContextKey, MPKMMLKotlinCoroutineContextElement, MPKMMLKotlinContinuation, MPKMMLKotlinContinuationInterceptor, MPKMMLKotlinx_coroutines_coreRunnable, MPKMMLKtor_client_coreHttpClientPlugin, MPKMMLKotlinx_coroutines_coreDisposableHandle, MPKMMLKotlinSuspendFunction2, MPKMMLKotlinIterator, MPKMMLKotlinx_serialization_coreSerializersModuleCollector, MPKMMLKotlinKClass, MPKMMLKtor_httpParameters, MPKMMLKotlinMapEntry, MPKMMLKtor_utilsStringValues, MPKMMLKotlinx_coroutines_coreChildHandle, MPKMMLKotlinx_coroutines_coreChildJob, MPKMMLKotlinSequence, MPKMMLKotlinx_coroutines_coreSelectClause0, MPKMMLKotlinComparable, MPKMMLKotlinFunction, MPKMMLKtor_httpHttpMessage, MPKMMLKtor_ioByteReadChannel, MPKMMLKtor_httpHttpMessageBuilder, MPKMMLKtor_client_coreHttpRequest, MPKMMLKotlinKDeclarationContainer, MPKMMLKotlinKAnnotatedElement, MPKMMLKotlinKClassifier, MPKMMLKotlinx_coroutines_coreParentJob, MPKMMLKotlinx_coroutines_coreSelectInstance, MPKMMLKotlinSuspendFunction0, MPKMMLKtor_ioReadSession, MPKMMLKotlinSuspendFunction1, MPKMMLKotlinAppendable, MPKMMLKtor_utilsStringValuesBuilder, MPKMMLKtor_httpParametersBuilder, MPKMMLKotlinKType, MPKMMLKtor_ioObjectPool;
+@protocol MPKMMLPlatform, MPKMMLKotlinx_serialization_coreKSerializer, MPKMMLKtor_client_coreHttpClientEngine, MPKMMLIEventApiClient, MPKMMLIPartOfDayApiClient, MPKMMLIPolicyApiClient, MPKMMLIProjectsApiClient, MPKMMLIEventRepository, MPKMMLIPartOfDayRepository, MPKMMLIPolicyRepository, MPKMMLIProjectRepository, MPKMMLKotlinx_serialization_coreEncoder, MPKMMLKotlinx_serialization_coreSerialDescriptor, MPKMMLKotlinx_serialization_coreSerializationStrategy, MPKMMLKotlinx_serialization_coreDecoder, MPKMMLKotlinx_serialization_coreDeserializationStrategy, MPKMMLKtor_client_coreHttpClientEngineCapability, MPKMMLKotlinCoroutineContext, MPKMMLKotlinx_coroutines_coreCoroutineScope, MPKMMLKtor_ioCloseable, MPKMMLKtor_utilsAttributes, MPKMMLKotlinx_serialization_coreCompositeEncoder, MPKMMLKotlinAnnotation, MPKMMLKotlinx_serialization_coreCompositeDecoder, MPKMMLKtor_httpHeaders, MPKMMLKotlinx_coroutines_coreJob, MPKMMLKotlinCoroutineContextKey, MPKMMLKotlinCoroutineContextElement, MPKMMLKotlinContinuation, MPKMMLKotlinContinuationInterceptor, MPKMMLKotlinx_coroutines_coreRunnable, MPKMMLKtor_client_coreHttpClientPlugin, MPKMMLKotlinx_coroutines_coreDisposableHandle, MPKMMLKotlinSuspendFunction2, MPKMMLKotlinIterator, MPKMMLKotlinx_serialization_coreSerializersModuleCollector, MPKMMLKotlinKClass, MPKMMLKtor_httpParameters, MPKMMLKotlinMapEntry, MPKMMLKtor_utilsStringValues, MPKMMLKotlinx_coroutines_coreChildHandle, MPKMMLKotlinx_coroutines_coreChildJob, MPKMMLKotlinSequence, MPKMMLKotlinx_coroutines_coreSelectClause0, MPKMMLKotlinComparable, MPKMMLKotlinFunction, MPKMMLKtor_httpHttpMessage, MPKMMLKtor_ioByteReadChannel, MPKMMLKtor_httpHttpMessageBuilder, MPKMMLKtor_client_coreHttpRequest, MPKMMLKotlinKDeclarationContainer, MPKMMLKotlinKAnnotatedElement, MPKMMLKotlinKClassifier, MPKMMLKotlinx_coroutines_coreParentJob, MPKMMLKotlinx_coroutines_coreSelectInstance, MPKMMLKotlinSuspendFunction0, MPKMMLKtor_ioReadSession, MPKMMLKotlinSuspendFunction1, MPKMMLKotlinAppendable, MPKMMLKtor_utilsStringValuesBuilder, MPKMMLKtor_httpParametersBuilder, MPKMMLKotlinKType, MPKMMLKtor_ioObjectPool;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -166,6 +166,45 @@ __attribute__((swift_name("IOSPlatform")))
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @end
 
+__attribute__((swift_name("MinderaPeopleAPIClient")))
+@protocol MPKMMLMinderaPeopleAPIClient
+@required
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CreatingEventDTO")))
+@interface MPKMMLCreatingEventDTO : MPKMMLBase
+- (instancetype)initWithPolicy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project __attribute__((swift_name("init(policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) MPKMMLCreatingEventDTOCompanion *companion __attribute__((swift_name("companion")));
+- (MPKMMLCreatingEventDTO *)doCopyPolicy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project __attribute__((swift_name("doCopy(policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable additionalInfo __attribute__((swift_name("additionalInfo")));
+@property (readonly) NSString * _Nullable city __attribute__((swift_name("city")));
+@property (readonly) NSString *endDate __attribute__((swift_name("endDate")));
+@property (readonly) MPKMMLBoolean * _Nullable includesBreakfast __attribute__((swift_name("includesBreakfast")));
+@property (readonly) MPKMMLPartOfDayDTO *partOfDay __attribute__((swift_name("partOfDay")));
+@property (readonly) MPKMMLPolicyDTO *policy __attribute__((swift_name("policy")));
+@property (readonly) MPKMMLProjectDTO * _Nullable project __attribute__((swift_name("project")));
+@property (readonly) NSString *startDate __attribute__((swift_name("startDate")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CreatingEventDTO.Companion")))
+@interface MPKMMLCreatingEventDTOCompanion : MPKMMLBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MPKMMLCreatingEventDTOCompanion *shared __attribute__((swift_name("shared")));
+- (id<MPKMMLKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
 
 /**
  * @note annotations
@@ -174,16 +213,16 @@ __attribute__((swift_name("IOSPlatform")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("EventDTO")))
 @interface MPKMMLEventDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString * _Nullable)id policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project __attribute__((swift_name("init(id:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project __attribute__((swift_name("init(id:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLEventDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLEventDTO *)doCopyId:(NSString * _Nullable)id policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project __attribute__((swift_name("doCopy(id:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:)")));
+- (MPKMMLEventDTO *)doCopyId:(NSString *)id policy:(MPKMMLPolicyDTO *)policy startDate:(NSString *)startDate endDate:(NSString *)endDate partOfDay:(MPKMMLPartOfDayDTO *)partOfDay additionalInfo:(NSString * _Nullable)additionalInfo includesBreakfast:(MPKMMLBoolean * _Nullable)includesBreakfast city:(NSString * _Nullable)city project:(MPKMMLProjectDTO * _Nullable)project __attribute__((swift_name("doCopy(id:policy:startDate:endDate:partOfDay:additionalInfo:includesBreakfast:city:project:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable additionalInfo __attribute__((swift_name("additionalInfo")));
 @property (readonly) NSString * _Nullable city __attribute__((swift_name("city")));
 @property (readonly) NSString *endDate __attribute__((swift_name("endDate")));
-@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) MPKMMLBoolean * _Nullable includesBreakfast __attribute__((swift_name("includesBreakfast")));
 @property (readonly) MPKMMLPartOfDayDTO *partOfDay __attribute__((swift_name("partOfDay")));
 @property (readonly) MPKMMLPolicyDTO *policy __attribute__((swift_name("policy")));
@@ -269,13 +308,14 @@ __attribute__((swift_name("PolicyDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ProjectDTO")))
 @interface MPKMMLProjectDTO : MPKMMLBase
-- (instancetype)initWithAux:(NSString *)aux __attribute__((swift_name("init(aux:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id name:(NSString *)name __attribute__((swift_name("init(id:name:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLProjectDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLProjectDTO *)doCopyAux:(NSString *)aux __attribute__((swift_name("doCopy(aux:)")));
+- (MPKMMLProjectDTO *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *aux __attribute__((swift_name("aux")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -289,11 +329,21 @@ __attribute__((swift_name("ProjectDTO.Companion")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ApiDefaultData")))
+@interface MPKMMLApiDefaultData : MPKMMLBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)apiDefaultData __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) MPKMMLApiDefaultData *shared __attribute__((swift_name("shared")));
+@property (readonly) BOOL API_IGNORE_UNKNOWN_KEYS __attribute__((swift_name("API_IGNORE_UNKNOWN_KEYS")));
+@property (readonly) NSString *BASE_URL __attribute__((swift_name("BASE_URL")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ApiHttpClient")))
 @interface MPKMMLApiHttpClient : MPKMMLBase
 - (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine __attribute__((swift_name("init(engine:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) MPKMMLKtor_client_coreHttpClient *httpClient __attribute__((swift_name("httpClient")));
-@property (readonly) NSString *url __attribute__((swift_name("url")));
 @end
 
 __attribute__((swift_name("IEventApiClient")))
@@ -304,7 +354,7 @@ __attribute__((swift_name("IEventApiClient")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)createEventUserId:(NSString *)userId event:(MPKMMLEventDTO *)event completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:event:completionHandler:)")));
+- (void)createEventUserId:(NSString *)userId event:(MPKMMLCreatingEventDTO *)event completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:event:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
@@ -346,7 +396,7 @@ __attribute__((swift_name("EventApiClient")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)createEventUserId:(NSString *)userId event:(MPKMMLEventDTO *)event completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:event:completionHandler:)")));
+- (void)createEventUserId:(NSString *)userId event:(MPKMMLCreatingEventDTO *)event completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("createEvent(userId:event:completionHandler:)")));
 
 /**
  * @note This method converts instances of CancellationException to errors.
@@ -425,16 +475,27 @@ __attribute__((swift_name("PolicyApiClient")))
 - (void)getAllPoliciesUserId:(NSString *)userId completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllPolicies(userId:completionHandler:)")));
 @end
 
+__attribute__((swift_name("IProjectsApiClient")))
+@protocol MPKMMLIProjectsApiClient
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)getAllProjectsWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
+@end
+
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultData")))
-@interface MPKMMLDefaultData : MPKMMLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)defaultData __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) MPKMMLDefaultData *shared __attribute__((swift_name("shared")));
-@property (readonly) NSString *BASE_URL __attribute__((swift_name("BASE_URL")));
-@property (readonly) NSString *INVALID_IDS __attribute__((swift_name("INVALID_IDS")));
-@property (readonly) NSString *INVALID_USER_ID __attribute__((swift_name("INVALID_USER_ID")));
+__attribute__((swift_name("ProjectApiClient")))
+@interface MPKMMLProjectApiClient : MPKMMLBase <MPKMMLIProjectsApiClient>
+- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine __attribute__((swift_name("init(engine:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)getAllProjectsWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
 @end
 
 __attribute__((swift_name("IEventRepository")))
@@ -564,6 +625,29 @@ __attribute__((swift_name("PolicyRepository")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)getPoliciesUserId:(NSString *)userId completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getPolicies(userId:completionHandler:)")));
+@end
+
+__attribute__((swift_name("IProjectRepository")))
+@protocol MPKMMLIProjectRepository
+@required
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)getAllProjectsWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ProjectRepository")))
+@interface MPKMMLProjectRepository : MPKMMLBase <MPKMMLIProjectRepository>
+- (instancetype)initWithApiClient:(id<MPKMMLIProjectsApiClient>)apiClient __attribute__((swift_name("init(apiClient:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * @note This method converts instances of CancellationException to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)getAllProjectsWithCompletionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("getAllProjects(completionHandler:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))

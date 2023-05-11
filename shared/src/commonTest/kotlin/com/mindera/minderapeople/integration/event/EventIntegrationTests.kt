@@ -4,9 +4,11 @@ import com.mindera.minderapeople.apiclient.EventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
-import io.ktor.http.*
-import io.ktor.utils.io.*
-import kotlinx.coroutines.runBlocking
+import io.ktor.http.HttpStatusCode
+import io.ktor.http.headersOf
+import io.ktor.http.HttpHeaders
+import io.ktor.utils.io.ByteReadChannel
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -28,7 +30,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getAllEventsForUser(DefaultTestData.USER_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -44,7 +46,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getAllEventsForUser("0001")
 
             assertTrue(result.isFailure)
@@ -62,7 +64,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.getAllEventsForUser(DefaultTestData.USER_ID_CORRECT)
             assertTrue(result.isFailure)
             assertEquals(error, result.exceptionOrNull()?.message)
@@ -82,9 +84,9 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.editEvent(DefaultTestData.USER_ID_CORRECT,
-                event.id!!,
+                event.id,
                 event.policy,
                 event.startDate,
                 event.endDate,
@@ -109,7 +111,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.editEvent(
                 DefaultTestData.USER_ID_CORRECT,
                 "0001",
@@ -139,10 +141,10 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.editEvent(
                 DefaultTestData.USER_ID_CORRECT,
-                event.id!!,
+                event.id,
                 event.policy,
                 event.startDate,
                 event.endDate,
@@ -169,7 +171,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.removeEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
 
             assertTrue(result.isSuccess)
@@ -185,7 +187,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.removeEventById(DefaultTestData.EVENT_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
             assertTrue(result.isFailure)
             assertEquals(HttpStatusCode.NotFound.description, result.exceptionOrNull()?.message)
@@ -201,7 +203,7 @@ class EventIntegrationTests {
         val apiClient = EventApiClient(mockEngine)
         val repo = EventRepository(apiClient)
 
-        runBlocking {
+        runTest {
             val result = repo.removeEventById(DefaultTestData.EVENT_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
             assertTrue(result.isFailure)
             assertEquals(error, result.exceptionOrNull()?.message)
@@ -220,7 +222,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -242,7 +244,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById("0001", DefaultTestData.EVENT_ID_CORRECT)
 
             assertTrue(result.isFailure)
@@ -264,7 +266,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, "0001")
 
             assertTrue(result.isFailure)
@@ -286,7 +288,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById("0001", "0001")
 
             assertTrue(result.isFailure)
@@ -305,7 +307,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
 
             assertTrue(result.isFailure)
@@ -326,7 +328,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.POLICY_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -348,7 +350,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy("0001", DefaultTestData.POLICY_ID_CORRECT)
 
             assertTrue(result.isFailure)
@@ -370,7 +372,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, "0001")
 
             assertTrue(result.isFailure)
@@ -392,7 +394,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy("0001", "0001")
 
             assertTrue(result.isFailure)
@@ -411,7 +413,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventsByPolicy(DefaultTestData.USER_ID_CORRECT, DefaultTestData.POLICY_ID_CORRECT)
             assertTrue(result.isFailure)
             assertEquals(null, result.getOrNull())
@@ -432,7 +434,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.createEvent(
                 DefaultTestData.USER_ID_CORRECT,
                 event.policy,
@@ -464,7 +466,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.createEvent(
                 DefaultTestData.USER_ID_CORRECT,
                 event.policy,
@@ -493,7 +495,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.createEvent(
                 DefaultTestData.USER_ID_CORRECT,
                 event.policy,

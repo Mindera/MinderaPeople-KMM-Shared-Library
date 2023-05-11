@@ -2,10 +2,9 @@ package com.mindera.minderapeople.mocks
 
 import com.mindera.minderapeople.apiclient.interfaces.IPolicyApiClient
 import com.mindera.minderapeople.dto.PolicyDTO
-import io.ktor.http.*
+import io.ktor.http.HttpStatusCode
 
 class PolicyApiClientMock: IPolicyApiClient {
-
 
     override suspend fun getAllPolicies(userId: String): Result<List<PolicyDTO>> {
         if (userId != "a74b7fef-6c57-49c6-8c7c-2522a4defc70")
