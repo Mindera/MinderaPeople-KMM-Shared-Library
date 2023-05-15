@@ -11,9 +11,9 @@ object DefaultTestData {
     )
 
     val SUCCESSFUL_3_PARTS_OF_DAY = listOf(
-        PartOfDayDTO("0001", "Morning", "morning"),
-        PartOfDayDTO("0002", "Afternoon", "afternoon"),
-        PartOfDayDTO("0003", "Full day", "fullday")
+        PartOfDayDTO("0001", "Morning", "morning", 4),
+        PartOfDayDTO("0002", "Afternoon", "afternoon", 4),
+        PartOfDayDTO("0003", "Full day", "fullday", 8)
     )
 
     val SUCCESSFUL_3_PROJECTS = listOf(
@@ -38,7 +38,8 @@ object DefaultTestData {
         PartOfDayDTO(
             "0001",
             "Full day",
-            "fullday"
+            "fullday",
+            8
         )
     )
     val CORRECT_NEW_EVENT = CreatingEventDTO(
@@ -52,7 +53,8 @@ object DefaultTestData {
         PartOfDayDTO(
             "0001",
             "Full day",
-            "fullday"
+            "fullday",
+            8
         )
     )
     val ERROR_EVENT = EventDTO(
@@ -67,7 +69,8 @@ object DefaultTestData {
         PartOfDayDTO(
             "0001",
             "Full day",
-            "fullday"
+            "fullday",
+            8
         )
     )
     val EVENT_LIST = listOf(
@@ -83,7 +86,8 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "fullday"
+                "fullday",
+                8
             )
         ),
         EventDTO(
@@ -98,7 +102,8 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0002",
                 "Morning",
-                "morning"
+                "morning",
+                4
             )
         ),
         EventDTO(
@@ -113,7 +118,8 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "fullday"
+                "fullday",
+                8
             )
         ),
         EventDTO(
@@ -128,7 +134,8 @@ object DefaultTestData {
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "fullday"
+                "fullday",
+                8
             )
         )
     )
