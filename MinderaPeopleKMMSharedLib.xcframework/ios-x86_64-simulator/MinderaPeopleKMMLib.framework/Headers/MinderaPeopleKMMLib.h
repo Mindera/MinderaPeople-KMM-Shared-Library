@@ -221,14 +221,15 @@ __attribute__((swift_name("EventDTO.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PartOfDayDTO")))
 @interface MPKMMLPartOfDayDTO : MPKMMLBase
-- (instancetype)initWithId:(NSString *)id description:(NSString *)description type:(NSString *)type __attribute__((swift_name("init(id:description:type:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id description:(NSString *)description type:(NSString *)type time:(int32_t)time __attribute__((swift_name("init(id:description:type:time:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) MPKMMLPartOfDayDTOCompanion *companion __attribute__((swift_name("companion")));
-- (MPKMMLPartOfDayDTO *)doCopyId:(NSString *)id description:(NSString *)description type:(NSString *)type __attribute__((swift_name("doCopy(id:description:type:)")));
+- (MPKMMLPartOfDayDTO *)doCopyId:(NSString *)id description:(NSString *)description type:(NSString *)type time:(int32_t)time __attribute__((swift_name("doCopy(id:description:type:time:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *description_ __attribute__((swift_name("description_")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) int32_t time __attribute__((swift_name("time")));
 @property (readonly) NSString *type __attribute__((swift_name("type")));
 @end
 
