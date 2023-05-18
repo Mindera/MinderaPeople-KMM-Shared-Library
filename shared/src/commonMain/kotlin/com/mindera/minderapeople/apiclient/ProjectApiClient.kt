@@ -14,7 +14,7 @@ class ProjectApiClient (engine: HttpClientEngine): IProjectsApiClient {
 
     override suspend fun getAllProjects(): Result<List<ProjectDTO>> {
         return try{
-            val response = httpClient.get("${ApiDefaultData.BASE_URL}/policies")
+            val response = httpClient.get("${ApiDefaultData.BASE_URL}/projects")
 
             if(response.status == HttpStatusCode.OK)
                 Result.success(response.body())
