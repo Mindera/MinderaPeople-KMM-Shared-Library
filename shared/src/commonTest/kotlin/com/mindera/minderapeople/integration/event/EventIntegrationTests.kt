@@ -4,6 +4,10 @@ import com.mindera.minderapeople.apiclient.EventApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
+import io.ktor.http.*
+import io.ktor.utils.io.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.runBlocking
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.http.HttpHeaders
@@ -15,6 +19,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 import kotlin.test.assertTrue
+import kotlinx.coroutines.test.runTest
 
 class EventIntegrationTests {
 
@@ -175,7 +180,7 @@ class EventIntegrationTests {
             val result = repo.removeEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 
@@ -448,7 +453,7 @@ class EventIntegrationTests {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 

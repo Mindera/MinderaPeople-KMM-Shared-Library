@@ -24,5 +24,4 @@ class PartOfDayApiClient(engine: HttpClientEngine): IPartOfDayApiClient {
             Result.failure(e)
         }
     }
-
 }
