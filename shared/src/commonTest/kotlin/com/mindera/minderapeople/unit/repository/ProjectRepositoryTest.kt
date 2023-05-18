@@ -3,7 +3,7 @@ package com.mindera.minderapeople.unit.repository
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.ProjectApiClientMock
 import com.mindera.minderapeople.repository.ProjectRepository
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -17,7 +17,7 @@ class ProjectRepositoryTest {
           val apiClient = ProjectApiClientMock()
           val projectRepo = ProjectRepository(apiClient)
 
-          runBlocking {
+          runTest {
                val result = projectRepo.getAllProjects()
 
                assertTrue(result.isSuccess)

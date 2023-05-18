@@ -4,9 +4,11 @@ import com.mindera.minderapeople.apiclient.ProjectApiClient
 import com.mindera.minderapeople.mocks.DefaultTestData
 import kotlin.test.Test
 import io.ktor.client.engine.mock.*
-import io.ktor.http.*
-import io.ktor.utils.io.*
-import kotlinx.coroutines.runBlocking
+import io.ktor.http.HttpStatusCode
+import io.ktor.http.headersOf
+import io.ktor.http.HttpHeaders
+import io.ktor.utils.io.ByteReadChannel
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.assertEquals
@@ -26,7 +28,7 @@ class ProjectApiClientTest {
             )
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val result = apiClient.getAllProjects()
 
@@ -45,7 +47,7 @@ class ProjectApiClientTest {
             )
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val result = apiClient.getAllProjects()
 
@@ -61,7 +63,7 @@ class ProjectApiClientTest {
             respondBadRequest()
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val result = apiClient.getAllProjects()
 
@@ -79,7 +81,7 @@ class ProjectApiClientTest {
             throw Exception(errorMessage)
         }
 
-        runBlocking {
+        runTest {
             val apiClient = ProjectApiClient(mockEngine)
             val result = apiClient.getAllProjects()
 

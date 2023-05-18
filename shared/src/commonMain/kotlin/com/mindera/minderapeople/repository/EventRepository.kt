@@ -3,7 +3,6 @@ package com.mindera.minderapeople.repository
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
 import com.mindera.minderapeople.dto.*
 import com.mindera.minderapeople.repository.interfaces.IEventRepository
-import com.mindera.minderapeople.utils.RequestResult
 import com.mindera.minderapeople.utils.toRequestResult
 
 class EventRepository(private val apiClient: IEventApiClient) : IEventRepository {
