@@ -5,15 +5,15 @@ import com.mindera.minderapeople.dto.*
 object DefaultTestData {
 
     val SUCCESSFUL_3_POLICIES = listOf(
-        PolicyDTO("0001", "Work from home", "defaultIcon"),
-        PolicyDTO("0002", "Holidays", "defaultIcon", 5, 20),
-        PolicyDTO("0002", "Sick Day", "defaultIcon")
+        PolicyDTO("0001", "Work from home", "wfh"),
+        PolicyDTO("0002", "Holidays", "holidays", 5, 20),
+        PolicyDTO("0002", "Sick Day", "sickday")
     )
 
     val SUCCESSFUL_3_PARTS_OF_DAY = listOf(
-        PartOfDayDTO("0001", "Morning", "defaultIcon"),
-        PartOfDayDTO("0002", "Afternoon", "defaultIcon"),
-        PartOfDayDTO("0003", "Full day", "defaultIcon")
+        PartOfDayDTO("0001", "Morning", "morning"),
+        PartOfDayDTO("0002", "Afternoon", "afternoon"),
+        PartOfDayDTO("0003", "Full day", "fullday")
     )
 
     val SUCCESSFUL_3_PROJECTS = listOf(
@@ -31,28 +31,28 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default"
+            "travel"
         ),
         "2023-04-03",
         "2023-04-10",
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default"
+            "fullday"
         )
     )
     val CORRECT_NEW_EVENT = CreatingEventDTO(
         PolicyDTO(
             "0001",
             "Travel",
-            "default"
+            "travel"
         ),
         "2023-04-03",
         "2023-04-10",
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default"
+            "fullday"
         )
     )
     val ERROR_EVENT = EventDTO(
@@ -60,14 +60,14 @@ object DefaultTestData {
         PolicyDTO(
             "0001",
             "Travel",
-            "default"
+            "travel"
         ),
         "2023-04-03",
         "2023-04-10",
         PartOfDayDTO(
             "0001",
             "Full day",
-            "default"
+            "fullday"
         )
     )
     val EVENT_LIST = listOf(
@@ -76,14 +76,14 @@ object DefaultTestData {
             PolicyDTO(
                 "0001",
                 "Travel",
-                "default"
+                "travel"
             ),
             "2023-04-03",
             "2023-04-10",
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default"
+                "fullday"
             )
         ),
         EventDTO(
@@ -91,14 +91,14 @@ object DefaultTestData {
             PolicyDTO(
                 "0002",
                 "Sick day",
-                "default"
+                "sickday"
             ),
             "2023-05-03",
             "2023-05-10",
             PartOfDayDTO(
                 "0002",
                 "Morning",
-                "default"
+                "morning"
             )
         ),
         EventDTO(
@@ -106,14 +106,14 @@ object DefaultTestData {
             PolicyDTO(
                 "0003",
                 "Holidays",
-                "default"
+                "holidays"
             ),
             "2023-06-03",
             "2023-06-10",
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default"
+                "fullday"
             )
         ),
         EventDTO(
@@ -121,14 +121,14 @@ object DefaultTestData {
             PolicyDTO(
                 "0006",
                 "Carnival",
-                "default"
+                "carnival"
             ),
             "2023-02-03",
             "2023-02-03",
             PartOfDayDTO(
                 "0001",
                 "Full day",
-                "default"
+                "fullday"
             )
         )
     )

@@ -1,6 +1,6 @@
 package com.mindera.minderapeople.utils
 
-class RequestResult<T> constructor(
+class RequestResult<T> internal constructor(
     private val value: T? = null,
     private val exception: Throwable? = null,
     val isSuccess: Boolean
