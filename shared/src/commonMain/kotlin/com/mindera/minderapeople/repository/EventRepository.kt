@@ -49,7 +49,7 @@ class EventRepository(private val apiClient: IEventApiClient) : IEventRepository
         includesBreakfast: Boolean?,
         city: String?,
         project: ProjectDTO?
-    ): RequestResult<Unit> {
+    ): RequestResult<EventDTO> {
         val event = CreatingEventDTO(policy, startDate, endDate, partOfDay, additionalInfo, includesBreakfast, city, project)
         return apiClient.createEvent(userId, event).toRequestResult()
     }

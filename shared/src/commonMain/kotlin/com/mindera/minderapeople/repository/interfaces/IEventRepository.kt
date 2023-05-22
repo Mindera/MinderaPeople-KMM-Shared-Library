@@ -32,6 +32,6 @@ interface IEventRepository {
         includesBreakfast: Boolean? = null,
         city: String? = null,
         project: ProjectDTO? = null
-    ): RequestResult<Unit>
+    ): RequestResult<EventDTO>
     suspend fun getEventsByPolicy(userId: String, policyId: String): RequestResult<List<EventDTO>>
 }

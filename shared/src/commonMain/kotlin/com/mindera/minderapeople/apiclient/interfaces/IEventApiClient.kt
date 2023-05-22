@@ -8,5 +8,5 @@ interface IEventApiClient {
     suspend fun editExistingEvent(userId: String, event: EventDTO): Result<EventDTO>
     suspend fun removeEventById(userId: String, eventId: String): Result<Unit>
     suspend fun getEventById(userId: String, eventId: String): Result<EventDTO>
-    suspend fun createEvent(userId: String, event: CreatingEventDTO): Result<Unit>
+    suspend fun createEvent(userId: String, event: CreatingEventDTO): Result<EventDTO>
 }

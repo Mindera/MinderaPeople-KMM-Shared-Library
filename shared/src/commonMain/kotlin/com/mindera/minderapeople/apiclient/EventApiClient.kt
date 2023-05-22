@@ -3,15 +3,17 @@ package com.mindera.minderapeople.apiclient
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
 import com.mindera.minderapeople.dto.CreatingEventDTO
 import com.mindera.minderapeople.dto.EventDTO
+import com.mindera.minderapeople.randomUUID
 import io.ktor.client.call.*
 import io.ktor.client.engine.*
 import io.ktor.client.request.*
 import io.ktor.http.*
 
-class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
+class EventApiClient(engine: HttpClientEngine, uuid: String? = null) : IEventApiClient {
 
     private val apiHttpClient = ApiHttpClient(engine)
     private val httpClient = apiHttpClient.httpClient
+    private val uuid = uuid
 
     override suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
         return try {
@@ -49,7 +51,18 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
             }
 
             if (response.status == HttpStatusCode.OK) {
-                Result.success(response.body())
+                //TODO: Return response.body() once backend is implemented
+                Result.success(EventDTO(
+                    event.id,
+                    event.policy,
+                    event.startDate,
+                    event.endDate,
+                    event.partOfDay,
+                    event.additionalInfo,
+                    event.includesBreakfast,
+                    event.city,
+                    event.project)
+                )
             } else {
                 Result.failure(Exception(response.status.description))
             }
@@ -88,7 +101,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
     override suspend fun createEvent(
         userId: String,
         event: CreatingEventDTO
-    ): Result<Unit> {
+    ): Result<EventDTO> {
         return try{
             val response = httpClient.post("${ApiDefaultData.BASE_URL}/events/${userId}") {
                 contentType(ContentType.Application.Json)
@@ -96,7 +109,18 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
             }
 
             if(response.status == HttpStatusCode.Created)
-                Result.success(Unit)
+                //TODO: Return response.body() once backend is implemented
+                Result.success(EventDTO(
+                    uuid ?: randomUUID(),
+                    event.policy,
+                    event.startDate,
+                    event.endDate,
+                    event.partOfDay,
+                    event.additionalInfo,
+                    event.includesBreakfast,
+                    event.city,
+                    event.project)
+                )
             else
                 Result.failure(Exception(response.status.description))
         }catch (e: Exception){

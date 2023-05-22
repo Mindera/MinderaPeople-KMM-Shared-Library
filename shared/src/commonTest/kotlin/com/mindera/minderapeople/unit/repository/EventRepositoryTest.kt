@@ -1,10 +1,12 @@
 package com.mindera.minderapeople.unit.repository
 
+import com.mindera.minderapeople.dto.EventDTO
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.EventApiClientMock
 import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.http.*
 import kotlinx.coroutines.runBlocking
+import kotlin.random.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
@@ -246,6 +248,7 @@ class EventRepositoryTest {
         val event = DefaultTestData.CORRECT_EVENT
         val client = EventApiClientMock()
         val eventRepo = EventRepository(client)
+        var expected = EventDTO("001", event.policy, event.startDate, event.endDate, event.partOfDay, event.additionalInfo, event.includesBreakfast, event.city, event.project)
 
         runBlocking {
             val result = eventRepo.createEvent(
@@ -261,7 +264,7 @@ class EventRepositoryTest {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(Unit, result.getOrNull())
+            assertEquals(expected, result.getOrNull())
         }
     }
 

@@ -427,12 +427,12 @@ class EventIntegrationTests {
         val event = DefaultTestData.CORRECT_EVENT
         val mockEngine = MockEngine {
             respond(
-                content = ByteReadChannel(""),
+                content = ByteReadChannel(Json.encodeToString(DefaultTestData.CORRECT_EVENT)),
                 status = HttpStatusCode.Created,
                 headers = headersOf(HttpHeaders.ContentType, "application/json")
             )
         }
-        val client = EventApiClient(mockEngine)
+        val client = EventApiClient(mockEngine, DefaultTestData.EVENT_ID_CORRECT)
         val eventRepo = EventRepository(client)
 
         runBlocking {
@@ -449,7 +449,7 @@ class EventIntegrationTests {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(Unit, result.getOrNull())
+            assertEquals(DefaultTestData.CORRECT_EVENT, result.getOrNull())
         }
     }
 

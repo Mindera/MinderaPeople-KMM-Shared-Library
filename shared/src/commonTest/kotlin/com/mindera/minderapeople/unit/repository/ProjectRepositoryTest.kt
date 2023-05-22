@@ -1,5 +1,7 @@
 package com.mindera.minderapeople.unit.repository
 
+import com.mindera.minderapeople.apiclient.ProjectApiClient
+import com.mindera.minderapeople.getEngine
 import com.mindera.minderapeople.mocks.DefaultTestData
 import com.mindera.minderapeople.mocks.ProjectApiClientMock
 import com.mindera.minderapeople.repository.ProjectRepository

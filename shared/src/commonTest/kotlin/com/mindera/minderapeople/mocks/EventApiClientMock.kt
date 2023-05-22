@@ -45,9 +45,9 @@ class EventApiClientMock : IEventApiClient {
         return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
 
-    override suspend fun createEvent(userId: String, event: CreatingEventDTO): Result<Unit> {
+    override suspend fun createEvent(userId: String, event: CreatingEventDTO): Result<EventDTO> {
         if (userId == DefaultTestData.USER_ID_CORRECT) {
-            return Result.success(Unit)
+            return Result.success(EventDTO("001", event.policy, event.startDate, event.endDate, event.partOfDay, event.additionalInfo, event.includesBreakfast, event.city, event.project))
         }
         return Result.failure(Exception(HttpStatusCode.NotFound.description))
     }
