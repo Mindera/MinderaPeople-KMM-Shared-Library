@@ -6,7 +6,6 @@ import com.mindera.minderapeople.repository.EventRepository
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.ktor.utils.io.*
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
@@ -15,7 +14,6 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 import kotlin.test.assertTrue
-import kotlinx.coroutines.test.runTest
 
 class EventIntegrationTests {
 
@@ -432,7 +430,8 @@ class EventIntegrationTests {
                 headers = headersOf(HttpHeaders.ContentType, "application/json")
             )
         }
-        val client = EventApiClient(mockEngine, DefaultTestData.EVENT_ID_CORRECT)
+        val client = EventApiClient(mockEngine)
+        client.uuid = DefaultTestData.EVENT_ID_CORRECT
         val eventRepo = EventRepository(client)
 
         runBlocking {

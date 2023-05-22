@@ -385,7 +385,7 @@ __attribute__((swift_name("IEventApiClient")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("EventApiClient")))
 @interface MPKMMLEventApiClient : MPKMMLBase <MPKMMLIEventApiClient>
-- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine uuid:(NSString * _Nullable)uuid __attribute__((swift_name("init(engine:uuid:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine __attribute__((swift_name("init(engine:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * @note This method converts instances of CancellationException to errors.
@@ -422,6 +422,7 @@ __attribute__((swift_name("EventApiClient")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)removeEventByIdUserId:(NSString *)userId eventId:(NSString *)eventId completionHandler:(void (^)(id _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("removeEventById(userId:eventId:completionHandler:)")));
+@property NSString * _Nullable uuid __attribute__((swift_name("uuid")));
 @end
 
 __attribute__((swift_name("IPartOfDayApiClient")))

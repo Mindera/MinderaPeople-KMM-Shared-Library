@@ -394,7 +394,8 @@ class EventApiClientTest {
         }
 
         runBlocking {
-            val client = EventApiClient(mockEngine, DefaultTestData.EVENT_ID_CORRECT)
+            val client = EventApiClient(mockEngine)
+            client.uuid = DefaultTestData.EVENT_ID_CORRECT
             val result = client.createEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_NEW_EVENT)
 
             assertTrue(result.isSuccess)

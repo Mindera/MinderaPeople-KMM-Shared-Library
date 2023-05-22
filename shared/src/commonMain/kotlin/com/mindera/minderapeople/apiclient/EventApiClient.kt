@@ -9,11 +9,11 @@ import io.ktor.client.engine.*
 import io.ktor.client.request.*
 import io.ktor.http.*
 
-class EventApiClient(engine: HttpClientEngine, uuid: String? = null) : IEventApiClient {
+class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
     private val apiHttpClient = ApiHttpClient(engine)
     private val httpClient = apiHttpClient.httpClient
-    private val uuid = uuid
+    var uuid: String? = null //TODO: Remove once backend is implemented
 
     override suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
         return try {
