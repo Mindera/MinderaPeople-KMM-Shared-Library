@@ -385,7 +385,7 @@ __attribute__((swift_name("IEventApiClient")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("EventApiClient")))
 @interface MPKMMLEventApiClient : MPKMMLBase <MPKMMLIEventApiClient>
-- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine __attribute__((swift_name("init(engine:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithEngine:(id<MPKMMLKtor_client_coreHttpClientEngine>)engine uuid:(NSString * _Nullable)uuid __attribute__((swift_name("init(engine:uuid:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * @note This method converts instances of CancellationException to errors.
@@ -649,6 +649,12 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("EngineKt")))
 @interface MPKMMLEngineKt : MPKMMLBase
 + (id<MPKMMLKtor_client_coreHttpClientEngine>)getEngine __attribute__((swift_name("getEngine()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UUIDKt")))
+@interface MPKMMLUUIDKt : MPKMMLBase
++ (NSString *)randomUUID __attribute__((swift_name("randomUUID()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
