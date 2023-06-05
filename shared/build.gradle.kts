@@ -31,6 +31,7 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "MinderaPeopleKMMLib"
+            freeCompilerArgs += "-Xno-objc-generics"
         }
     }
 

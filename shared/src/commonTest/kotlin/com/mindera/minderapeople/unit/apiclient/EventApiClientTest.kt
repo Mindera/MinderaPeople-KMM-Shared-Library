@@ -144,7 +144,7 @@ class EventApiClientTest {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 
@@ -389,7 +389,7 @@ class EventApiClientTest {
     fun `test create event returns success if api call is successful`(){
         val mockEngine = MockEngine {
             respond(
-                content = ByteReadChannel(""),
+                content = ByteReadChannel(Json.encodeToString(DefaultTestData.CORRECT_EVENT)),
                 status = HttpStatusCode.Created,
                 headers = headersOf(HttpHeaders.ContentType, "application/json")
             )
@@ -397,10 +397,11 @@ class EventApiClientTest {
 
         runBlocking {
             val client = EventApiClient(mockEngine)
+            client.uuid = DefaultTestData.EVENT_ID_CORRECT
             val result = client.createEvent(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_NEW_EVENT)
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(DefaultTestData.CORRECT_EVENT, result.getOrNull())
         }
     }
 

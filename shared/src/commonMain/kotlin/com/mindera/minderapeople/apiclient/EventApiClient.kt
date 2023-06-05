@@ -3,6 +3,7 @@ package com.mindera.minderapeople.apiclient
 import com.mindera.minderapeople.apiclient.interfaces.IEventApiClient
 import com.mindera.minderapeople.dto.CreatingEventDTO
 import com.mindera.minderapeople.dto.EventDTO
+import com.mindera.minderapeople.randomUUID
 import io.ktor.client.call.body
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.request.*
@@ -12,6 +13,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
 
     private val apiHttpClient = ApiHttpClient(engine)
     private val httpClient = apiHttpClient.httpClient
+    var uuid: String? = null //TODO: Remove once backend is implemented
 
     override suspend fun getEventsByPolicy(userId: String, policyId: String): Result<List<EventDTO>> {
         return try {
@@ -49,7 +51,18 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
             }
 
             if (response.status == HttpStatusCode.OK) {
-                Result.success(response.body())
+                //TODO: Return response.body() once backend is implemented
+                Result.success(EventDTO(
+                    event.id,
+                    event.policy,
+                    event.startDate,
+                    event.endDate,
+                    event.partOfDay,
+                    event.additionalInfo,
+                    event.includesBreakfast,
+                    event.city,
+                    event.project)
+                )
             } else {
                 Result.failure(Exception(response.status.description))
             }
@@ -58,12 +71,12 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
         }
     }
 
-    override suspend fun removeEventById(userId: String, eventId: String): Result<Nothing?> {
+    override suspend fun removeEventById(userId: String, eventId: String): Result<Unit> {
         return try {
             val response = httpClient.delete("${ApiDefaultData.BASE_URL}/events/${userId}/${eventId}")
 
             if (response.status == HttpStatusCode.NoContent) {
-                Result.success(null)
+                Result.success(Unit)
             } else {
                 Result.failure(Exception(response.status.description))
             }
@@ -88,7 +101,7 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
     override suspend fun createEvent(
         userId: String,
         event: CreatingEventDTO
-    ): Result<Nothing?> {
+    ): Result<EventDTO> {
         return try{
             val response = httpClient.post("${ApiDefaultData.BASE_URL}/events/${userId}") {
                 contentType(ContentType.Application.Json)
@@ -96,7 +109,18 @@ class EventApiClient(engine: HttpClientEngine) : IEventApiClient {
             }
 
             if(response.status == HttpStatusCode.Created)
-                Result.success(null)
+                //TODO: Return response.body() once backend is implemented
+                Result.success(EventDTO(
+                    uuid ?: randomUUID(),
+                    event.policy,
+                    event.startDate,
+                    event.endDate,
+                    event.partOfDay,
+                    event.additionalInfo,
+                    event.includesBreakfast,
+                    event.city,
+                    event.project)
+                )
             else
                 Result.failure(Exception(response.status.description))
         }catch (e: Exception){

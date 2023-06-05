@@ -7,5 +7,6 @@ import kotlinx.serialization.Serializable
 data class PartOfDayDTO(
     val id: String,
     val description: String,
-    @SerialName("icon_name") val iconName: String
+    val type: String,
+    val time: Int
 )

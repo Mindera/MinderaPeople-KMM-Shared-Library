@@ -20,7 +20,7 @@ interface IEventRepository {
         city: String?,
         project: ProjectDTO?
     ): RequestResult<EventDTO>
-    suspend fun removeEventById(userId: String, event: EventDTO): RequestResult<Nothing?>
+    suspend fun removeEventById(userId: String, event: EventDTO): RequestResult<Unit>
     suspend fun getEventById(userId: String, eventId: String): RequestResult<EventDTO>
     suspend fun createEvent(
         userId: String,
@@ -32,6 +32,6 @@ interface IEventRepository {
         includesBreakfast: Boolean? = null,
         city: String? = null,
         project: ProjectDTO? = null
-    ): RequestResult<Nothing?>
+    ): RequestResult<EventDTO>
     suspend fun getEventsByPolicy(userId: String, policyId: String): RequestResult<List<EventDTO>>
 }

@@ -9,6 +9,7 @@ import io.ktor.http.headersOf
 import io.ktor.http.HttpHeaders
 import io.ktor.utils.io.ByteReadChannel
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -175,7 +176,7 @@ class EventIntegrationTests {
             val result = repo.removeEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.CORRECT_EVENT)
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(Unit, result.getOrNull())
         }
     }
 
@@ -222,7 +223,7 @@ class EventIntegrationTests {
         val client = EventApiClient(mockEngine)
         val eventRepo = EventRepository(client)
 
-        runBlocking {
+        runTest {
             val result = eventRepo.getEventById(DefaultTestData.USER_ID_CORRECT, DefaultTestData.EVENT_ID_CORRECT)
 
             assertTrue(result.isSuccess)
@@ -426,12 +427,13 @@ class EventIntegrationTests {
         val event = DefaultTestData.CORRECT_EVENT
         val mockEngine = MockEngine {
             respond(
-                content = ByteReadChannel(""),
+                content = ByteReadChannel(Json.encodeToString(DefaultTestData.CORRECT_EVENT)),
                 status = HttpStatusCode.Created,
                 headers = headersOf(HttpHeaders.ContentType, "application/json")
             )
         }
         val client = EventApiClient(mockEngine)
+        client.uuid = DefaultTestData.EVENT_ID_CORRECT
         val eventRepo = EventRepository(client)
 
         runBlocking {
@@ -448,7 +450,7 @@ class EventIntegrationTests {
             )
 
             assertTrue(result.isSuccess)
-            assertEquals(null, result.getOrNull())
+            assertEquals(DefaultTestData.CORRECT_EVENT, result.getOrNull())
         }
     }
 
